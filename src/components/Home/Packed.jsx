@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import NewButton from "@/Shaire/NewButton";
 import SmoothButton from "@/Shaire/SmoothButton";
 
-const About = () => {
+const Packed = () => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -67,7 +67,7 @@ const About = () => {
         {/* Circular Spinning Images Container */}
         <div className="relative w-full h-[800px] flex items-center justify-center my-32">
           {/* Center Content  bg-black/80 backdrop-blur-sm */}
-          <motion.div 
+          <motion.div
             className="absolute z-30 text-center items-center rounded-3xl max-w-3xl py-16 px-12 shadow-2xl"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -79,7 +79,6 @@ const About = () => {
             }}
           >
             <div className="mb-6 flex mx-auto">
-                
               <NewButton>Features</NewButton>
             </div>
             <motion.h1
@@ -191,4 +190,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Packed;

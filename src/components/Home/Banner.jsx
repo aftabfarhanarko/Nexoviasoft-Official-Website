@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import Navbar from "./Navbar";
+import Navbar from "../../layout/Navbar";
 
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,8 +43,7 @@ const Banner = () => {
         }}
       />
 
-      {/* Navbar Component */}
-      <Navbar />
+    
 
       {/* Banner Component */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
