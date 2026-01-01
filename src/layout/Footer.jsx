@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#1F0A55] text-white py-16 px-8 overflow-hidden">
+    <footer className="relative bg-gradint to-orange-400 via-blue-300   text-white py-16 px-8 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large Purple Glow - Top Right */}
@@ -36,6 +36,7 @@ const Footer = () => {
             delay: 1,
           }}
         />
+        {/* jhbfib */}
 
         {/* Small Purple Accent - Center */}
         <motion.div

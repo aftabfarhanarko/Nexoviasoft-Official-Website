@@ -1,12 +1,14 @@
+import TextColorLetters from "@/components/AboutPages/Test";
 import NewButton from "@/Shaire/NewButton";
 import SmoothButton from "@/Shaire/SmoothButton";
+import Image from "next/image";
 import React from "react";
 import { FaMendeley } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen  bg-black/50  overflow-hidden ">
-      <div className="mt-20 max-w-11/12 mx-auto">
+    <div className="min-h-screen  bg-black/50  overflow-hidden  pb-20">
+      <div className="mt-20 max-w-11/12 mx-auto space-y-30">
         <div className=" mt-40 flex flex-col  justify-center items-center text-center mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full  flex flex-col items-center md:items-center justify-center text-center md:text-center">
             {/* Responsive Button: Center on large screens, Left on mobile */}
@@ -51,7 +53,41 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div></div>
+        <div className=" max-w-11/12 md:max-w-9/12 mx-auto  grid grid-cols-1 md:grid-cols-2 gaap-20">
+          {/* Left Side  img stakey */}
+          <div className="bg-black p-3 max-w-[538px] rounded-2xl">
+            <img
+              className="max-w-[528px] sm:max-h-[300px]  md:max-h-[340px]  lg:max-h-[534px] rounded-2xl"
+              src={"/about/about1.png"}
+              alt="About"
+            ></img>
+          </div>
+
+          {/* RIght side box */}
+          <div>
+
+            {/* <button class="relative overflow-hidden border border-purple-500/30 px-6 py-2 rounded-full bg-gradient-to-r from-purple-900/20 via-violet-900/20 to-blue-900/20 hover:border-purple-400/50 transition-all duration-300 group flex items-center gap-3">
+              <span class="bg-gradient-to-br from-purple-600 via-violet-600 to-blue-600 rounded-full p-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" />
+                </svg>
+              </span>
+
+              <span class="text-gray-200 text-base font-medium">
+                About Nubien
+              </span>
+
+              <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500 via-violet-500 to-blue-500 blur-sm -z-10"></span>
+            </button> */}
+            <NewButton>About Squadlog</NewButton>
+            <h1 className=" md:text-4xl">Shaping Tomorrow <br /> With Bold Ideas</h1>
+          </div>
+          
+        </div>
       </div>
     </div>
   );

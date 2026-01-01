@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import Navbar from "../../layout/Navbar";
+import TextColorLetters from "../AboutPages/Test";
 
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,8 +42,6 @@ const Banner = () => {
           top: cursorYSpring,
         }}
       />
-
-    
 
       {/* Banner Component */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
@@ -128,12 +126,22 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
+            
             <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-              AI-Driven Success
+              <TextColorLetters
+                text="AI-Driven Success"
+                fontFamily="Urbanist"
+                transitionStartIndex={20}
+              />
             </span>
             <br />
             <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-              Redefining the Future.
+              <TextColorLetters
+                text="Redefining the Future."
+                fontFamily="Urbanist"
+                transitionStartIndex={2}
+              />
+              
             </span>
           </motion.h1>
 

@@ -18,9 +18,9 @@ const Navbar = () => {
             <Image
               src="/squadlog-logo.png"
               alt="Squadlog Logo"
-              width={160}
-              height={160}
-              className="rounded-lg"
+              width={150}
+              height={150}
+              className="rounded-md"
             />
           </Link>
 
