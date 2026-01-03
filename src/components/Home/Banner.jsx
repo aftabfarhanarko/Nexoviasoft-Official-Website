@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import TextColorLetters from "../AboutPages/Test";
+import TextColorLetters from "../TextColorLetters";
 
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -126,7 +126,7 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            
+
             <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
               <TextColorLetters
                 text="AI-Driven Success"
@@ -141,7 +141,7 @@ const Banner = () => {
                 fontFamily="Urbanist"
                 transitionStartIndex={2}
               />
-              
+
             </span>
           </motion.h1>
 

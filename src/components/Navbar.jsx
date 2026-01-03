@@ -1,6 +1,6 @@
 "use client";
 
-import SmoothButton from "@/Shaire/SmoothButton";
+import SmoothButton from "@/Share/SmoothButton";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

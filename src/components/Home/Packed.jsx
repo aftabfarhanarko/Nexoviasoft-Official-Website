@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import NewButton from "@/Shaire/NewButton";
-import SmoothButton from "@/Shaire/SmoothButton";
-import { FaMendeley } from "react-icons/fa";
+import NewButton from "@/Share/NewButton";
+import SmoothButton from "@/Share/SmoothButton";
+import { Atom } from "lucide-react";
 
 const Packed = () => {
   const sectionRef = useRef(null);
@@ -34,8 +34,8 @@ const Packed = () => {
   ];
 
   return (
-    <div className="  text-white overflow-hidden">
-      <div className="bg-black/80 backdrop-blur-sm bg-gradient-to-b from-black via-gray-900 to-black max-w-[1480px] mx-auto px-4 border border-white">
+    <div ref={sectionRef} className="text-white overflow-hidden bg-black pb-20">
+      <div className="bg-black/80 backdrop-blur-sm bg-gradient-to-b from-black via-gray-900 to-black max-w-[1480px] mx-auto px-4  border-white">
         {/* অন্যান্য অংশ অপরিবর্তিত */}
         <motion.div className="flex justify-center mb-8">
           <motion.div
@@ -45,7 +45,7 @@ const Packed = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-2xl">
-              <FaMendeley />
+              <Atom />
             </span>
             <span className="text-gray-200 text-sm font-medium">About Us</span>
           </motion.div>
@@ -59,7 +59,7 @@ const Packed = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.h1
-            className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight"
+            className="text-3xl md:text-4xl lg:text-4xl font-light leading-tight"
             style={{ opacity: textOpacity }}
           >
             Built on creativity, collaboration, and top excellence, SYNC is a
@@ -73,7 +73,7 @@ const Packed = () => {
         </motion.div>
         <div className="">
           {/* Main Rotating Gallery Section - Fixed */}
-          <div className=" relative w-full flex items-center justify-center py-32 overflowvisible-">
+          <div className=" relative w-full flex items-center justify-center pt-32  pb-80 overflowvisible-">
             {/* Background container for full visibility */}
             <div className="relative w-full  flex items-center justify-center">
               {/* Rotating Images Container */}
@@ -137,7 +137,6 @@ const Packed = () => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{
-                  duration: 1,
                   delay: 0.4,
                   type: "spring",
                   stiffness: 120,

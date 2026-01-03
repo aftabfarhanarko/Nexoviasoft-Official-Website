@@ -1,9 +1,9 @@
-import TextColorLetters from "@/components/AboutPages/Test";
-import NewButton from "@/Shaire/NewButton";
-import SmoothButton from "@/Shaire/SmoothButton";
+
+import NewButton from "@/Share/NewButton";
+import SmoothButton from "@/Share/SmoothButton";
 import Image from "next/image";
 import React from "react";
-import { FaMendeley } from "react-icons/fa";
+import { Atom } from "lucide-react";
 
 const AboutPage = () => {
   return (
@@ -86,7 +86,7 @@ const AboutPage = () => {
             <NewButton>About Squadlog</NewButton>
             <h1 className=" md:text-4xl">Shaping Tomorrow <br /> With Bold Ideas</h1>
           </div>
-          
+
         </div>
       </div>
     </div>
