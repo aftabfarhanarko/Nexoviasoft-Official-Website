@@ -6,7 +6,11 @@ import AboutSquadLog from "@/components/home/AboutSquadLog";
 import Portfolio from "@/components/home/Protfolio";
 import Support from "@/components/home/Support";
 import Intregration from "@/components/home/Intregration";
+import Pricing from "@/components/home/Pricing";
+import OurProccess from "@/components/home/OurProccess";
+import LanuchYourSite from "@/components/home/LanuchYourSite";
 import React from "react";
+import OurTeam from "@/components/home/OurTeam";
 
 const TestPages = () => {
   return (
@@ -29,9 +33,13 @@ const TestPages = () => {
       </section>
 
 
+
+
       <section>
         <Portfolio />
       </section>
+
+
 
       <section>
         <Support />
@@ -43,6 +51,19 @@ const TestPages = () => {
 
       <section>
         <Intregration />
+      </section>
+
+      <section>
+        <Pricing />
+      </section>
+      <section>
+        <OurProccess />
+      </section>
+      <section>
+        <LanuchYourSite />
+      </section>
+      <section>
+        <OurTeam />
       </section>
 
     </div>
