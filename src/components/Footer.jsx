@@ -2,65 +2,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { Heart, Check } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradint to-orange-400 via-blue-300   text-white py-16 px-8 overflow-hidden">
+    <footer className="relative border-t border-white/50 bg-black text-white pt-20 pb-10 px-8 overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large Purple Glow - Top Right */}
-        <motion.div
-          className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-purple-600/40 rounded-full blur-[120px]"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        {/* Medium Purple Glow - Bottom Left */}
-        <motion.div
-          className="absolute -bottom-32 -left-32 w-[600px] h-[600px] bg-purple-800/30 rounded-full blur-[100px]"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-        {/* jhbfib */}
-
-        {/* Small Purple Accent - Center */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-purple-500/20 rounded-full blur-[80px]"
-          animate={{
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-            opacity: [0.15, 0.3, 0.15],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top Center Purple Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-[120px] rounded-full opacity-50" />
 
         {/* Floating Particles */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full"
+          className="absolute top-1/4 left-1/4 w-1 h-1 bg-purple-500 rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.3, 1, 0.3],
-            scale: [1, 1.5, 1],
           }}
           transition={{
             duration: 3,
@@ -68,199 +26,157 @@ const Footer = () => {
             ease: "easeInOut",
           }}
         />
-
         <motion.div
-          className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-300 rounded-full"
+          className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full"
           animate={{
             y: [0, -30, 0],
-            opacity: [0.4, 1, 0.4],
-            scale: [1, 2, 1],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.5,
-          }}
-        />
-
-        <motion.div
-          className="absolute bottom-1/3 left-1/2 w-1 h-1 bg-purple-500 rounded-full"
-          animate={{
-            y: [0, -25, 0],
-            opacity: [0.3, 1, 0.3],
-            scale: [1, 2.5, 1],
+            opacity: [0.2, 0.8, 0.2],
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1.5,
-          }}
-        />
-
-        <motion.div
-          className="absolute top-3/4 right-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.5, 1, 0.5],
-            scale: [1, 1.8, 1],
-          }}
-          transition={{
-            duration: 3.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
+            delay: 1,
           }}
         />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-        {/* Logo and Description */}
+      {/* Main Content */}
+      <div className="relative z-10 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        {/* Brand Section */}
         <motion.div
-          className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="space-y-6"
         >
-          <Image
-            src={"/squadlog-logo.png"}
-            height={160}
-            width={160}
-            alt="Logo"
-          ></Image>
-          <p className="text-gray-400 text-sm">
-            Made remotely with <span className="text-purple-500">💜</span> and
-            passion
-          </p>
-          <p className="text-gray-500 text-sm">- Westhill Studio.</p>
+          {/* Logo */}
+          {/* Logo and Description */}
+          <motion.div
+            className="space-y-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Image
+              src={"/squadlog-logo.png"}
+              height={160}
+              width={160}
+              alt="Logo"
+            ></Image>
+            <p className="text-gray-400 text-sm">
+              Made remotely with <span className="text-purple-500">💜</span> and
+              passion
+            </p>
+            <p className="text-gray-500 text-sm">- Westhill Studio.</p>
+          </motion.div>
         </motion.div>
 
         {/* Template Pages */}
         <motion.div
-          className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="space-y-6"
         >
-          <h3 className="text-lg font-semibold mb-4">Template Pages</h3>
-          <ul className="space-y-3 text-gray-400">
-            {["Home", "About", "Portfolio", "Contact", "FAQ"].map(
-              (item, index) => (
-                <motion.li
-                  key={item}
-                  whileHover={{ x: 5, color: "#a78bfa" }}
-                  transition={{ type: "spring", stiffness: 300 }}
+          <h3 className="text-lg font-medium text-white">Template Pages</h3>
+          <ul className="space-y-3">
+            {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/pages/about" },
+              { name: "Portfolio", href: "/pages/portfolio" },
+              { name: "Contact", href: "/pages/contact" },
+              { name: "FAQ", href: "/pages/faq" },
+            ].map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
                 >
-                  <a href="#" className="transition-colors">
-                    {item}
-                  </a>
-                </motion.li>
-              )
-            )}
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </motion.div>
 
         {/* Social */}
         <motion.div
-          className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="space-y-6"
         >
-          <h3 className="text-lg font-semibold mb-4">Social</h3>
-          <ul className="space-y-3 text-gray-400">
-            {["Twitter (X)", "Instagram", "Youtube", "Framer"].map(
-              (item, index) => (
-                <motion.li
-                  key={item}
-                  whileHover={{ x: 5, color: "#a78bfa" }}
-                  transition={{ type: "spring", stiffness: 300 }}
+          <h3 className="text-lg font-medium text-white">Social</h3>
+          <ul className="space-y-3">
+            {[
+              { name: "Twitter (X)", href: "https://twitter.com" },
+              { name: "Instagram", href: "https://instagram.com" },
+              { name: "Youtube", href: "https://youtube.com" },
+              { name: "Framer", href: "https://framer.com" },
+            ].map((link) => (
+              <li key={link.name}>
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
                 >
-                  <a href="#" className="transition-colors">
-                    {item}
-                  </a>
-                </motion.li>
-              )
-            )}
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </motion.div>
 
         {/* Subscribe Form */}
         <motion.div
-          className="space-y-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="space-y-6"
         >
-          <h3 className="text-lg font-semibold mb-4">Subscribe Form</h3>
-          <div className="flex flex-col sm:flex-row gap-2">
-            <motion.input
+          <h3 className="text-lg font-medium text-white">Subscribe Form</h3>
+          <div className="relative max-w-sm">
+            <input
               type="email"
               placeholder="Enter Your Email..."
-              className="flex-1 px-4 py-3 bg-gray-900/80 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-all backdrop-blur-sm"
-              whileFocus={{ scale: 1.02, borderColor: "#a78bfa" }}
+              className="w-full bg-[#0F0F0F] border border-white/10 rounded-full py-3.5 pl-6 pr-32 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all"
             />
-            <motion.button
-              className="px-6 py-3 bg-purple-600 rounded-lg font-medium whitespace-nowrap"
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "#7c3aed",
-                boxShadow: "0 0 20px rgba(167, 139, 250, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
+            <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-purple-600 hover:bg-purple-500 text-white text-xs font-medium px-5 rounded-full transition-colors">
               Subscribe Us
-            </motion.button>
+            </button>
           </div>
         </motion.div>
       </div>
 
       {/* Bottom Bar */}
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="relative z-10 max-w-[1400px] mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500"
       >
-        <p className="text-gray-500 text-sm">© 2024 Mandro Design</p>
-        <div className="flex items-center gap-6 text-sm text-gray-400">
-          <motion.a
-            href="#"
-            className="transition-colors"
-            whileHover={{ color: "#a78bfa" }}
+        <p>© 2024 Mandro Design</p>
+        <div className="flex items-center gap-8">
+          <Link
+            href="/terms"
+            className="hover:text-purple-400 transition-colors"
           >
             Terms & Conditions
-          </motion.a>
-          <span className="text-gray-600">|</span>
-          <motion.a
-            href="#"
-            className="transition-colors"
-            whileHover={{ color: "#a78bfa" }}
+          </Link>
+          <Link
+            href="/privacy"
+            className="hover:text-purple-400 transition-colors"
           >
             Privacy Policy
-          </motion.a>
+          </Link>
         </div>
-        <motion.div
-          className="flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg text-sm font-medium"
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 0 20px rgba(255, 255, 255, 0.3)",
-          }}
-          transition={{ type: "spring", stiffness: 400 }}
-        >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2L3 6H6V12H10V6H13L8 2Z" fill="currentColor" />
-          </svg>
-          Made in Framer
-        </motion.div>
       </motion.div>
     </footer>
   );
