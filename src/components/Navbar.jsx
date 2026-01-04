@@ -39,7 +39,7 @@ const Navbar = () => {
               About
             </Link>
             <Link
-              href="/portfolio"
+              href="/pages/portfolio"
               className="text-gray-300 hover:text-white transition-colors"
             >
               Portfolio

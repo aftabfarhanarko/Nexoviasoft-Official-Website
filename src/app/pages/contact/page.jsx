@@ -5,7 +5,7 @@ import ContactReady from "@/components/Contact/ContactReady";
 
 const Contactpage = () => {
   return (
-    <div className="min-h-screen bg-black overflow-x-hidden pb-20">
+    <div className="min-h-screen bg-black overflow-x-hidden pb-30">
       <section>
         <ContactForm />
       </section>
