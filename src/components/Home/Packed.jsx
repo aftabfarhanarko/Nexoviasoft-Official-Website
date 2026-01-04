@@ -95,7 +95,7 @@ const Packed = () => {
                   return (
                     <motion.div
                       key={img.id}
-                      className="absolute"
+                      className="absolute "
                       style={{
                         left: "50%",
                         top: "50%",
@@ -112,7 +112,7 @@ const Packed = () => {
                       }}
                     >
                       <motion.div
-                        className="relative w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+                        className="relative bg-black/10 p-1 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-white/10"
                         animate={{ rotate: -360 }} // counter rotate to keep upright
                         transition={{
                           duration: 60,
@@ -123,7 +123,7 @@ const Packed = () => {
                         <img
                           src={img.src}
                           alt={`Gallery image ${img.id}`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover rounded-3xl"
                         />
                       </motion.div>
                     </motion.div>
