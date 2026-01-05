@@ -18,8 +18,8 @@ const ElevateBrands = () => {
         >
           {/* Badge */}
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit">
-            <div className="p-1 rounded-full bg-purple-600 flex items-center justify-center">
-               <Gift size={14} className="text-white" />
+            <div className="p-1 rounded-full bg-[#EFFC76] flex items-center justify-center">
+               <Gift size={14} className="text-black" />
             </div>
             <span className="text-gray-300 text-sm font-medium">About Nubien</span>
           </div>
@@ -50,14 +50,14 @@ const ElevateBrands = () => {
 
           {/* Bottom Action Area */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mt-4">
-            <button className="px-8 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all shadow-lg shadow-purple-500/25">
+            <button className="px-8 py-3 rounded-xl bg-[#EFFC76] hover:bg-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/25">
               Book an Appointment
             </button>
             
             <div className="flex flex-col gap-1">
-              <div className="flex gap-1 text-white">
+              <div className="flex gap-1 text-[#EFFC76]">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} size={18} fill="currentColor" className="text-white" />
+                  <Star key={star} size={18} fill="currentColor" className="text-[#EFFC76]" />
                 ))}
               </div>
               <span className="text-gray-400 text-sm">900+ People Rated</span>

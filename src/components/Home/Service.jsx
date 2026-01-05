@@ -64,7 +64,7 @@ const Service = () => {
     return (
         <section className="bg-black py-20 px-4 md:px-8 relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-purple-900/20 to-transparent blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-[#EFFC76]/20 to-transparent blur-[100px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
@@ -75,8 +75,8 @@ const Service = () => {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
-                        <div className="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center">
-                            <Brain size={12} className="text-white" />
+                        <div className="w-5 h-5 rounded-full bg-[#EFFC76] flex items-center justify-center">
+                            <Brain size={12} className="text-black" />
                         </div>
                         <span className="text-gray-300 text-sm">Services</span>
                     </motion.div>
@@ -108,7 +108,7 @@ const Service = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors"
+                        className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-colors"
                     >
                         Book a Terminal
                     </motion.button>
@@ -134,9 +134,9 @@ const Service = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.4 + (index * 0.05) }}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-white/10 transition-all cursor-default"
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#EFFC76]/50 hover:bg-white/10 transition-all cursor-default"
                         >
-                            <div className="p-1 rounded-full bg-purple-600/20 text-purple-400">
+                            <div className="p-1 rounded-full bg-[#EFFC76]/20 text-[#EFFC76]">
                                 <tag.icon size={14} />
                             </div>
                             <span className="text-gray-300 text-sm">{tag.name}</span>

@@ -45,7 +45,7 @@ const TeamCard = ({ member, index }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group relative bg-[#0A0A0A] border border-white/5 rounded-3xl p-3 flex items-center gap-4 hover:border-purple-500/30 transition-colors duration-300"
+            className="group relative bg-[#0A0A0A] border border-white/5 rounded-3xl p-3 flex items-center gap-4 hover:border-[#EFFC76]/50 transition-colors duration-300"
         >
             {/* Image */}
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-gray-800 shrink-0">
@@ -68,15 +68,15 @@ const TeamCard = ({ member, index }) => {
 
             {/* Info */}
             <div className="flex-grow">
-                <h3 className="text-white font-medium text-lg leading-tight mb-1 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-white font-medium text-lg leading-tight mb-1 group-hover:text-[#EFFC76] transition-colors">
                     {member.name}
                 </h3>
                 <p className="text-gray-400 text-sm">{member.role}</p>
             </div>
 
             {/* Button */}
-            <div className="rounded-xl bg-[#6d28d9] p-2.5 flex items-center justify-center shrink-0 group-hover:bg-[#7c3aed] transition-colors cursor-pointer">
-                <Percent className="w-5 h-5 text-white" />
+            <div className="rounded-xl bg-[#EFFC76] p-2.5 flex items-center justify-center shrink-0 group-hover:bg-[#EFFC76] transition-colors cursor-pointer">
+                <Percent className="w-5 h-5 text-black" />
                 {/* The icon in the image looks like a % or similar abstract shape. 
             Using Percent as a placeholder or close match from lucide. 
             Actually, looking closer it might be a specific logo or different icon. 
@@ -92,8 +92,8 @@ const OurTeam = () => {
     return (
         <section className="py-24 bg-black relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#EFFC76]/10 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#EFFC76]/10 blur-[120px] rounded-full pointer-events-none" />
 
 
             <div className="container mx-auto px-4 relative z-10">
@@ -105,7 +105,7 @@ const OurTeam = () => {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8"
                     >
-                        <Search className="w-4 h-4 text-purple-400" />
+                        <Search className="w-4 h-4 text-[#EFFC76]" />
                         <span className="text-gray-300 text-sm">Our Team</span>
                     </motion.div>
 
@@ -139,7 +139,7 @@ const OurTeam = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-[#6d28d9] text-white px-8 py-3 rounded-full hover:bg-[#7c3aed] transition-colors font-medium"
+                        className="bg-[#EFFC76] text-black px-8 py-3 rounded-full hover:bg-[#EFFC76] transition-colors font-medium"
                     >
                         View About Reboot
                     </motion.button>

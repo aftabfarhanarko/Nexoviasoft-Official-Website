@@ -17,7 +17,7 @@ const PortfolioCard = () => {
         "Fast Loading",
       ],
       tags: ["E-Commerce", "Portfolio"],
-      gradient: "from-purple-900/40 to-blue-900/40",
+      gradient: "from-[#EFFC76]/40 to-[#EFFC76]/40",
       images: ["/portfolio/watch.png", "/portfolio/phone.png"],
     },
     {
@@ -30,7 +30,7 @@ const PortfolioCard = () => {
         "SEO Optimized",
       ],
       tags: ["Business", "Agency"],
-      gradient: "from-purple-900/40 to-pink-900/40",
+      gradient: "from-[#EFFC76]/40 to-[#EFFC76]/40",
       images: ["/portfolio/cap.png", "/portfolio/woman.png"],
     },
     {
@@ -43,7 +43,7 @@ const PortfolioCard = () => {
         "High Performance",
       ],
       tags: ["Portfolio", "Agency"],
-      gradient: "from-blue-900/40 to-purple-900/40",
+      gradient: "from-[#EFFC76]/40 to-[#EFFC76]/40",
       images: ["/portfolio/car.png", "/portfolio/bottle.png"],
     },
   ];
@@ -55,8 +55,8 @@ const PortfolioCard = () => {
     >
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] left-[20%] w-[500px] h-[500px] bg-[#EFFC76]/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-[#EFFC76]/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-10">
@@ -68,8 +68,8 @@ const PortfolioCard = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6"
           >
-            <span className="bg-purple-600 p-1 rounded-full">
-              <Briefcase size={12} className="text-white" />
+            <span className="bg-[#EFFC76] p-1 rounded-full">
+              <Briefcase size={12} className="text-black" />
             </span>
             <span className="text-sm font-medium text-gray-300">Portfolio</span>
           </motion.div>
@@ -102,7 +102,7 @@ const PortfolioCard = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-[0_0_20px_rgba(108,72,255,0.4)]">
+            <button className="bg-[#EFFC76]  hover:from-[#EFFC76]  text-black px-8 py-3 rounded-lg font-medium transition-all duration-300 ">
               Build Your Product
             </button>
           </motion.div>
@@ -132,8 +132,8 @@ const PortfolioCard = () => {
                 <div className="space-y-4 mb-12">
                   {project.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="bg-[#6c48ff] rounded-full p-0.5">
-                        <Check size={12} className="text-white" />
+                      <div className="bg-[#EFFC76] rounded-full p-0.5">
+                        <Check size={12} className="text-black" />
                       </div>
                       <span className="text-gray-300 font-medium">
                         {feature}

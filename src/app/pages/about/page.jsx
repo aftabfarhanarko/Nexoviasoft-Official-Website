@@ -8,16 +8,16 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-black overflow-x-hidden pb-20">
+    <div className="min-h-screen bg-black overflow-x-hidden pb-30">
       <div className="mt-20 max-w-11/12 mx-auto space-y-30">
         <div className="mt-40 flex flex-col justify-center items-center text-center mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full flex flex-col items-center md:items-center justify-center text-center md:text-center">
             {/* Responsive Button: Center on large screens, Left on mobile */}
             <div className="w-full flex justify-center md:justify-center mb-8">
               <div className="w-full max-w-md md:max-w-none flex justify-start md:justify-center">
-                <button className="relative overflow-hidden flex items-center justify-center gap-3 px-6 py-1.5 rounded-full border border-purple-500/40 hover:border-purple-400/70 transition-all duration-500 group shadow-xl hover:shadow-purple-500/30">
+                <button className="relative overflow-hidden flex items-center justify-center gap-3 px-6 py-1.5 rounded-full border border-[#EFFC76]/40 hover:border-[#EFFC76]/70 transition-all duration-500 group shadow-xl hover:shadow-[#EFFC76]/30">
                   {/* Year Badge - Responsive size */}
-                  <span className="relative bg-gradient-to-br from-purple-500 via-violet-500 to-indigo-600 rounded-full font-bold text-white px-2 md:px-4 py-1.5 md:py-2 text-sm md:text-lg shadow-xl group-hover:scale-110 group-hover:shadow-purple-500/50 transition-all duration-300">
+                  <span className="relative bg-gradient-to-br from-[#EFFC76] via-[#EFFC76] to-[#EFFC76] rounded-full font-bold text-black px-2 md:px-4 py-1.5 md:py-2 text-sm md:text-lg shadow-xl group-hover:scale-110 group-hover:shadow-[#EFFC76]/50 transition-all duration-300">
                     2026
                     {/* Subtle shine effect */}
                     <span className="absolute inset-0 rounded-full bg-white opacity-20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
@@ -29,10 +29,10 @@ const AboutPage = () => {
                   </span>
 
                   {/* Glowing border on hover */}
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-violet-500 to-blue-500 opacity-0 group-hover:opacity-80 blur-xl -z-10 transition-opacity duration-500"></span>
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EFFC76] via-[#EFFC76] to-[#EFFC76] opacity-0 group-hover:opacity-80 blur-xl -z-10 transition-opacity duration-500"></span>
 
                   {/* Animated background glow on hover */}
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 scale-0 group-hover:scale-150 transition-transform duration-700 -z-10"></span>
+                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EFFC76]/20 to-[#EFFC76]/20 scale-0 group-hover:scale-150 transition-transform duration-700 -z-10"></span>
                 </button>
               </div>
             </div>

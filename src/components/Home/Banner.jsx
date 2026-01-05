@@ -44,7 +44,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden cursor-none">
+    <div className="min-h-screen  bg-black text-white overflow-hidden cursor-none">
       {/* Custom Cursor */}
       <motion.div
         className="fixed w-8 h-8 border-2 border-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
@@ -55,9 +55,9 @@ const Banner = () => {
       />
 
       {/* Banner Component */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
+      <section className="relative max-w-7xl min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Static Background Image */}
-        <div className="absolute inset-0 w-full h-full z-0">
+        <div className="absolute inset-0  w-full h-full z-0">
           <Image
             src="/banerImages.png"
             alt="Background"
@@ -76,7 +76,7 @@ const Banner = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
               2025
             </span>
             <span className="text-gray-300 text-sm font-medium">Next-Gen AI Studio</span>
@@ -121,7 +121,7 @@ const Banner = () => {
             <button className="px-8 py-3.5 bg-gray-100 text-black rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               Connect With Us
             </button>
-            <button className="px-8 py-3.5 bg-purple-600/20 backdrop-blur-sm text-white rounded-full font-medium border border-purple-500/30 hover:bg-purple-600/30 transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
+            <button className="px-8 py-3.5 bg-[#EFFC76]/20 backdrop-blur-sm text-white rounded-full font-medium border border-[#EFFC76]/30 hover:bg-[#EFFC76]/30 transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               What is Nubien?
             </button>
           </motion.div>

@@ -7,7 +7,7 @@ const Support = () => {
     return (
         <section className="bg-black py-24 px-4 relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-purple-900/20 to-transparent blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-[#EFFC76]/20 to-transparent blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
@@ -16,9 +16,9 @@ const Support = () => {
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#EFFC76]/20 mb-8"
                     >
-                        <Headset size={14} className="text-purple-400" />
+                        <Headset size={14} className="text-[#EFFC76]" />
                         <span className="text-gray-300 text-sm font-medium">24/7 Support</span>
                     </motion.div>
 
@@ -49,7 +49,7 @@ const Support = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
-                        className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full text-sm font-medium transition-all shadow-lg shadow-purple-900/20"
+                        className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-8 py-3 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20"
                     >
                         View About Nubien
                     </motion.button>
@@ -100,13 +100,12 @@ const CardsDisplay = () => {
         <div className="relative w-full h-full flex items-center justify-center">
             {/* Floating Chat Bubbles */}
             <motion.div
-                initial={{ opacity: 0, y: 20, x: -50 }}
-                whileInView={{ opacity: 1, y: 0, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="absolute top-10 left-[15%] md:left-[25%] z-30 bg-blue-500 text-white px-4 py-2 rounded-2xl rounded-bl-sm text-sm font-medium shadow-lg"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="absolute top-10 left-[15%] md:left-[25%] z-30 bg-[#EFFC76] text-black px-4 py-2 rounded-2xl rounded-bl-sm text-sm font-medium shadow-lg"
             >
-                Hey, It's me!
+                Hi! How can we help?
             </motion.div>
 
             <motion.div
@@ -114,7 +113,7 @@ const CardsDisplay = () => {
                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute top-16 right-[15%] md:right-[25%] z-30 bg-purple-600 text-white px-4 py-2 rounded-2xl rounded-br-sm text-sm font-medium shadow-lg"
+                className="absolute top-16 right-[15%] md:right-[25%] z-30 bg-[#EFFC76] text-black px-4 py-2 rounded-2xl rounded-br-sm text-sm font-medium shadow-lg"
             >
                 Problem Solved
             </motion.div>
@@ -138,11 +137,11 @@ const CardsDisplay = () => {
                     <div className="w-full h-full bg-gradient-to-br from-white/5 to-white/0 relative">
                         {/* active card overlay controls */}
                         {card.active && (
-                            <div className="absolute inset-0 border-2 border-purple-500/50 rounded-2xl pointer-events-none">
-                                <div className="absolute -top-1 -left-1 w-3 h-3 bg-white rounded-full border-2 border-purple-500 shadow-sm" />
-                                <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-purple-500 shadow-sm" />
-                                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-white rounded-full border-2 border-purple-500 shadow-sm" />
-                                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-purple-500 shadow-sm" />
+                            <div className="absolute inset-0 border-2 border-[#EFFC76]/50 rounded-2xl pointer-events-none">
+                                <div className="absolute -top-1 -left-1 w-3 h-3 bg-white rounded-full border-2 border-[#EFFC76] shadow-sm" />
+                                <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-[#EFFC76] shadow-sm" />
+                                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-white rounded-full border-2 border-[#EFFC76] shadow-sm" />
+                                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-[#EFFC76] shadow-sm" />
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full border border-dashed border-white/30" />
                             </div>
                         )}
@@ -170,8 +169,8 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
         transition={{ delay, duration: 0.5 }}
         className="bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-900 transition-colors group"
     >
-        <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-            <Icon size={20} className="text-purple-400" />
+        <div className="w-10 h-10 rounded-full bg-[#EFFC76]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Icon size={20} className="text-[#EFFC76]" />
         </div>
         <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
         <p className="text-gray-400 text-sm">{description}</p>

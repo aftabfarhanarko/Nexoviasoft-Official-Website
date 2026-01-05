@@ -5,7 +5,7 @@ import React from 'react';
 
 const Portfoliopage = () => {
     return (
-        <div className="min-h-screen bg-black overflow-x-hidden pb-20">
+        <div className="min-h-screen bg-black overflow-x-hidden pb-30">
             <section>
                 <PortfolioCard/>
             </section>

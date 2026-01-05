@@ -14,8 +14,8 @@ const ContactForm = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit"
         >
-          <div className="p-1 rounded-full bg-purple-600 flex items-center justify-center">
-            <MessageCircle size={14} className="text-white" />
+          <div className="p-1 rounded-full bg-[#EFFC76] flex items-center justify-center">
+            <MessageCircle size={14} className="text-black" />
           </div>
           <span className="text-gray-300 text-sm font-medium">
             24/7 Collaborate With Us
@@ -46,13 +46,13 @@ const ContactForm = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all shadow-lg shadow-purple-500/25"
+          className="px-8 py-4 rounded-xl bg-[#EFFC76] hover:bg-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/25"
         >
           Fill The Form Out!
         </motion.button>
         
         {/* Background glow for header */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-purple-900/20 blur-[100px] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#EFFC76]/20 blur-[100px] pointer-events-none -z-10" />
       </div>
 
       {/* Form Section */}
@@ -64,11 +64,11 @@ const ContactForm = () => {
         className="relative"
       >
         {/* Glow effect behind form */}
-        <div className="absolute inset-0 bg-purple-600/10 blur-[60px] rounded-[2rem] transform scale-95 translate-y-4 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#EFFC76]/10 blur-[60px] rounded-[2rem] transform scale-95 translate-y-4 pointer-events-none" />
         
         <div className="relative bg-[#0A0A0A] border border-white/10 rounded-[2rem] p-6 md:p-12 lg:p-16 overflow-hidden">
              {/* Subtle top gradient inside card */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-purple-600/10 blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-[#EFFC76]/10 blur-[80px] pointer-events-none" />
 
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
             {/* First Name */}
@@ -79,7 +79,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Jane"
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
               />
             </div>
 
@@ -91,7 +91,7 @@ const ContactForm = () => {
               <input
                 type="text"
                 placeholder="Smith"
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
               />
             </div>
 
@@ -103,7 +103,7 @@ const ContactForm = () => {
               <input
                 type="email"
                 placeholder="jane@framer.com"
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
               />
             </div>
 
@@ -113,7 +113,7 @@ const ContactForm = () => {
                 Where Are you from?*
               </label>
               <div className="relative">
-                <select className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all appearance-none cursor-pointer">
+                <select className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all appearance-none cursor-pointer">
                   <option value="">Select your country...</option>
                   <option value="us">United States</option>
                   <option value="uk">United Kingdom</option>
@@ -134,7 +134,7 @@ const ContactForm = () => {
                 What's the type of your company?*
               </label>
               <div className="relative">
-                <select className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all appearance-none cursor-pointer">
+                <select className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all appearance-none cursor-pointer">
                   <option value="">Select category</option>
                   <option value="tech">Technology</option>
                   <option value="finance">Finance</option>
@@ -158,7 +158,7 @@ const ContactForm = () => {
               <textarea
                 rows="4"
                 placeholder="Type your message..."
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all resize-none"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all resize-none"
               ></textarea>
             </div>
 
@@ -166,7 +166,7 @@ const ContactForm = () => {
             <div className="md:col-span-2 mt-4">
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-purple-700 to-purple-600 hover:from-purple-600 hover:to-purple-500 text-white font-medium transition-all shadow-lg shadow-purple-900/20"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/20"
               >
                 Submit Now
               </button>

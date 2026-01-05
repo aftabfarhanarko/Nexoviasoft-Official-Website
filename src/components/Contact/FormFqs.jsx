@@ -52,8 +52,8 @@ const FormFqs = () => {
         {/* Left Side - Header */}
         <div className="sticky top-32 self-start">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit mb-8">
-            <div className="p-1 rounded-full bg-purple-600 flex items-center justify-center">
-              <HelpCircle size={14} className="text-white" />
+            <div className="p-1 rounded-full bg-[#EFFC76] flex items-center justify-center">
+              <HelpCircle size={14} className="text-black" />
             </div>
             <span className="text-gray-300 text-sm font-medium">FAQ</span>
           </div>
@@ -80,7 +80,7 @@ const FormFqs = () => {
               transition={{ delay: index * 0.1 }}
               className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 openIndex === index
-                  ? "bg-[#111] border-purple-500/30"
+                  ? "bg-[#111] border-[#EFFC76]/30"
                   : "bg-transparent border-white/5 hover:border-white/10"
               }`}
             >
@@ -88,13 +88,13 @@ const FormFqs = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between p-6 text-left group"
               >
-                <span className="text-lg font-medium text-white group-hover:text-purple-400 transition-colors">
+                <span className="text-lg font-medium text-white group-hover:text-[#EFFC76] transition-colors">
                   {faq.question}
                 </span>
                 <span
                   className={`p-2 rounded-full border transition-all duration-300 ${
                     openIndex === index
-                      ? "bg-purple-600 border-purple-500 text-white rotate-180"
+                      ? "bg-[#EFFC76] border-[#EFFC76] text-black rotate-180"
                       : "bg-white/5 border-white/10 text-gray-400 group-hover:bg-white/10"
                   }`}
                 >

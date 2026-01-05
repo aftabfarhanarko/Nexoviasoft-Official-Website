@@ -15,22 +15,22 @@ const PricingCard = ({
 }) => {
     return (
         <motion.div
-            className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-purple-500/50 transition-colors duration-500 flex flex-col h-full"
+            className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#EFFC76]/50 transition-colors duration-500 flex flex-col h-full"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay }}
         >
             {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-[#EFFC76]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Header */}
             <div className="relative z-10 flex justify-between items-start mb-6">
-                <div className="w-12 h-12 rounded-xl bg-purple-900/20 flex items-center justify-center border border-purple-500/30">
+                <div className="w-12 h-12 rounded-xl bg-[#EFFC76]/20 flex items-center justify-center border border-[#EFFC76]/30">
                     {Icon ? (
-                        <Icon className="w-6 h-6 text-purple-400" />
+                        <Icon className="w-6 h-6 text-[#EFFC76]" />
                     ) : (
-                        <Zap className="w-6 h-6 text-purple-400" />
+                        <Zap className="w-6 h-6 text-[#EFFC76]" />
                     )}
                 </div>
                 {tag && (
@@ -69,8 +69,8 @@ const PricingCard = ({
             <div className="relative z-10 space-y-4 mb-8 flex-grow">
                 {features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-3">
-                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-purple-500/20 flex items-center justify-center">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-purple-400" />
+                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#EFFC76]/20 flex items-center justify-center">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#EFFC76]" />
                         </div>
                         <span className="text-gray-400 text-sm">{feature}</span>
                     </div>
@@ -81,7 +81,7 @@ const PricingCard = ({
             <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="relative z-10 w-full py-4 rounded-xl font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 transition-all duration-300 shadow-lg shadow-purple-500/20"
+                className="relative z-10 w-full py-4 rounded-xl font-medium text-black bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] transition-all duration-300 shadow-lg shadow-[#EFFC76]/20"
             >
                 Book an Appointment
             </motion.button>

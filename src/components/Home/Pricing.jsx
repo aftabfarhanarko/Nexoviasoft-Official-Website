@@ -65,7 +65,7 @@ const Pricing = () => {
     return (
         <section className="py-24 bg-black relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-purple-900/10 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#EFFC76]/10 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header */}
@@ -77,8 +77,8 @@ const Pricing = () => {
                         transition={{ duration: 0.6 }}
                         className="flex items-center gap-2 mb-6"
                     >
-                        <div className="h-px w-8 bg-purple-500" />
-                        <span className="text-purple-400 font-medium tracking-wide uppercase text-sm">
+                        <div className="h-px w-8 bg-[#EFFC76]" />
+                        <span className="text-[#EFFC76] font-medium tracking-wide uppercase text-sm">
                             Pricing
                         </span>
                     </motion.div>

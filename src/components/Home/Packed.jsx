@@ -44,7 +44,7 @@ const Packed = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-2xl">
+            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1.5 rounded-2xl">
               <Atom />
             </span>
             <span className="text-gray-200 text-sm font-medium">About Us</span>
@@ -112,7 +112,7 @@ const Packed = () => {
                       }}
                     >
                       <motion.div
-                        className="relative bg-black/10 p-1 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+                        className="relative bg-black/10 p-1 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-[#EFFC76]/30"
                         animate={{ rotate: -360 }} // counter rotate to keep upright
                         transition={{
                           duration: 60,
@@ -149,7 +149,7 @@ const Packed = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <span className="bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-2xl">
+                    <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1.5 rounded-2xl">
                       2026
                     </span>
                     <span className="text-gray-200 text-sm font-medium">

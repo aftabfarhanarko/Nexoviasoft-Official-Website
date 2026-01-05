@@ -8,14 +8,14 @@ const Card = ({ icon: Icon, badge, title, description, tags, buttonText }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            className="p-6 sm:p-8 rounded-3xl bg-[#111111] border border-white/10 relative overflow-hidden group hover:border-purple-500/30 transition-all duration-500"
+            className="p-6 sm:p-8 rounded-3xl bg-[#111111] border border-white/10 relative overflow-hidden group hover:border-[#EFFC76]/30 transition-all duration-500"
         >
             {/* Hover Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
             <div className="relative z-10">
                 <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#EFFC76] group-hover:scale-110 transition-transform duration-300">
                         {Icon && <Icon size={24} />}
                     </div>
                     {badge && (
@@ -42,7 +42,7 @@ const Card = ({ icon: Icon, badge, title, description, tags, buttonText }) => {
                 )}
 
                 {buttonText && (
-                    <button className="px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium transition-colors shadow-lg shadow-purple-500/20">
+                    <button className="px-6 py-2.5 rounded-xl bg-[#EFFC76] hover:bg-[#EFFC76] text-black text-sm font-medium transition-colors shadow-lg shadow-[#EFFC76]/20">
                         {buttonText}
                     </button>
                 )}

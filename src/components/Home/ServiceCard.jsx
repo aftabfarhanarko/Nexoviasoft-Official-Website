@@ -11,18 +11,18 @@ const ServiceCard = ({ icon: Icon, title, subtitle, description, image, delay })
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay }}
-            className="group relative flex flex-col justify-between h-full bg-white/5 border border-white/10 rounded-3xl p-6 overflow-hidden hover:border-white/20 transition-all duration-300"
+            className="group relative flex flex-col justify-between h-full bg-white/5 border border-white/10 rounded-3xl p-6 overflow-hidden hover:border-[#EFFC76]/50 transition-all duration-300"
         >
             {/* Top Content */}
             <div className="relative z-10">
                 <div className="flex justify-between items-start mb-4">
-                    <div className={`p-3 rounded-full ${title === 'AI-Powered Development' ? 'bg-purple-600' :
-                        title === 'AI Chatbots' ? 'bg-indigo-600' :
-                            title === 'Predictive Analytics' ? 'bg-blue-600' :
-                                title === 'Computer Vision Solutions' ? 'bg-violet-600' :
-                                    title === 'Speech Recognition' ? 'bg-blue-500' :
-                                        'bg-indigo-500'
-                        } text-white`}>
+                    <div className={`p-3 rounded-full ${title === 'AI-Powered Development' ? 'bg-[#EFFC76] text-black' :
+                        title === 'AI Chatbots' ? 'bg-[#EFFC76] text-black' :
+                            title === 'Predictive Analytics' ? 'bg-[#EFFC76] text-black' :
+                                title === 'Computer Vision Solutions' ? 'bg-[#EFFC76] text-black' :
+                                    title === 'Speech Recognition' ? 'bg-[#EFFC76] text-black' :
+                                        'bg-[#EFFC76] text-black'
+                        }`}>
                         {Icon && <Icon size={20} />}
                     </div>
                     <div className="text-gray-500 group-hover:text-white transition-colors duration-300">
@@ -50,9 +50,9 @@ const ServiceCard = ({ icon: Icon, title, subtitle, description, image, delay })
                 ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gray-800">
                         {/* Fallback pattern if no image */}
-                        <div className={`w-32 h-32 rounded-full blur-3xl opacity-30 ${title === 'AI-Powered Development' ? 'bg-purple-500' :
-                            title === 'AI Chatbots' ? 'bg-orange-500' :
-                                'bg-blue-500'
+                        <div className={`w-32 h-32 rounded-full blur-3xl opacity-30 ${title === 'AI-Powered Development' ? 'bg-[#EFFC76]' :
+                            title === 'AI Chatbots' ? 'bg-[#EFFC76]' :
+                                'bg-[#EFFC76]'
                             }`} />
                     </div>
                 )}

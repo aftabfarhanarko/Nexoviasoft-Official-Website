@@ -8,7 +8,7 @@ const AboutSquadLog = () => {
     return (
         <section className="bg-black py-24 px-4 relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/10 to-transparent blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#EFFC76]/10 to-transparent blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
 
@@ -20,7 +20,7 @@ const AboutSquadLog = () => {
                         viewport={{ once: true }}
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8"
                     >
-                        <Bot size={14} className="text-purple-400" />
+                        <Bot size={14} className="text-[#EFFC76]" />
                         <span className="text-gray-300 text-xs font-medium uppercase tracking-wider">About SquadLog</span>
                     </motion.div>
 

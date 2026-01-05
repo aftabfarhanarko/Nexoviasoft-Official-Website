@@ -9,10 +9,10 @@ const AboutSquadLogCard = ({ icon: Icon, title, description, tags, hasButton, de
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay }}
-            className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-purple-500/30 transition-all duration-300 group hover:bg-zinc-900/60"
+            className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60"
         >
             <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-lg bg-white/5 text-purple-400 group-hover:text-purple-300 group-hover:bg-purple-500/10 transition-colors">
+                <div className="p-2.5 rounded-lg bg-white/5 text-[#EFFC76] group-hover:text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors">
                     <Icon size={20} />
                 </div>
                 <div>
@@ -30,7 +30,7 @@ const AboutSquadLogCard = ({ icon: Icon, title, description, tags, hasButton, de
                     {tags && (
                         <div className="flex flex-wrap gap-2">
                             {tags.map((tag, i) => (
-                                <span key={i} className="px-3 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                                <span key={i} className="px-3 py-1 rounded-full text-xs font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20">
                                     {tag}
                                 </span>
                             ))}
@@ -38,7 +38,7 @@ const AboutSquadLogCard = ({ icon: Icon, title, description, tags, hasButton, de
                     )}
 
                     {hasButton && (
-                        <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-purple-900/20 w-full sm:w-auto">
+                        <button className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full sm:w-auto">
                             Book an Appointment
                         </button>
                     )}

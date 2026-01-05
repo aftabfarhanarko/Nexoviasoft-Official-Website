@@ -1,11 +1,9 @@
 "use client";
-import Errors from '@/components/Errors';
-import React from 'react';
+import Errors from "@/components/Errors";
+import React from "react";
 
 const error = () => {
-    return (
-        <Errors />
-    );
+  return <Errors />;
 };
 
 export default error;

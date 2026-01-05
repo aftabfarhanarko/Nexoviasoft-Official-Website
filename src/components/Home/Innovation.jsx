@@ -11,8 +11,8 @@ const Innovation = () => {
                 {/* Top Section - 3 Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 relative">
                     {/* Background decorative elements */}
-                    <div className="absolute -top-20 -left-20 w-96 h-96 bg-purple-900/10 rounded-full blur-[100px]" />
-                    <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-blue-900/10 rounded-full blur-[100px]" />
+                    <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#EFFC76]/10 rounded-full blur-[100px]" />
+                    <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#EFFC76]/10 rounded-full blur-[100px]" />
 
                     <InnovationCard
                         title="Seamless API Integrations"
@@ -76,7 +76,7 @@ const FeatureItem = ({ icon: Icon, title, description, delay }) => {
             transition={{ duration: 0.5, delay }}
         >
             <div className="flex items-center space-x-3 mb-3">
-                <Icon className="w-5 h-5 text-white" />
+                <Icon className="w-5 h-5 text-[#EFFC76]" />
                 <h4 className="text-white font-semibold text-lg">{title}</h4>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">{description}</p>

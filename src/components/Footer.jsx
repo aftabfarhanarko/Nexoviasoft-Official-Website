@@ -11,11 +11,11 @@ const Footer = () => {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Top Center Purple Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-900/20 blur-[120px] rounded-full opacity-50" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#EFFC76]/20 blur-[120px] rounded-full opacity-50" />
 
         {/* Floating Particles */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-1 h-1 bg-purple-500 rounded-full"
+          className="absolute top-1/4 left-1/4 w-1 h-1 bg-[#EFFC76] rounded-full"
           animate={{
             y: [0, -20, 0],
             opacity: [0.3, 1, 0.3],
@@ -27,7 +27,7 @@ const Footer = () => {
           }}
         />
         <motion.div
-          className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full"
+          className="absolute top-3/4 right-1/3 w-1.5 h-1.5 bg-[#EFFC76] rounded-full"
           animate={{
             y: [0, -30, 0],
             opacity: [0.2, 0.8, 0.2],
@@ -67,7 +67,7 @@ const Footer = () => {
               alt="Logo"
             ></Image>
             <p className="text-gray-400 text-sm">
-              Made remotely with <span className="text-purple-500">💜</span> and
+              Made remotely with <span className="text-[#EFFC76]">💜</span> and
               passion
             </p>
             <p className="text-gray-500 text-sm">- Westhill Studio.</p>
@@ -94,7 +94,7 @@ const Footer = () => {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm"
                 >
                   {link.name}
                 </Link>
@@ -123,7 +123,7 @@ const Footer = () => {
                 <Link
                   href={link.href}
                   target="_blank"
-                  className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
+                  className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm"
                 >
                   {link.name}
                 </Link>
@@ -145,9 +145,9 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter Your Email..."
-              className="w-full bg-[#0F0F0F] border border-white/10 rounded-full py-3.5 pl-6 pr-32 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/50 transition-all"
+              className="w-full bg-[#0F0F0F] border border-white/10 rounded-full py-3.5 pl-6 pr-32 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
             />
-            <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-purple-600 hover:bg-purple-500 text-white text-xs font-medium px-5 rounded-full transition-colors">
+            <button className="absolute right-1.5 top-1.5 bottom-1.5 bg-[#EFFC76] hover:bg-[#EFFC76] text-black text-xs font-medium px-5 rounded-full transition-colors">
               Subscribe Us
             </button>
           </div>
@@ -166,13 +166,13 @@ const Footer = () => {
         <div className="flex items-center gap-8">
           <Link
             href="/terms"
-            className="hover:text-purple-400 transition-colors"
+            className="hover:text-[#EFFC76] transition-colors"
           >
             Terms & Conditions
           </Link>
           <Link
             href="/privacy"
-            className="hover:text-purple-400 transition-colors"
+            className="hover:text-[#EFFC76] transition-colors"
           >
             Privacy Policy
           </Link>

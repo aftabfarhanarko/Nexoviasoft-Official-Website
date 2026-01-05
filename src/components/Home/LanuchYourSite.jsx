@@ -7,7 +7,7 @@ const LanuchYourSite = () => {
     return (
         <section className="relative py-24 bg-black overflow-hidden">
             {/* Background Gradients/Effects */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-indigo-900/10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#EFFC76]/10 to-[#EFFC76]/10 pointer-events-none" />
 
             {/* Decorative Grid Background - Optional if needed to match exact texture */}
             <div className="absolute inset-0 opacity-10"
@@ -49,8 +49,8 @@ const LanuchYourSite = () => {
                         transition={{ duration: 0.5 }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
                     >
-                        <div className="p-1 bg-purple-500 rounded-full">
-                            <Rocket className="w-3 h-3 text-white" />
+                        <div className="p-1 bg-[#EFFC76] rounded-full">
+                            <Rocket className="w-3 h-3 text-black" />
                         </div>
                         <span className="text-sm font-medium text-gray-300">Launch Your Site</span>
                     </motion.div>
@@ -83,14 +83,14 @@ const LanuchYourSite = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex flex-col sm:flex-row items-center gap-8"
                     >
-                        <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-600/25 w-full sm:w-auto">
+                        <button className="px-8 py-4 bg-[#EFFC76] hover:bg-[#EFFC76] text-black rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-[#EFFC76]/25 w-full sm:w-auto">
                             Book an Appointment
                         </button>
 
                         <div className="flex flex-col items-start">
                             <div className="flex items-center gap-1 mb-1">
                                 {[1, 2, 3, 4, 5].map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 fill-white text-white" />
+                                    <Star key={i} className="w-5 h-5 fill-[#EFFC76] text-[#EFFC76]" />
                                 ))}
                             </div>
                             <span className="text-gray-400 text-sm">200+ Agencies Rated</span>
