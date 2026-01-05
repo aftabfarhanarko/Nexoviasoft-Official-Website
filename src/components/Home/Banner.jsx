@@ -55,7 +55,7 @@ const Banner = () => {
       />
 
       {/* Banner Component */}
-      <section className="relative max-w-7xl min-h-screen flex flex-col items-center justify-center pt-20">
+      <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Static Background Image */}
         <div className="absolute inset-0  w-full h-full z-0">
           <Image

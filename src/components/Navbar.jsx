@@ -56,15 +56,15 @@ const Navbar = () => {
             Services
           </Link>
           <Link
-            href="/faq"
+            href="/pages/policy"
             className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
           >
-            FAQ
+            Policy
           </Link>
         </div>
 
         <div className="hidden md:block">
-            <SmoothButton>Get In Touch</SmoothButton>
+          <SmoothButton>Get In Touch</SmoothButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,7 +114,9 @@ const Navbar = () => {
               FAQ
             </Link>
             <div className="pt-4">
-              <SmoothButton className="w-full flex justify-center">Get In Touch</SmoothButton>
+              <SmoothButton className="w-full flex justify-center">
+                Get In Touch
+              </SmoothButton>
             </div>
           </div>
         )}
