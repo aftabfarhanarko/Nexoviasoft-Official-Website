@@ -4,7 +4,7 @@ import Comparision from "@/components/home/Comparision";
 import Service from "@/components/home/Service";
 import Packed from "@/components/home/Packed";
 import AboutSquadLog from "@/components/home/AboutSquadLog";
-import Portfolio from "@/components/home/Protfolio";
+import Portfolio from "@/components/home/Portfolio";
 import Support from "@/components/home/Support";
 import Intregration from "@/components/home/Intregration";
 import Pricing from "@/components/home/Pricing";
