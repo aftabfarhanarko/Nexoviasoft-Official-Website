@@ -1,20 +1,20 @@
-import Banner from "@/components/home/Banner";
-import Innovation from "@/components/home/Innovation";
-import Comparision from "@/components/home/Comparision";
-import Service from "@/components/home/Service";
-import Packed from "@/components/home/Packed";
-import AboutSquadLog from "@/components/home/AboutSquadLog";
-import Portfolio from "@/components/home/Protfolio";
-import Support from "@/components/home/Support";
-import Intregration from "@/components/home/Intregration";
-import Pricing from "@/components/home/Pricing";
-import OurProccess from "@/components/home/OurProccess";
-import LanuchYourSite from "@/components/home/LanuchYourSite";
-import React from "react";
-import OurTeam from "@/components/home/OurTeam";
-import Testimonial from "@/components/home/Testimonial";
-import Fqa from "@/components/home/Fqa";
-import PartOfus from "@/components/home/PartOfus";
+import AboutSquadLog from "@/components/Home/AboutSquadLog";
+import Banner from "@/components/Home/Banner";
+import Comparision from "@/components/Home/Comparision";
+import Fqa from "@/components/Home/Fqa";
+import Innovation from "@/components/Home/Innovation";
+import Intregration from "@/components/Home/Intregration";
+import LanuchYourSite from "@/components/Home/LanuchYourSite";
+import OurProccess from "@/components/Home/OurProccess";
+import OurTeam from "@/components/Home/OurTeam";
+import Packed from "@/components/Home/Packed";
+import PartOfUs from "@/components/Home/PartOfus";
+import Pricing from "@/components/Home/Pricing";
+import Portfolio from "@/components/Home/Protfolio";
+import Service from "@/components/Home/Service";
+import Support from "@/components/Home/Support";
+import Testimonial from "@/components/Home/Testimonial";
+
 const TestPages = () => {
   return (
     <div>
@@ -82,7 +82,7 @@ const TestPages = () => {
       </section>
 
       <section>
-        <PartOfus />
+        <PartOfUs />
       </section>
     </div>
   );
