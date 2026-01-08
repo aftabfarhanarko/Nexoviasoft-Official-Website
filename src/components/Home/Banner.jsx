@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
+import CosmicBackground from "./CosmicBackground";
 
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,7 +45,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="min-h-screen  bg-black text-white overflow-hidden cursor-none">
+    <div className="min-h-screen text-white overflow-hidden cursor-none">
       {/* Custom Cursor */}
       <motion.div
         className="fixed w-8 h-8 border-2 border-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
@@ -56,17 +57,8 @@ const Banner = () => {
 
       {/* Banner Component */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
-        {/* Static Background Image */}
-        <div className="absolute inset-0  w-full h-full z-0">
-          <Image
-            src="/banerImages.png"
-            alt="Background"
-            fill
-            className="object-cover object-bottom opacity-70"
-            priority
-          />
-          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#EFFC76]/45 via-[#EFFC76]/15 to-black/75" />
-        </div>
+        {/* Animated Cosmic Background */}
+        <CosmicBackground />
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center flex-grow">
