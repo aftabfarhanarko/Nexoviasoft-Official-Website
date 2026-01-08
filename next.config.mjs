@@ -24,14 +24,7 @@ const nextConfig = {
     ],
     // bbbsdsdsds
   },
-  reactCompiler: true,
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(__dirname, "./src"),
-    };
-    return config;
-  },
+  reactCompiler: false,
 };
 // hhhhh
 export default nextConfig;

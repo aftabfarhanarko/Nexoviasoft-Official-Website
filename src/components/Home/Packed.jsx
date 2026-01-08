@@ -89,8 +89,8 @@ const Packed = () => {
                 {images.map((img, index) => {
                   const angle = (index * 360) / images.length;
                   const radius = 450; // একটু বড় radius দিলাম যাতে ভালো দেখায়
-                  const x = Math.cos((angle * Math.PI) / 180) * radius;
-                  const y = Math.sin((angle * Math.PI) / 180) * radius;
+                  const x = Math.round(Math.cos((angle * Math.PI) / 180) * radius);
+                  const y = Math.round(Math.sin((angle * Math.PI) / 180) * radius);
 
                   return (
                     <motion.div

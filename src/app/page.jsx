@@ -10,7 +10,7 @@ import OurTeam from "@/components/Home/OurTeam";
 import Packed from "@/components/Home/Packed";
 import PartOfUs from "@/components/Home/PartOfus";
 import Pricing from "@/components/Home/Pricing";
-import Portfolio from "@/components/Home/Protfolio";
+import Portfolio from "@/components/Home/Portfolio";
 import Service from "@/components/Home/Service";
 import Support from "@/components/Home/Support";
 import Testimonial from "@/components/Home/Testimonial";
