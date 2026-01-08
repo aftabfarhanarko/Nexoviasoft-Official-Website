@@ -3,6 +3,7 @@ import React from "react";
 import ServiceCard from "./ServiceCard";
 import { Brain, MessageSquare, LineChart, ScanFace, Mic, LayoutGrid, PenTool, Shield, Monitor, BarChart, Database, UserPen, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import SmoothButton from "@/Share/SmoothButton";
 
 const Service = () => {
     const services = [
@@ -103,15 +104,9 @@ const Service = () => {
                         enhance efficiency, and drive innovation.
                     </motion.p>
 
-                    <motion.button
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-colors"
-                    >
-                        Book a Terminal
-                    </motion.button>
+<SmoothButton> 
+                        Book a Terminal</SmoothButton>
+                    
                 </div>
 
                 {/* Services Grid */}

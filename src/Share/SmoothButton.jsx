@@ -5,7 +5,7 @@ export default function SmoothButton({ children, className = "" }) {
   return (
     <div className={className}>
       <motion.button
-        className="px-6 py-2.5 bg-gradient-to-br from-[#EFFC76] to-[#EFFC76] rounded-full text-black text-md shadow-2xl font-medium"
+        className="px-6 py-2.5 bg-gradient-to-br from-[#EFFC76] to-[#EFFC76] rounded-lg  text-black text-md shadow-2xl font-semibold"
         initial={{ scale: 1 }}
         whileHover={{
           scale: 1.05,

@@ -11,7 +11,7 @@ import Packed from "@/components/Home/Packed";
 import PartOfUs from "@/components/Home/PartOfus";
 import Pricing from "@/components/Home/Pricing";
 import Portfolio from "@/components/Home/Portfolio";
-import Service from "@/components/Home/Service";
+// import Service from "@/components/Home/Service";
 import Support from "@/components/Home/Support";
 import Testimonial from "@/components/Home/Testimonial";
 
@@ -29,11 +29,6 @@ const TestPages = () => {
         <Innovation />
       </section>
 
-
-
-      <section>
-        <Service />
-      </section>
       <section>
         <Portfolio />
       </section>
