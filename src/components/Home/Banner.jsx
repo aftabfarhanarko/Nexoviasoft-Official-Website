@@ -122,7 +122,7 @@ const Banner = () => {
             <button className="px-8 py-3.5 bg-gray-100 text-black rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               Connect With Us
             </button>
-            <button className="px-8 py-3.5 bg-[#EFFC76]/20 backdrop-blur-sm text-white rounded-full font-medium border border-[#EFFC76]/30 hover:bg-[#EFFC76]/30 transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
+            <button className="px-8 py-3.5 bg-[#EFFC76] text-black rounded-full font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               What is Nubien?
             </button>
           </motion.div>
