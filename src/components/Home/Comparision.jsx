@@ -107,11 +107,11 @@ const Comparision = () => {
                         className="relative bg-[#0A0A0A] rounded-[32px] border border-white/10 overflow-hidden group"
                     >
                         {/* Glowing Border Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-[#8B5CF6]/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#8B5CF6] to-transparent opacity-70"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#EFFC76]/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#EFFC76] to-transparent opacity-70"></div>
 
                         {/* Inner Gradient */}
-                        <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-[#8B5CF6]/5 to-transparent pointer-events-none"></div>
+                        <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-[#EFFC76]/5 to-transparent pointer-events-none"></div>
 
                         <motion.div
                             initial="hidden"
@@ -129,11 +129,11 @@ const Comparision = () => {
                             }}
                             className="relative z-10 space-y-6 p-8 md:p-10 h-full flex flex-col justify-center"
                         >
-                            <ComparisionItem icon={Check} color="text-white" iconColor="text-white" bg="bg-[#8B5CF6]" text="AI-Driven Design" isPremium />
-                            <ComparisionItem icon={Check} color="text-white" iconColor="text-white" bg="bg-[#8B5CF6]" text="Premium, Minimal Aesthetic" isPremium />
-                            <ComparisionItem icon={Check} color="text-white" iconColor="text-white" bg="bg-[#8B5CF6]" text="Performance Optimized" isPremium />
-                            <ComparisionItem icon={Check} color="text-white" iconColor="text-white" bg="bg-[#8B5CF6]" text="Future-Proof Technology" isPremium />
-                            <ComparisionItem icon={Check} color="text-white" iconColor="text-white" bg="bg-[#8B5CF6]" text="Unmatched Flexibility" isPremium />
+                            <ComparisionItem icon={Check} color="text-white" iconColor="text-black" bg="bg-[#EFFC76]" text="AI-Driven Design" isPremium />
+                            <ComparisionItem icon={Check} color="text-white" iconColor="text-black" bg="bg-[#EFFC76]" text="Premium, Minimal Aesthetic" isPremium />
+                            <ComparisionItem icon={Check} color="text-white" iconColor="text-black" bg="bg-[#EFFC76]" text="Performance Optimized" isPremium />
+                            <ComparisionItem icon={Check} color="text-white" iconColor="text-black" bg="bg-[#EFFC76]" text="Future-Proof Technology" isPremium />
+                            <ComparisionItem icon={Check} color="text-white" iconColor="text-black" bg="bg-[#EFFC76]" text="Unmatched Flexibility" isPremium />
                         </motion.div>
                     </motion.div>
                 </div>

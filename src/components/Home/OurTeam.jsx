@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Search, Percent } from "lucide-react";
 import Image from "next/image";
+import SmoothButton from "@/Share/SmoothButton";
 
 const teamMembers = [
     {
@@ -134,15 +135,8 @@ const OurTeam = () => {
                     </motion.p>
 
                     {/* Button */}
-                    <motion.button
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="bg-[#EFFC76] text-black px-8 py-3 rounded-full hover:bg-[#EFFC76] transition-colors font-medium"
-                    >
-                        View About Reboot
-                    </motion.button>
+                    <SmoothButton>  View About Reboot</SmoothButton>
+                    
                 </div>
 
                 {/* Team Grid */}

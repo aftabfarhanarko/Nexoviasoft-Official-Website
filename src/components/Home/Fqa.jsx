@@ -118,8 +118,8 @@ const Fqa = () => {
             </div>
 
             {/* Background gradients for aesthetics */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-900/5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
         </section>
     );
 };

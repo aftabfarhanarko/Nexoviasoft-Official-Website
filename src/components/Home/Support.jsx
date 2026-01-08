@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone, Star, Headset, MessageCircle, CheckCircle2 } from "lucide-react";
+import SmoothButton from "@/Share/SmoothButton";
 
 const Support = () => {
     return (
@@ -44,15 +45,8 @@ const Support = () => {
                         your site without friction.
                     </motion.p>
 
-                    <motion.button
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-8 py-3 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20"
-                    >
-                        View About SquadLog
-                    </motion.button>
+<SmoothButton>View About SquadLog </SmoothButton>
+                  
                 </div>
 
                 {/* Central Visual - Moving Cards */}

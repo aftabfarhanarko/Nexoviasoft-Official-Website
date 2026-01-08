@@ -14,6 +14,7 @@ import {
   Github,
   Puzzle,
 } from "lucide-react";
+import SmoothButton from "@/Share/SmoothButton";
 
 const Intregration = () => {
   // Icon data mimicking the image sequence
@@ -91,9 +92,7 @@ const Intregration = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mb-20"
         >
-          <button className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-8 py-3 rounded-full font-medium transition-colors shadow-[0_0_20px_rgba(239,252,118,0.5)]">
-            View About Reboot
-          </button>
+          <SmoothButton> View About Reboot </SmoothButton>
         </motion.div>
 
         {/* Icons Row */}
