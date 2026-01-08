@@ -42,7 +42,7 @@ const PortfolioCard = () => {
         "Retina Ready",
         "High Performance",
       ],
-      tags: ["Portfolio", "Agency"],
+      tags: ["Case Studies", "Agency"],
       gradient: "from-[#EFFC76]/40 to-[#EFFC76]/40",
       images: ["/portfolio/car.png", "/portfolio/bottle.png"],
     },
