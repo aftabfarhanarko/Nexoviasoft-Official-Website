@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
         <footer>
           <Footer />
         </footer>
+        <BackToTop />
       </body>
     </html>
   );
