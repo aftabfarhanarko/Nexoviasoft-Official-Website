@@ -62,9 +62,10 @@ const Banner = () => {
             src="/banerImages.png"
             alt="Background"
             fill
-            className="object-cover object-bottom opacity-60"
+            className="object-cover object-bottom opacity-70"
             priority
           />
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[#EFFC76]/45 via-[#EFFC76]/15 to-black/75" />
         </div>
 
         {/* Content */}
