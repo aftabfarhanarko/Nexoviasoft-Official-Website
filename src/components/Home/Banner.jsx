@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
 import CosmicBackground from "./CosmicBackground";
@@ -8,17 +8,31 @@ import CosmicBackground from "./CosmicBackground";
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+
+  const springConfig = { damping: 25, stiffness: 150 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
+    const handleMouseMove = (e) => {
+      cursorX.set(e.clientX - 16);
+      cursorY.set(e.clientY - 16);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [cursorX, cursorY]);
 
   // Partner logos for marquee
   const logos = [
@@ -31,7 +45,16 @@ const Banner = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white overflow-hidden">
+    <div className="min-h-screen text-white overflow-hidden cursor-none">
+      {/* Custom Cursor */}
+      <motion.div
+        className="fixed w-8 h-8 border-2 border-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        style={{
+          left: cursorXSpring,
+          top: cursorYSpring,
+        }}
+      />
+
       {/* Banner Component */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Animated Cosmic Background */}
@@ -88,10 +111,10 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <button className="px-8 py-3.5 bg-gray-100 text-black rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105 min-w-[180px]">
+            <button className="px-8 py-3.5 bg-gray-100 text-black rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               Connect With Us
             </button>
-            <button className="px-8 py-3.5 bg-[#EFFC76] text-black rounded-full font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 min-w-[180px]">
+            <button className="px-8 py-3.5 bg-[#EFFC76] text-black rounded-full font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 cursor-none min-w-[180px]">
               What is SquadLog?
             </button>
           </motion.div>
