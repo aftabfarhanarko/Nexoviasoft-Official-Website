@@ -34,24 +34,15 @@ const TestPages = () => {
       <section>
         <Service />
       </section>
-
-
-
-
       <section>
         <Portfolio />
       </section>
-
-
-
       <section>
         <Support />
       </section>
-
       <section>
         <AboutSquadLog />
       </section>
-
       <section>
         <Intregration />
       </section>
