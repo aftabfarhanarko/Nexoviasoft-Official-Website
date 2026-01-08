@@ -64,7 +64,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <SmoothButton>Get In Touch</SmoothButton>
+          <Link href="/pages/contact">
+            <SmoothButton>Get In Touch</SmoothButton>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -114,9 +116,11 @@ const Navbar = () => {
               FAQ
             </Link>
             <div className="pt-4">
-              <SmoothButton className="w-full flex justify-center">
-                Get In Touch
-              </SmoothButton>
+              <Link href="/pages/contact" onClick={() => setIsMenuOpen(false)}>
+                <SmoothButton className="w-full flex justify-center">
+                  Get In Touch
+                </SmoothButton>
+              </Link>
             </div>
           </div>
         )}
