@@ -55,7 +55,7 @@ const PortfolioFqs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFFC76]  text-sm font-medium mb-4  shadow-[#EFFC76]">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFFC76] text-black text-sm font-medium mb-4 shadow-[0_0_15px_rgba(239,252,118,0.5)]">
                 FAQ
               </span>
               <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-4">
