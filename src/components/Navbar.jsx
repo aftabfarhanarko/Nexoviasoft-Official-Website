@@ -1,13 +1,14 @@
 "use client";
 
 import SmoothButton from "@/Share/SmoothButton";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   return (
     <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
