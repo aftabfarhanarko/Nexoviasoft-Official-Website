@@ -3,19 +3,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Bot,
-  Layers,
   Zap,
-  ArrowRight,
   Settings,
-  CheckCircle2,
-  ExternalLink,
 } from "lucide-react";
 import AboutSquadLogCard from "./AboutSquadLogCard";
-import SmoothButton from "@/Share/SmoothButton";
 
 const AboutSquadLog = () => {
   return (
-    <section className="bg-transparent py-24 px-4 relative overflow-hidden">
+    <section className=" -mt-25 md:-mt-15 py-24 px-4 relative overflow-hidden">
       {/* Desktop Version - No Changes */}
       <div className=" hidden md:block">
         <div className="max-w-7xl  mx-auto flex  flex-row gap-16 items-center relative z-10">
@@ -186,26 +181,4 @@ const AboutSquadLog = () => {
     </section>
   );
 };
-
 export default AboutSquadLog;
-// {/* Card 1 with Image */}
-//           <AboutSquadLogCard
-//             delay={0.2}
-//             icon={Bot}
-//             title=""
-//             description="SquadLog blends technical expertise with creative innovation."
-//             tags={["AI Design"]}
-//             imageUrl="https://i.ibb.co.com/q38fff6X/image.png"
-//             isMobile={true}
-//           />
-
-//           {/* Card 2 with Image */}
-//           <AboutSquadLogCard
-//             delay={0.3}
-//             icon={Settings}
-//             title="Tailored Solutions & Smart Strategies"
-//             description="We adapt our strategies to your unique vision and brand identity."
-//             tags={["Customization"]}
-//             imageUrl="https://i.ibb.co.com/9kd6gtfh/image.png"
-//             isMobile={true}
-//           />

@@ -38,10 +38,7 @@ const Integration = () => {
   ];
 
   return (
-    <section className="bg-transparent py-24 px-4 overflow-hidden relative">
-      {/* Background Glows - Removed for global theme */}
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#EFFC76]/20 rounded-full blur-[120px]" /> */}
-
+    <section className="-mt-30 md:-mt-17  py-24 px-4 overflow-hidden relative">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Pill Label */}
         <motion.div
@@ -80,8 +77,8 @@ const Integration = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-gray-400 text-base md:text-lg mb-10 max-w-xl mx-auto"
         >
-          SquadLog leverages leading technologies and platforms,
-          ensuring robust and scalable solutions.
+          SquadLog leverages leading technologies and platforms, ensuring robust
+          and scalable solutions.
         </motion.p>
 
         {/* CTA Button */}
