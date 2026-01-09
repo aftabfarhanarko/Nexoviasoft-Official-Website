@@ -124,10 +124,7 @@ const PolicyConditions = () => {
   ];
 
   return (
-    <section className="bg-black min-h-screen py-24 px-4 md:px-8 relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-blue-900/20 blur-[120px] rounded-full pointer-events-none" />
-
+    <section className="bg-transparent min-h-screen py-24 px-4 md:px-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header Badge */}
         <motion.div
