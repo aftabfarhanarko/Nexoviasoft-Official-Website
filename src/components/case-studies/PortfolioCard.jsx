@@ -51,54 +51,24 @@ const PortfolioCard = () => {
 
   return (
     <div
-      className="bg-transparent text-white py-24 relative overflow-hidden"
+      className="bg-transparent text-white py-24  relative overflow-hidden"
       id="portfolio-section"
     >
-      <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative z-10">
+      <div className="max-w-[1400px] mx-auto  mt-5 px-4 md:px-8 relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-20">
+        <div className="flex justify-center items-center  mb-10">
           <motion.div
+            className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
             initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] p-1 rounded-full">
-              <Briefcase size={12} className="text-black" />
+            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+              2026
             </span>
-            <span className="text-sm font-medium text-gray-300">Portfolio</span>
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-semibold mb-6 tracking-tight bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent"
-          >
-            Explore Our Most <br />
-            Remarkable Projects.
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-400 max-w-2xl mx-auto text-lg mb-8 leading-relaxed"
-          >
-            We craft customized solutions that empower both startups and
-            established brands, driving success and delivering real impact.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <SmoothButton>Build Your Product </SmoothButton>
-            
+            <span className="text-gray-300 text-sm font-medium">
+              Case Studio
+            </span>
           </motion.div>
         </div>
 

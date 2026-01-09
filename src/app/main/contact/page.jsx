@@ -10,7 +10,7 @@ const Contactpage = () => {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CosmicBackground />
       </div>
-      <div className="relative z-10">
+      <div className="relative">
         <section>
           <ContactForm />
         </section>

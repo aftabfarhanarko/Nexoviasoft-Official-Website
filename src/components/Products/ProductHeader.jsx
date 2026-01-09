@@ -5,18 +5,21 @@ import { Package } from "lucide-react";
 
 const ProductHeader = () => {
   return (
-    <div className="text-center mb-20">
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6"
-      >
-        <div className="w-5 h-5 rounded-full bg-[#EFFC76] flex items-center justify-center">
-          <Package size={12} className="text-black" />
-        </div>
-        <span className="text-gray-300 text-sm">Products</span>
-      </motion.div>
+    <div className="text-center mb-20 mt-19">
+      <div className="flex justify-center items-center  mb-10">
+        <motion.div
+          className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <Package size={15} className="text-black" />
+          </span>
+          <span className="text-gray-300 text-sm font-medium">Products</span>
+        </motion.div>
+      </div>
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

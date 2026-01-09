@@ -4,53 +4,32 @@ import ElevateBrands from "@/components/About/ElevateBrands";
 import Frequently from "@/components/About/Frequently";
 import BecomePart from "@/components/About/BecomePart";
 import Video from "@/components/About/Video";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
 import CosmicBackground from "@/components/Home/CosmicBackground";
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen relative overflow-x-hidden pb-30">
+    <div className="min-h-screen mt-20 relative overflow-x-hidden pb-30">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CosmicBackground />
       </div>
-      <div className="relative z-10 mt-20 max-w-11/12 mx-auto space-y-30">
-        <div className="mt-40 flex flex-col justify-center items-center text-center mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="w-full flex flex-col items-center md:items-center justify-center text-center md:text-center">
-            <div className="w-full flex justify-center md:justify-center mb-8">
-              <div className="w-full max-w-md md:max-w-none flex justify-start md:justify-center">
-                <button className="relative overflow-hidden flex items-center justify-center gap-3 px-6 py-1.5 rounded-full border border-[#EFFC76]/40 hover:border-[#EFFC76]/70 transition-all duration-500 group shadow-xl hover:shadow-[#EFFC76]/30">
-                  <span className="relative bg-gradient-to-br from-[#EFFC76] via-[#EFFC76] to-[#EFFC76] rounded-full font-bold text-black px-2 md:px-4 py-1.5 md:py-2 text-sm md:text-lg shadow-xl group-hover:scale-110 group-hover:shadow-[#EFFC76]/50 transition-all duration-300">
-                    2026
-                    <span className="absolute inset-0 rounded-full bg-white opacity-20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                  </span>
-
-                  <span className="text-gray-100 font-medium text-base md:text-lg tracking-wide">
-                    Explore Our Journey
-                  </span>
-
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EFFC76] via-[#EFFC76] to-[#EFFC76] opacity-0 group-hover:opacity-80 blur-xl -z-10 transition-opacity duration-500"></span>
-
-                  <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#EFFC76]/20 to-[#EFFC76]/20 scale-0 group-hover:scale-150 transition-transform duration-700 -z-10"></span>
-                </button>
-              </div>
-            </div>
-
-            <h1 className="text-left mb-4 text-white md:text-center text-4xl md:text-5xl lg:text-7xl font-medium leading-tight">
-              Pioneering AI Innovation <br className="hidden md:block" /> with
-              Revolution!
-            </h1>
-            <p className="mb-7 text-[20px] text-white/80 md:text-[22px] text-left md:text-center md:max-w-[550px]">
-              Reboot is your trusted agency for creative strategy. We specialize
-              in cutting-edge digital business solutions.
-            </p>
-            <div className="font-medium w-full">
-              <div className="flex justify-center md:justify-center lg:justify-center xl:justify-center max-md:justify-start">
-                <SmoothButton>View This Website</SmoothButton>
-              </div>
-            </div>
+      <div className="relative  mt-20 max-w-11/12 mx-auto space-y-10">
+        <div className="flex justify-center items-center ">
+          <div
+            className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+              2026
+            </span>
+            <span className="text-gray-300 text-sm font-medium">
+            About SquadLog
+            </span>
           </div>
         </div>
-
         <div>
           <Video />
         </div>

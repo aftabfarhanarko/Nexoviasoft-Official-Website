@@ -63,7 +63,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white overflow-hidden bg-transparent">
+    <div className="min-h-screen text-white -mt-15 overflow-hidden bg-transparent">
       {/* Banner Component */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Content */}

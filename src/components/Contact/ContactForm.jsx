@@ -8,20 +8,22 @@ const ContactForm = () => {
   return (
     <div className="w-11/12 md:max-w-[1280px] mx-auto py-30">
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-center text-center gap-6 mb-16 relative">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit"
-        >
-          <div className="p-1 rounded-full bg-[#EFFC76] flex items-center justify-center">
-            <MessageCircle size={14} className="text-black" />
-          </div>
-          <span className="text-gray-300 text-sm font-medium">
-            24/7 Collaborate With Us
-          </span>
-        </motion.div>
+      <div className="flex flex-col mt-9 items-center justify-center text-center gap-6 mb-16 relative">
+        <div className="flex justify-center items-center  mb-10">
+          <motion.div
+            className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+              <MessageCircle size={15} className="text-black" />
+            </span>
+            <span className="text-gray-300 text-sm font-medium">
+              24/7 Collaborate With Us
+            </span>
+          </motion.div>
+        </div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
