@@ -63,34 +63,34 @@ const Banner = () => {
   ];
 
   return (
-    <div className="min-h-screen text-white mt-8 md:-mt-15 overflow-hidden bg-transparent">
+    <div className="min-h-screen text-white  -mt-15 md:-mt-8  overflow-hidden bg-transparent">
       {/* Banner Component */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center flex-grow">
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
+            className="inline-flex -mt-15 items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
-              2025
+              Premium
             </span>
             <span className="text-gray-300 text-sm font-medium">
-              Premium Digital Agency
+              Software Solutions
             </span>
           </motion.div>
 
           {/* Main Heading */}
           <motion.div
-            className="mb-8"
+            className=" mb-5 md:mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.1] tracking-tight text-white">
+            <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-medium leading-[1.1] tracking-tight text-white">
               Transforming Ideas
               <br />
               <span className="text-white/90">Into Digital Reality.</span>
@@ -99,7 +99,7 @@ const Banner = () => {
 
           {/* Description */}
           <motion.div
-            className="space-y-2 mb-12"
+            className=" md:space-y-2  mb-6 md:mb-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -107,22 +107,22 @@ const Banner = () => {
             <p className="text-gray-400 text-lg md:text-xl font-light tracking-wide">
               Creating latest solutions that redefine innovation.
             </p>
-            <p className="text-gray-400 text-lg md:text-xl font-light tracking-wide">
+            <p className=" hidden md:block text-gray-400 text-lg md:text-xl font-light tracking-wide">
               Stay ahead with AI-powered technology for the future.
             </p>
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24"
+            className=" grid grid-cols-2 items-center justify-center  gap-2 md:gap-15 mb-15 md:mb-24"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <button className="px-8 py-3 bg-gray-100 text-black rounded-full font-medium hover:bg-white transition-all duration-300 hover:scale-105 min-w-[180px]">
+            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-gray-100 text-black rounded-full text-[14px] md:text-lg font-medium hover:bg-white transition-all duration-300 hover:scale-105 ">
               Connect With Us
             </button>
-            <button className="px-8 py-3 bg-[#EFFC76] text-black rounded-full font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 min-w-[180px]">
+            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-[#EFFC76] text-black rounded-full text-[14px] md:text-lg  font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 ">
               What is SquadLog?
             </button>
           </motion.div>

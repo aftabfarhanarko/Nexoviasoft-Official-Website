@@ -7,31 +7,11 @@ import SmoothButton from "@/Share/SmoothButton";
 
 const Innovation = () => {
   return (
-    <section className=" py-20 px-4 md:px-8 overflow-hidden">
-      <div className="relative z-10 text-white max-w-[1480px] mx-auto px-4">
-        <motion.div
-          className="text-center mb-7 md:mb-16"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.h1 className="text-3xl md:text-4xl lg:text-4xl max-w-6xl mx-auto font-light leading-tight">
-            Built on creativity, collaboration, and technical excellence, SquadLog is a
-            dynamic team of industry experts committed to delivering exceptional
-            digital solutions...
-          </motion.h1>
-        </motion.div>
-
-        <motion.div className="flex justify-center mb-80">
-          <SmoothButton>Book an Appointment</SmoothButton>
-        </motion.div>
-      </div>
-      <div className="max-w-7xl mx-auto -mt-40">
+    <section className="  px-4 md:px-8 overflow-hidden">
+      <div className="max-w-7xl mx-auto ">
         {/* Top Section - 3 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 relative">
           {/* Background decorative elements */}
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-[#EFFC76]/10 rounded-full blur-[100px]" />
-          <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-[#EFFC76]/10 rounded-full blur-[100px]" />
 
           <InnovationCard
             title="Custom Software Solutions"
