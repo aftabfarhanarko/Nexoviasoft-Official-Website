@@ -5,34 +5,34 @@ import { Plus, Minus, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "What do I need to get started?",
+    question: "How do you approach a new project?",
     answer:
-      "To get started, simply choose a plan that suits your needs, sign up, and you'll get instant access to our platform and resources.",
+      "We start with a deep dive into your business goals and requirements. This discovery phase ensures we understand your vision before moving into design and development.",
   },
   {
-    question: "What kind of customization is available?",
+    question: "What technologies do you specialize in?",
     answer:
-      "Our template is highly customizable. You can easily change colors, fonts, layouts, and content to match your brand identity without any coding knowledge.",
+      "We are experts in modern tech stacks including React, Next.js, Node.js, Python, and Cloud platforms like AWS and Google Cloud, ensuring your solution is built for the future.",
   },
   {
-    question: "How easy is it to edit for beginners?",
+    question: "Do you provide post-launch support?",
     answer:
-      "It's designed with beginners in mind! We provide a drag-and-drop interface and comprehensive documentation to help you every step of the way.",
+      "Absolutely. We offer ongoing maintenance and support packages to keep your application secure, up-to-date, and performing optimally after launch.",
   },
   {
-    question: "Let me know more about moneyback guarantee?",
+    question: "How long does a typical project take?",
     answer:
-      "We offer a 30-day money-back guarantee. If you're not satisfied with our product for any reason, simply contact our support team for a full refund.",
+      "Timelines vary based on project complexity. We work in agile sprints to deliver value quickly, typically delivering MVPs in 4-8 weeks.",
   },
   {
-    question: "Do I need to know how to code?",
+    question: "Can you update or modernize my existing system?",
     answer:
-      "No coding skills are required! Our platform is built for non-technical users, allowing you to build and manage your site effortlessly.",
+      "Yes, we specialize in legacy system modernization. We can refactor your existing codebase, improve performance, and add new features without disrupting your operations.",
   },
   {
-    question: "What will I get after purchasing the template?",
+    question: "What is your pricing model?",
     answer:
-      "You'll receive the full source code, documentation, lifetime updates, and access to our premium support team.",
+      "We offer flexible engagement models tailored to your needs, including fixed-price contracts for well-defined projects and dedicated team models for ongoing development.",
   },
 ];
 

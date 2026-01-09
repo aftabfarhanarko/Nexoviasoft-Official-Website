@@ -26,25 +26,25 @@ const ElevateBrands = () => {
 
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
-            Elevate Brands with <br />
-            <span className="text-gray-400">Innovation Tech!</span>
+            Elevate Your Business with <br />
+            <span className="text-gray-400">Proven Expertise!</span>
           </h2>
 
           {/* Feature 1 */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-white">Smart Digital Solutions</h3>
+            <h3 className="text-xl font-semibold text-white">End-to-End Development</h3>
             <p className="text-gray-400 leading-relaxed">
-              We combine technology and creativity to build future-ready solutions 
-              that help businesses thrive in a competitive landscape.
+              From initial concept to final deployment, we handle every aspect of your software lifecycle 
+              with precision, using cutting-edge technologies to deliver superior results.
             </p>
           </div>
 
           {/* Feature 2 */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-white">Elevating Brands with Strategy</h3>
+            <h3 className="text-xl font-semibold text-white">Strategic Digital Growth</h3>
             <p className="text-gray-400 leading-relaxed">
-              Our expertise in branding, marketing, and design ensures your business 
-              stands out, leaving a lasting impact on your audience.
+              We don't just build; we strategize. Our solutions are crafted to enhance your 
+              market presence, optimize operations, and drive measurable business growth.
             </p>
           </div>
 
