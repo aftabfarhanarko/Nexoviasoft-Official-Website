@@ -141,10 +141,7 @@ const TermsPages = () => {
   ];
 
   return (
-    <section className="bg-black min-h-screen py-24 px-4 md:px-8 relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-900/20 blur-[120px] rounded-full pointer-events-none" />
-
+    <section className="bg-transparent min-h-screen py-24 px-4 md:px-8 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header Badge */}
         <motion.div
@@ -156,7 +153,6 @@ const TermsPages = () => {
           <span className="bg-[#EFFC76] text-black px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">READ</span>
           <span className="text-gray-300">Terms & Conditions</span>
         </motion.div>
-{/* fsdfdsfdfs ergh rwth  */}
         {/* Main Title */}
         <motion.h1
             initial={{ opacity: 0, y: 20 }}
