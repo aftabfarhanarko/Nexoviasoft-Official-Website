@@ -1,7 +1,6 @@
 import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/Share/BackToTop";
-import AppShell from "@/components/AppShell";
 
 const baiJamjuree = Bai_Jamjuree({
   variable: "--font-bai-jamjuree",
@@ -21,7 +20,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${baiJamjuree.variable} antialiased`}
       >
-        <AppShell>{children}</AppShell>
+        {children}
         <BackToTop />
       </body>
     </html>
