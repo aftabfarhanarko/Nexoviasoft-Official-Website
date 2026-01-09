@@ -39,6 +39,7 @@ const nextConfig = {
       { source: "/terms", destination: "/terms-and-conditions", permanent: true },
       { source: "/policy", destination: "/privacy-policy", permanent: true },
       { source: "/privacy", destination: "/privacy-policy", permanent: true },
+      { source: "/squadcart", destination: "/products/squadcart", permanent: true },
     ];
   },
   reactCompiler: false,
