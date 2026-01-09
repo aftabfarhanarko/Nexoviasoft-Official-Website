@@ -2,50 +2,149 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutSquadLogCard = ({ icon: Icon, title, description, tags, hasButton, delay }) => {
+const AboutSquadLogCard = ({
+  delay,
+  icon: Icon,
+  title,
+  description,
+  tags,
+  hasButton,
+  imageUrl,
+  isMobile = false,
+}) => {
+  // Mobile version with image
+  if (isMobile && imageUrl) {
     return (
-        <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay }}
-            className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60"
-        >
-            <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-lg bg-white/5 text-[#EFFC76] group-hover:text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors">
-                    <Icon size={20} />
-                </div>
-                <div>
-                    <div className="flex justify-between items-center mb-2">
-                        <h3 className="text-white font-semibold text-lg">{title}</h3>
-                        {hasButton && (
-                            <span className="hidden sm:inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-gray-400 border border-white/10">Resolve</span>
-                        )}
-                    </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay }}
+        className="rounded-xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60 overflow-hidden"
+      >
+        {/* Image Section */}
+        <div className="relative h-40 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-                    <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                        {description}
-                    </p>
+        {/* Content Section */}
+        <div className="p-4">
+          <div className="flex items-start gap-3 mb-3">
+            {/* <div className="p-2 rounded-lg bg-white/5 text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors shrink-0">
+              <Icon size={18} />
+            </div> */}
+            <h3 className="text-white font-semibold text-base leading-tight">
+              {title}
+            </h3>
+          </div>
 
-                    {tags && (
-                        <div className="flex flex-wrap gap-2">
-                            {tags.map((tag, i) => (
-                                <span key={i} className="px-3 py-1 rounded-full text-xs font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    )}
+          <p className="text-gray-400 text-xs leading-relaxed mb-3">
+            {description}
+          </p>
 
-                    {hasButton && (
-                        <button className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full sm:w-auto">
-                            Book an Appointment
-                        </button>
-                    )}
-                </div>
+          {tags && (
+            <div className="flex flex-wrap gap-1.5">
+              {tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-        </motion.div>
-    )
-}
+          )}
+        </div>
+      </motion.div>
+    );
+  }
+
+  // Mobile version without image (for button card)
+  if (isMobile) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay }}
+        className="rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60 p-4"
+      >
+        <div className="flex items-start gap-3 mb-3">
+          <div className="p-2 rounded-lg bg-white/5 text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors shrink-0">
+            <Icon size={18} />
+          </div>
+          <h3 className="text-white font-semibold text-base leading-tight">
+            {title}
+          </h3>
+        </div>
+
+        <p className="text-gray-400 text-xs leading-relaxed mb-3">
+          {description}
+        </p>
+
+        {hasButton && (
+          <button className="bg-[#EFFC76] hover:bg-[#EFFC76]/90 text-black px-4 py-2 rounded-full text-xs font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full">
+            Book an Appointment
+          </button>
+        )}
+      </motion.div>
+    );
+  }
+
+  // Desktop version (original)
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay }}
+      className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60"
+    >
+      <div className="flex items-start gap-4">
+        <div className="p-2.5 rounded-lg bg-white/5 text-[#EFFC76] group-hover:text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors">
+          <Icon size={20} />
+        </div>
+        <div>
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-white font-semibold text-lg">{title}</h3>
+            {hasButton && (
+              <span className="hidden sm:inline-block px-3 py-1 rounded-full text-xs font-medium bg-white/5 text-gray-400 border border-white/10">
+                Resolve
+              </span>
+            )}
+          </div>
+
+          <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            {description}
+          </p>
+
+          {tags && (
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 rounded-full text-xs font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {hasButton && (
+            <button className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full sm:w-auto mt-4">
+              Book an Appointment
+            </button>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 export default AboutSquadLogCard;
