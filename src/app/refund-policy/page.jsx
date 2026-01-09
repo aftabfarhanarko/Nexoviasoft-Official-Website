@@ -15,9 +15,7 @@ const page = () => {
           Refund Policy
         </h1>
 
-        <div className="text-gray-500 text-xs mb-12">
-          Last Updated: Jan 9, 2026
-        </div>
+        <div className="text-gray-500 text-xs mb-12">Last Updated: Jan 9, 2026</div>
 
         <div className="space-y-10">
           <div>
