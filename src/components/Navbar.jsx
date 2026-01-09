@@ -90,7 +90,7 @@ const Navbar = () => {
             </Link>
 
             {isProductsOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-5">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-8">
                 <div className="w-[720px] bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                   <div className="px-6 pt-6 pb-4 flex items-start justify-between gap-6 border-b border-white/10">
                     <div>
