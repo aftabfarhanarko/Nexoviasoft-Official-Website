@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "@/components/Contact/ContactForm";
-import FormFqs from "@/components/Contact/FormFqs";
+import FormFaqs from "@/components/Contact/FormFaqs";
 import ContactReady from "@/components/Contact/ContactReady";
 import CosmicBackground from "@/components/Home/CosmicBackground";
 

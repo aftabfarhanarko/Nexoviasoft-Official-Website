@@ -36,7 +36,7 @@ const faqs = [
   },
 ];
 
-const FormFqs = () => {
+const FormFaqs = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   const toggleFAQ = (index) => {

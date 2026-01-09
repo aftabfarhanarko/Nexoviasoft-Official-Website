@@ -1,5 +1,5 @@
 import PortfolioCard from "@/components/case-studies/PortfolioCard";
-import PortfolioFqs from "@/components/case-studies/PortfolioFqs";
+import PortfolioFaqs from "@/components/case-studies/PortfolioFaqs";
 import PortfolioReady from "@/components/case-studies/PortfolioReady";
 import React from "react";
 import CosmicBackground from "@/components/Home/CosmicBackground";
