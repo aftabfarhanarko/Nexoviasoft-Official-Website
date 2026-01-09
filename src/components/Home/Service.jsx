@@ -23,75 +23,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SmoothButton from "@/Share/SmoothButton";
+import { servicesData } from "@/constants/services";
 
 const Service = () => {
-  const services = [
-    {
-      icon: Code,
-      title: "Web Development",
-      subtitle: "Robust Solutions",
-      description:
-        "Building scalable, high-performance websites tailored to your business needs.",
-      image: null,
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Computing",
-      subtitle: "Scalable Infrastructure",
-      description:
-        "Secure and scalable cloud solutions to power your enterprise applications.",
-      image: null,
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      subtitle: "iOS & Android",
-      description:
-        "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      image: null,
-    },
-    {
-      icon: PenTool,
-      title: "UI/UX Design",
-      subtitle: "User-Centric Design",
-      description:
-        "Creating intuitive and engaging interfaces that users love and trust.",
-      image: null,
-    },
-    {
-      icon: TrendingUp,
-      title: "Digital Marketing",
-      subtitle: "Growth & Reach",
-      description:
-        "Data-driven marketing strategies to grow your brand and reach your audience.",
-      image: null,
-    },
-    {
-      icon: Palette,
-      title: "Graphic Design",
-      subtitle: "Visual Identity",
-      description:
-        "Stunning visuals and branding materials that make a lasting impression.",
-      image: null,
-    },
-    {
-      icon: Globe,
-      title: "WordPress Development",
-      subtitle: "Custom Themes",
-      description:
-        "Expert WordPress development for flexible and easy-to-manage websites.",
-      image: null,
-    },
-    {
-      icon: Monitor,
-      title: "Custom Software Development",
-      subtitle: "Tailored Solutions",
-      description:
-        "Bespoke software solutions designed to solve your specific business challenges.",
-      image: null,
-    },
-  ];
-
   const bottomTags = [
     { name: "Content Strategy", icon: PenTool },
     { name: "Cybersecurity", icon: Shield },
@@ -153,7 +87,7 @@ const Service = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-          {services.map((service, index) => (
+          {servicesData.map((service, index) => (
             <ServiceCard key={index} {...service} delay={index * 0.1} />
           ))}
         </div>
