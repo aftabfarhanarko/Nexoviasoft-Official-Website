@@ -116,13 +116,13 @@ const PortfolioCard = () => {
                 />
               </motion.div> */}
 
-              {/* Image Card 2 - Spans 4 cols */}
+              {/* Image Card - Spans 8 cols (remaining space) */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: index * 0.1 + 0.2 }}
-                className="lg:col-span-4 h-[300px] lg:h-auto rounded-3xl overflow-hidden relative border border-white/10 group"
+                className="lg:col-span-8 w-full h-[300px] md:h-[500px] rounded-3xl overflow-hidden relative border border-white/10 group"
               >
                 <div className="absolute inset-0 bg-gray-900/50 -z-10" />
                 <img
