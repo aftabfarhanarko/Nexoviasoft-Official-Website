@@ -33,25 +33,25 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/pages/about"
+            href="/about"
             className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
           >
             About
           </Link>
           <Link
-            href="/pages/case-studies"
+            href="/case-studies"
             className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
           >
             Case Studies
           </Link>
           <Link
-            href="/pages/contact"
+            href="/contact"
             className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
           >
             Contact
           </Link>
           <Link
-            href="/pages/services"
+            href="/services"
             className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
           >
             Services
@@ -87,7 +87,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:block">
-          <Link href="/pages/contact">
+          <Link href="/contact">
             <SmoothButton>Get In Touch</SmoothButton>
           </Link>
         </div>
@@ -111,21 +111,21 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href="/pages/about"
+              href="/about"
               className="block text-gray-300 hover:text-white text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
-              href="/pages/case-studies"
+              href="/case-studies"
               className="block text-gray-300 hover:text-white text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               Case Studies
             </Link>
             <Link
-              href="/pages/contact"
+              href="/contact"
               className="block text-gray-300 hover:text-white text-lg"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -152,7 +152,7 @@ const Navbar = () => {
               FAQ
             </Link>
             <div className="pt-4">
-              <Link href="/pages/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 <SmoothButton className="w-full flex justify-center">
                   Get In Touch
                 </SmoothButton>

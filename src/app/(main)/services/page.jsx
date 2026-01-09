@@ -10,12 +10,12 @@ const page = () => {
         <CosmicBackground />
       </div>
       <div className="relative z-10">
-      <section>
-        <Service />
-      </section>
-      <section>
-        <OurServices />
-      </section>
+        <section>
+          <Service />
+        </section>
+        <section>
+          <OurServices />
+        </section>
       </div>
     </div>
   );

@@ -86,10 +86,10 @@ const Footer = () => {
           <ul className="space-y-3">
             {[
               { name: "Home", href: "/" },
-              { name: "About", href: "/pages/about" },
-              { name: "Case Studies", href: "/pages/case-studies" },
-              { name: "Contact", href: "/pages/contact" },
-              { name: "FAQ", href: "/pages/faq" },
+              { name: "About", href: "/about" },
+              { name: "Case Studies", href: "/case-studies" },
+              { name: "Contact", href: "/contact" },
+              { name: "FAQ", href: "/faq" },
             ].map((link) => (
               <li key={link.name}>
                 <Link
@@ -171,7 +171,7 @@ const Footer = () => {
             Terms & Conditions
           </Link>
           <Link
-            href="/privacy"
+            href="/policy"
             className="hover:text-[#EFFC76] transition-colors"
           >
             Privacy Policy

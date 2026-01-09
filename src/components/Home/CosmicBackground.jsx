@@ -1,21 +1,18 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const CosmicBackground = () => {
-  const [stars, setStars] = useState([]);
-
-  useEffect(() => {
-    const generatedStars = [...Array(50)].map((_, i) => ({
+  const [stars] = useState(() =>
+    [...Array(50)].map((_, i) => ({
       id: i,
       width: Math.random() * 2 + 1 + "px",
       height: Math.random() * 2 + 1 + "px",
       top: Math.random() * 100 + "%",
       left: Math.random() * 100 + "%",
       duration: Math.random() * 3 + 2,
-    }));
-    setStars(generatedStars);
-  }, []);
+    }))
+  );
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#050505] -z-10">
