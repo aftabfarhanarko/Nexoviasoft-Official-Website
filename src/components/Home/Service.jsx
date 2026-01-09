@@ -15,6 +15,11 @@ import {
   Database,
   UserPen,
   Globe,
+  Code,
+  Cloud,
+  Smartphone,
+  TrendingUp,
+  Palette,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SmoothButton from "@/Share/SmoothButton";
@@ -22,62 +27,79 @@ import SmoothButton from "@/Share/SmoothButton";
 const Service = () => {
   const services = [
     {
-      icon: Brain,
-      title: "AI-Powered Development",
-      subtitle: "Smart Websites",
+      icon: Code,
+      title: "Web Development",
+      subtitle: "Robust Solutions",
       description:
-        "We Build AI-driven websites that adapt to users and automation.",
-      image: null, // Placeholder will be used
-    },
-    {
-      icon: MessageSquare,
-      title: "AI Chatbots",
-      subtitle: "24/7 Customer Support",
-      description: "Instant AI-powered chatbots that automate responses.",
+        "Building scalable, high-performance websites tailored to your business needs.",
       image: null,
     },
     {
-      icon: LineChart,
-      title: "Predictive Analytics",
-      subtitle: "Driven Decisions",
+      icon: Cloud,
+      title: "Cloud Computing",
+      subtitle: "Scalable Infrastructure",
       description:
-        "Leverage AI to analyze trends and predict outcomes for smarter ways.",
+        "Secure and scalable cloud solutions to power your enterprise applications.",
       image: null,
     },
     {
-      icon: ScanFace,
-      title: "Computer Vision Solutions",
-      subtitle: "World Through AI",
+      icon: Smartphone,
+      title: "Mobile App Development",
+      subtitle: "iOS & Android",
       description:
-        "AI-based facial recognition, image analysis, and automation solutions.",
+        "Native and cross-platform mobile apps that deliver exceptional user experiences.",
       image: null,
     },
     {
-      icon: Mic,
-      title: "Speech Recognition",
-      subtitle: "Smart Actions",
+      icon: PenTool,
+      title: "UI/UX Design",
+      subtitle: "User-Centric Design",
       description:
-        "Develop voice assistants, transcriptions, and speech with AI.",
+        "Creating intuitive and engaging interfaces that users love and trust.",
       image: null,
     },
     {
-      icon: LayoutGrid,
-      title: "AI-Driven Automation",
-      subtitle: "Driven Decisions",
+      icon: TrendingUp,
+      title: "Digital Marketing",
+      subtitle: "Growth & Reach",
       description:
-        "Automate tasks, reduce costs, and improve productivity with solutions.",
+        "Data-driven marketing strategies to grow your brand and reach your audience.",
+      image: null,
+    },
+    {
+      icon: Palette,
+      title: "Graphic Design",
+      subtitle: "Visual Identity",
+      description:
+        "Stunning visuals and branding materials that make a lasting impression.",
+      image: null,
+    },
+    {
+      icon: Globe,
+      title: "WordPress Development",
+      subtitle: "Custom Themes",
+      description:
+        "Expert WordPress development for flexible and easy-to-manage websites.",
+      image: null,
+    },
+    {
+      icon: Monitor,
+      title: "Custom Software Development",
+      subtitle: "Tailored Solutions",
+      description:
+        "Bespoke software solutions designed to solve your specific business challenges.",
       image: null,
     },
   ];
 
   const bottomTags = [
-    { name: "AI Content Generation", icon: PenTool },
+    { name: "Content Strategy", icon: PenTool },
     { name: "Cybersecurity", icon: Shield },
-    { name: "UX/UI Optimization", icon: Monitor },
+    { name: "SEO Optimization", icon: Monitor },
     { name: "Data Insight", icon: BarChart },
     { name: "Analytics", icon: LineChart },
-    { name: "Personalization", icon: UserPen },
-    { name: "Data Analysis", icon: Database },
+    { name: "Branding", icon: UserPen },
+    { name: "Database Design", icon: Database },
     { name: "Lead Generation", icon: Globe },
   ];
 
@@ -93,9 +115,9 @@ const Service = () => {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6"
           >
             <div className="w-5 h-5 rounded-full bg-[#EFFC76] flex items-center justify-center">
-              <Brain size={12} className="text-black" />
+              <Code size={12} className="text-black" />
             </div>
-            <span className="text-gray-300 text-sm">Services</span>
+            <span className="text-gray-300 text-sm">Our Expertise</span>
           </motion.div>
 
           <motion.h2
@@ -105,9 +127,9 @@ const Service = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-sans text-white mb-6 leading-tight"
           >
-            AI-Powered Services for
+            Comprehensive Services for
             <br />
-            <span className="text-gray-400">Future-Driven Businesses</span>
+            <span className="text-gray-400">Digital Excellence</span>
           </motion.h2>
 
           <motion.p
@@ -117,7 +139,7 @@ const Service = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto mb-8 text-sm md:text-base"
           >
-            Our cutting-edge AI solutions are designed to transform businesses,
+            Our cutting-edge solutions are designed to transform businesses,
             <br />
             enhance efficiency, and drive innovation.
           </motion.p>
