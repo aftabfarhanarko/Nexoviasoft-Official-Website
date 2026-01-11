@@ -61,7 +61,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <Image
-              src={"/squadlog-logo.png"}
+              src={"/fxiedLogo.png"}
               height={160}
               width={160}
               alt="Logo"
