@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
 import { useQuery } from "@/hooks/useApi";
-
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -23,7 +22,7 @@ const Banner = () => {
   // Partner logos for marquee
   const { data, isLoading, isError } = useQuery("/hero-crasol");
   console.log("Data", data);
-  
+
   return (
     <div className="min-h-screen text-white  mt-2 md:-mt-8  overflow-hidden bg-transparent">
       {/* Banner Component */}
@@ -102,12 +101,19 @@ const Banner = () => {
 
             <div className="flex items-center justify-center gap-16 md:gap-24 grayscale">
               {isLoading ? (
-                <span className="text-gray-500 animate-pulse">Loading partners...</span>
+                <span className="text-gray-500 animate-pulse">
+                  Loading partners...
+                </span>
               ) : isError ? (
-                <span className="text-red-500 text-sm">Failed to load partners</span>
+                <span className="text-red-500 text-sm">
+                  Failed to load partners
+                </span>
               ) : (
                 data?.map((item, index) => (
-                  <div key={item.id || index} className="relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity">
+                  <div
+                    key={item.id || index}
+                    className="relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                  >
                     <Image
                       src={item.logoUrl}
                       alt="Partner Logo"
