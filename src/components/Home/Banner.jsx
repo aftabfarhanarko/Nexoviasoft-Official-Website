@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
+import { useQuery } from "@/hooks/useApi";
 
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,14 +35,7 @@ const Banner = () => {
   }, [cursorX, cursorY]);
 
   // Partner logos for marquee
-  const logos = [
-    "/logos/logo-ipsum.svg",
-    "/logos/logo-ipsum-2.svg",
-    "/logos/logo-ipsum-3.svg",
-    "/logos/logo-ipsum.svg",
-    "/logos/logo-ipsum-2.svg",
-    "/logos/logo-ipsum-3.svg",
-  ];
+  const { data, isLoading, isError } = useQuery("/hero-crasol");
 
   return (
     <div className="min-h-screen  bg-black text-white overflow-hidden cursor-none">
@@ -127,7 +121,7 @@ const Banner = () => {
           </motion.div>
 
           {/* Partner Logos Marquee */}
-          <motion.div 
+          <motion.div
             className="w-full max-w-4xl overflow-hidden relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.3 }}
@@ -136,13 +130,24 @@ const Banner = () => {
             {/* Gradient masks for smooth fade edges */}
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10" />
-            
+
             <div className="flex items-center justify-center gap-16 md:gap-24 grayscale">
-                <span className="text-2xl font-bold font-sans tracking-widest">LOGO</span>
-                <span className="text-xl font-bold font-mono border-2 border-current p-1 px-2">LOGO IPSUM</span>
-                <span className="text-2xl font-black italic tracking-tighter">IPSUM</span>
-                <span className="text-2xl font-bold font-sans tracking-widest hidden md:block">LOGO</span>
-                <span className="text-xl font-bold font-mono border-2 border-current p-1 px-2 hidden md:block">LOGO IPSUM</span>
+              {isLoading ? (
+                <span className="text-gray-500 animate-pulse">Loading partners...</span>
+              ) : isError ? (
+                <span className="text-red-500 text-sm">Failed to load partners</span>
+              ) : (
+                data?.map((item, index) => (
+                  <div key={item.id || index} className="relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity">
+                    <Image
+                      src={item.logoUrl}
+                      alt="Partner Logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ))
+              )}
             </div>
           </motion.div>
         </div>
