@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
-<<<<<<< HEAD
 import { useQuery } from "@/hooks/useApi";
-
-=======
->>>>>>> 8c2cea7ffbbba4864f4fad6886dc5e3dd705a066
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -24,52 +20,14 @@ const Banner = () => {
   }, []);
 
   // Partner logos for marquee
-<<<<<<< HEAD
   const { data, isLoading, isError } = useQuery("/hero-crasol");
-=======
-  const logoItems = [
-    {
-      id: 1,
-      component: (
-        <span className="text-2xl font-bold font-sans tracking-widest">
-          TECHFLOW
-        </span>
-      ),
-    },
-    {
-      id: 2,
-      component: (
-        <span className="text-xl font-bold font-mono border-2 border-current p-1 px-2">
-          CLOUDSCALE
-        </span>
-      ),
-    },
-    {
-      id: 3,
-      component: (
-        <span className="text-2xl font-black italic tracking-tighter">
-          DEVCORP
-        </span>
-      ),
-    },
-    {
-      id: 4,
-      component: (
-        <span className="text-2xl font-bold font-sans tracking-widest">
-          APPIFY
-        </span>
-      ),
-    },
-    {
-      id: 5,
-      component: (
-        <span className="text-xl font-bold font-mono border-2 border-current p-1 px-2">
-          NETSECURE
-        </span>
-      ),
-    },
-  ];
->>>>>>> 8c2cea7ffbbba4864f4fad6886dc5e3dd705a066
+
+  // Create a display array that we can loop (doubled for infinite scroll)
+  // Ensure we have an array to prevent errors if data is null/undefined
+  const displayTokens = data ? [...data, ...data] : [];
+
+
+  console.log("displayTokens", displayTokens);
 
   return (
     <div className="min-h-screen text-white  -mt-15 md:-mt-8  overflow-hidden bg-transparent">
@@ -147,15 +105,22 @@ const Banner = () => {
             <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10" />
 
-<<<<<<< HEAD
-            <div className="flex items-center justify-center gap-16 md:gap-24 grayscale">
-              {isLoading ? (
-                <span className="text-gray-500 animate-pulse">Loading partners...</span>
-              ) : isError ? (
-                <span className="text-red-500 text-sm">Failed to load partners</span>
-              ) : (
-                data?.map((item, index) => (
-                  <div key={item.id || index} className="relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity">
+            {isLoading ? (
+              <div className="flex justify-center items-center h-20 w-full text-white/50">
+                Loading partners...
+              </div>
+            ) : displayTokens.length > 0 ? (
+              <motion.div
+                className="flex items-center gap-16 md:gap-24 grayscale w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{
+                  repeat: Infinity,
+                  ease: "linear",
+                  duration: 20,
+                }}
+              >
+                {displayTokens.map((item, index) => (
+                  <div key={`${item.id}-${index}`} className="flex-shrink-0 relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity">
                     <Image
                       src={item.logoUrl}
                       alt="Partner Logo"
@@ -163,26 +128,9 @@ const Banner = () => {
                       className="object-contain"
                     />
                   </div>
-                ))
-              )}
-            </div>
-=======
-            <motion.div
-              className="flex items-center gap-16 md:gap-24 grayscale w-max"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                repeat: Infinity,
-                ease: "linear",
-                duration: 20,
-              }}
-            >
-              {[...logoItems, ...logoItems].map((item, index) => (
-                <div key={index} className="flex-shrink-0">
-                  {item.component}
-                </div>
-              ))}
-            </motion.div>
->>>>>>> 8c2cea7ffbbba4864f4fad6886dc5e3dd705a066
+                ))}
+              </motion.div>
+            ) : null}
           </motion.div>
         </div>
       </section>
