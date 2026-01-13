@@ -231,13 +231,20 @@ const CardsDisplay = () => {
       {cards.map((card, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 0.5, y: 200, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.5, y: 200, rotate: 0, zIndex: 0 }}
           whileInView={{
             opacity: 1,
             scale: card.scale,
             y: card.y,
             rotate: card.rotate,
             x: card.x,
+            zIndex: card.z,
+          }}
+          whileHover={{
+            scale: 1.15,
+            rotate: 0,
+            zIndex: 100,
+            transition: { duration: 0.2 },
           }}
           viewport={{ once: true }}
           transition={{
@@ -247,9 +254,6 @@ const CardsDisplay = () => {
             delay: 0.2 + index * 0.1,
           }}
           className={`absolute w-32 h-44 sm:w-44 sm:h-64 md:w-52 md:h-72 rounded-[16px] md:rounded-[24px] bg-neutral-800 shadow-2xl overflow-hidden group origin-bottom`}
-          style={{
-            zIndex: card.z,
-          }}
         >
           {/* Card Border & Glow */}
           <div className="absolute inset-0 rounded-[16px] md:rounded-[24px] border border-white/10 z-10" />
@@ -264,12 +268,12 @@ const CardsDisplay = () => {
                 backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
               }}
             />
-            {/* Overlay Gradient for depth */}
-            <div className="absolute inset-0 bg-black/20" />
+            {/* Overlay Gradient for depth - fades out on hover */}
+            <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:opacity-0" />
             
              {/* Active Highlight */}
             {card.active && (
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
             )}
           </div>
         </motion.div>
