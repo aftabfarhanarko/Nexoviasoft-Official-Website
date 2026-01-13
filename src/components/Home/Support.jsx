@@ -154,6 +154,8 @@ const CardsDisplay = () => {
       scale: 0.85,
       z: 0,
       img: "1524504388940-b1c1722653e1", // Bag
+      name: "Sarah Jenkins",
+      role: "Support Agent"
     },
     {
       // Card 2
@@ -163,6 +165,8 @@ const CardsDisplay = () => {
       scale: 0.9,
       z: 10,
       img: "1494976388531-d377034f0d38", // Car
+      name: "David Kim",
+      role: "Tech Lead"
     },
     {
       // Card 3
@@ -172,6 +176,8 @@ const CardsDisplay = () => {
       scale: 0.95,
       z: 20,
       img: "1546069901-ba9599a7e63c", // Food
+      name: "Emily Chen",
+      role: "Product Manager"
     },
     {
       // Center
@@ -182,6 +188,8 @@ const CardsDisplay = () => {
       z: 30,
       active: true,
       img: "1618005182384-a83a8bd57fbe", // Main
+      name: "Alex Morgan",
+      role: "Senior Developer"
     },
     {
       // Card 5
@@ -191,6 +199,8 @@ const CardsDisplay = () => {
       scale: 0.95,
       z: 20,
       img: "1515886657613-9f3515b0c78f", // Fashion
+      name: "Jessica Wu",
+      role: "UI/UX Designer"
     },
     {
       // Card 6
@@ -200,6 +210,8 @@ const CardsDisplay = () => {
       scale: 0.9,
       z: 10,
       img: "1534528741775-53994a69daeb", // Art/Abstract
+      name: "Ryan Park",
+      role: "Frontend Engineer"
     },
     {
       // Card 7 (Right Outer)
@@ -209,6 +221,8 @@ const CardsDisplay = () => {
       scale: 0.85,
       z: 0,
       img: "1542291026-7eec264c27ff", // Product
+      name: "Lisa Thompson",
+      role: "QA Specialist"
     },
   ];
 
@@ -263,6 +277,12 @@ const CardsDisplay = () => {
                     />
                     {/* Dark overlay for inactive slides */}
                     <div className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
+                    
+                    {/* Glassy Name Overlay */}
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
+                        <span className="text-white text-xs font-semibold">{card.name}</span>
+                        <span className="text-white/60 text-[10px]">{card.role}</span>
+                    </div>
                   </div>
                 )}
             </SwiperSlide>
@@ -312,6 +332,12 @@ const CardsDisplay = () => {
                     {card.active && (
                         <div className={`absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-50'}`} />
                     )}
+
+                    {/* Glassy Name Overlay - Visible on Hover/Active */}
+                    <div className={`absolute bottom-4 left-4 right-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-3 flex flex-col text-center transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                        <span className="text-white text-sm font-semibold">{card.name}</span>
+                        <span className="text-white/60 text-xs">{card.role}</span>
+                    </div>
                 </div>
                 </motion.div>
             );
