@@ -26,6 +26,7 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   const products = [
     {
@@ -175,6 +176,18 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      {/* Mobile Top Bar */}
+      <div className="md:hidden absolute top-0 left-0 right-0 p-6 flex justify-center z-20 pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
+        <Link href="/" className="pointer-events-auto">
+          <Image
+            src="/fxiedLogo.png"
+            alt="SquadLogo"
+            width={120}
+            height={40}
+            className="h-15 w-auto "
+          />
+        </Link>
+      </div>
 
       {/* Mobile Bottom Dock */}
       <div className="md:hidden fixed bottom-8 left-4 right-4 z-50">
@@ -212,16 +225,10 @@ const Navbar = () => {
           <div className="relative -top-6 flex flex-col items-center justify-end w-full">
             <Link href="/contact">
               <div className="bg-white/10 backdrop-blur-lg p-3 rounded-xl  border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
-                <Image
-                  src="/customIcon.png"
-                  alt="Center Icon"
-                  width={28}
-                  height={28}
-                  className="object-contain"
-                />
+                <MessageCircle size={28} className="text-[#EFFC76]" />
               </div>
             </Link>
-            <span className="text-[10px] font-medium tracking-wide text-gray-400 mt-1">
+            <span className="text-[10px] font-medium tracking-wide text-gray-400 mt-2">
               Contact
             </span>
           </div>
@@ -277,7 +284,7 @@ const Navbar = () => {
                   alt="Squadlogo"
                   width={100}
                   height={32}
-                  className="h-8 w-auto object-contain"
+                  className="h-12 w-auto -ml-5 object-contain"
                 />
               </Link>
               <button
@@ -289,15 +296,20 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="flex flex-col space-y-8 mt-8 pb-32 flex-grow">
+            <div className="flex flex-col space-y-5 mt-3 pb-32 flex-grow">
               {[
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
                 { name: "Case Studies", href: "/case-studies" },
                 { name: "Contact", href: "/contact" },
-                { name: "Products", href: "/products" },
-                { name: "SquadCart", href: "/products/squadcart", sub: true },
-                { name: "CleverERP", href: "/products", sub: true },
+                {
+                  name: "Products",
+                  href: "#",
+                  children: [
+                    { name: "SquadCart", href: "/products/squadcart" },
+                    { name: "CleverERP", href: "/products" },
+                  ],
+                },
                 { name: "FAQ", href: "/faq" },
               ].map((item, i) => (
                 <motion.div
@@ -306,17 +318,56 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                 >
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`block transition-all duration-300 ${
-                      item.sub
-                        ? "text-lg text-gray-500 pl-6 font-medium hover:text-[#EFFC76]"
-                        : "text-4xl md:text-5xl font-medium text-white hover:text-[#EFFC76] tracking-tight"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  {item.children ? (
+                    <div className="flex flex-col">
+                      <div
+                        className="flex items-center justify-between cursor-pointer group"
+                        onClick={() =>
+                          setMobileProductsOpen(!mobileProductsOpen)
+                        }
+                      >
+                        <span className="text-xl md:text-3xl font-medium text-white hover:text-[#EFFC76] tracking-tight">
+                          {item.name}
+                        </span>
+                        <ChevronDown
+                          className={`text-white transition-transform duration-300 ${
+                            mobileProductsOpen ? "rotate-180" : ""
+                          }`}
+                          size={24}
+                        />
+                      </div>
+                      <AnimatePresence>
+                        {mobileProductsOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden flex flex-col space-y-3 mt-3 pl-6"
+                          >
+                            {item.children.map((child) => (
+                              <Link
+                                key={child.name}
+                                href={child.href}
+                                onClick={() => setIsMenuOpen(false)}
+                                className="text-lg text-gray-500 font-medium hover:text-[#EFFC76] block"
+                              >
+                                {child.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block transition-all duration-300 text-xl md:text-3xl font-medium text-white hover:text-[#EFFC76] tracking-tight"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
 
@@ -331,7 +382,7 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="block"
                 >
-                  <button className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white px-6 py-4 rounded-full hover:bg-[#EFFC76] hover:text-black hover:border-[#EFFC76] transition-all group">
+                  <button className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white px-6 py-2.5 rounded-full hover:bg-[#EFFC76] hover:text-black hover:border-[#EFFC76] transition-all group">
                     <span className="font-semibold text-lg">
                       Free Consultation
                     </span>
