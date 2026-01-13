@@ -2,39 +2,38 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Video,
-  Slack,
-  Calculator,
-  Activity,
-  Accessibility,
-  DollarSign,
-  GitBranch,
-  Check,
-  Mail,
-  Github,
-  Puzzle,
-} from "lucide-react";
+  SiJavascript,
+  SiNextdotjs,
+  SiNestjs,
+  SiTailwindcss,
+  SiDocker,
+  SiGo,
+  SiAmazonaws,
+  SiGit,
+  SiTerraform,
+  SiReact,
+} from "react-icons/si";
+import { Puzzle } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
 
 const Integration = () => {
-  // Icon data mimicking the image sequence
-  // Using Lucide icons to approximate the brands
+  // Brand icons for technology stack
   const integrationIcons = [
-    { icon: Video, color: "bg-[#EFFC76]", iconColor: "text-[#EFFC76]" }, // Zoom-ish
-    { icon: Slack, color: "bg-white", iconColor: "text-red-500" }, // Slack (using multicolor fallback later if needed, simple for now)
-    { icon: Calculator, color: "bg-green-700", iconColor: "text-green-200" }, // Sheets/Excel
-    { icon: Activity, color: "bg-yellow-400", iconColor: "text-yellow-900" }, // Sport/Activity
-    { icon: Accessibility, color: "bg-white", iconColor: "text-black" }, // Access
-    { icon: DollarSign, color: "bg-orange-600", iconColor: "text-white" }, // Money
-    { icon: GitBranch, color: "bg-[#EFFC76]", iconColor: "text-black" }, // Bitbucket-ish
+    { icon: SiJavascript, color: "bg-[#F7DF1E]", iconColor: "text-black" }, // JS
+    { icon: SiNextdotjs, color: "bg-white", iconColor: "text-black" }, // Next.js
+    { icon: SiNestjs, color: "bg-[#E0234E]", iconColor: "text-white" }, // Nest.js
+    { icon: SiTailwindcss, color: "bg-[#06B6D4]", iconColor: "text-white" }, // Tailwind
+    { icon: SiDocker, color: "bg-[#2496ED]", iconColor: "text-white" }, // Docker
+    { icon: SiGo, color: "bg-[#00ADD8]", iconColor: "text-white" }, // Golang
+    { icon: SiAmazonaws, color: "bg-[#232F3E]", iconColor: "text-[#FF9900]" }, // AWS
     {
-      icon: Check,
-      color: "bg-[#EFFC76]",
-      iconColor: "text-black",
+      icon: SiGit,
+      color: "bg-[#F05032]",
+      iconColor: "text-white",
       isMain: true,
-    }, // Main Active
-    { icon: Mail, color: "bg-yellow-500", iconColor: "text-black" }, // Mailchimp
-    { icon: Github, color: "bg-white", iconColor: "text-black" }, // Github
+    }, // Git (Main)
+    { icon: SiTerraform, color: "bg-[#7B42BC]", iconColor: "text-white" }, // Terraform
+    { icon: SiReact, color: "bg-[#61DAFB]", iconColor: "text-black" }, // React
   ];
 
   return (
@@ -120,15 +119,15 @@ const Integration = () => {
                                     relative rounded-full flex items-center justify-center transition-all duration-300
                                     ${
                                       isMain
-                                        ? "w-20 h-20 shadow-[0_0_40px_rgba(79,70,229,0.6)] z-20 scale-110"
-                                        : "w-12 h-12 md:w-14 md:h-14 opacity-60 hover:opacity-100 grayscale hover:grayscale-0"
+                                        ? "w-20 h-20 shadow-[0_0_40px_rgba(240,80,50,0.6)] z-20 scale-110"
+                                        : "w-12 h-12 md:w-14 md:h-14 opacity-80 hover:opacity-100 grayscale-[50%] hover:grayscale-0"
                                     }
                                     ${item.color}
                                 `}
               >
                 {/* Main Icon Ring Effect */}
                 {isMain && (
-                  <div className="absolute inset-0 rounded-full border-4 border-[#EFFC76]/30 animate-pulse" />
+                  <div className="absolute inset-0 rounded-full border-4 border-[#F05032]/30 animate-pulse" />
                 )}
 
                 <Icon
