@@ -29,21 +29,21 @@ const CosmicBackground = () => {
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#050505] -z-10">
-      {/* Premium Modern Glow Effects */}
+      {/* Premium Modern Glow Effects - Enhanced with #effc76 */}
       <motion.div
         animate={{
-          opacity: [0.3, 0.5, 0.3],
-          scale: [1, 1.1, 1],
+          opacity: [0.4, 0.6, 0.4],
+          scale: [1, 1.15, 1],
         }}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -top-[30%] left-1/2 -translate-x-1/2 w-[80%] aspect-square rounded-full bg-[#EFFC76]/10 blur-[120px] pointer-events-none"
+        className="absolute -top-[40%] left-1/2 -translate-x-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-b from-[#EFFC76]/25 via-[#EFFC76]/5 to-transparent blur-[140px] pointer-events-none"
       />
 
-      {/* Secondary Ambient Glows */}
+      {/* Secondary Ambient Glows - Stronger */}
       <motion.div
         animate={{
           rotate: [0, 360],
@@ -53,10 +53,10 @@ const CosmicBackground = () => {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[100%] h-[100%] pointer-events-none opacity-30"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] pointer-events-none opacity-40"
       >
-        <div className="absolute top-[10%] left-[20%] w-[40%] h-[40%] bg-[#EFFC76]/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[20%] right-[20%] w-[35%] h-[35%] bg-[#EFFC76]/5 rounded-full blur-[90px]" />
+        <div className="absolute top-[15%] left-[15%] w-[45%] h-[45%] bg-[#EFFC76]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[25%] right-[25%] w-[40%] h-[40%] bg-[#EFFC76]/10 rounded-full blur-[100px]" />
       </motion.div>
 
       {/* Stars Background */}
