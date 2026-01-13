@@ -15,6 +15,7 @@ import {
   MessageSquare,
   Check,
 } from "lucide-react";
+import DevOpsWorkflow from "@/components/Home/DevOpsWorkflow"; // Import the workflow component
 
 const ServiceDetail = () => {
   const params = useParams();
@@ -143,6 +144,11 @@ const ServiceDetail = () => {
                     </Link>
                 </div>
             </div>
+        </div>
+
+        {/* Workflow Section for All Services */}
+        <div className="mb-24 -mx-4 md:-mx-8">
+             <DevOpsWorkflow />
         </div>
 
         {/* Next Service Navigation */}
