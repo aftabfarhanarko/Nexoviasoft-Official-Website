@@ -176,7 +176,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-
       {/* Mobile Bottom Dock */}
       <div className="md:hidden fixed bottom-8 left-4 right-4 z-50">
         <div className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-white/10 rounded-2xl grid grid-cols-5 items-end px-2 py-3 shadow-2xl relative">
@@ -212,7 +211,7 @@ const Navbar = () => {
           {/* Floating Central Button */}
           <div className="relative -top-6 flex flex-col items-center justify-end w-full">
             <Link href="/contact">
-              <div className="bg-white/10 backdrop-blur-lg p-3 rounded-full border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-lg p-3 rounded-xl  border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
                 <Image
                   src="/customIcon.png"
                   alt="Center Icon"
