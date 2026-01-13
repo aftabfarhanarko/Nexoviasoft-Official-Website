@@ -246,6 +246,12 @@ const CardsDisplay = () => {
             zIndex: 100,
             transition: { duration: 0.2 },
           }}
+          whileTap={{
+            scale: 1.15,
+            rotate: 0,
+            zIndex: 100,
+            transition: { duration: 0.2 },
+          }}
           viewport={{ once: true }}
           transition={{
             type: "spring",
@@ -268,12 +274,12 @@ const CardsDisplay = () => {
                 backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
               }}
             />
-            {/* Overlay Gradient for depth - fades out on hover */}
-            <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:opacity-0" />
+            {/* Overlay Gradient for depth - fades out on hover/tap */}
+            <div className="absolute inset-0 bg-black/20 transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0" />
             
              {/* Active Highlight */}
             {card.active && (
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none group-hover:opacity-0 group-active:opacity-0 transition-opacity duration-300" />
             )}
           </div>
         </motion.div>
