@@ -2,6 +2,7 @@
 
 import SmoothButton from "@/Share/SmoothButton";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -162,75 +163,60 @@ const Navbar = () => {
         </button>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 mt-4 p-6 bg-[#0A0A0A] border border-white/10 rounded-3xl flex flex-col space-y-4 md:hidden shadow-2xl">
-            <Link
-              href="/"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-[#050505]/98 backdrop-blur-3xl z-40 flex flex-col pt-32 px-6 md:hidden"
             >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/case-studies"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Case Studies
-            </Link>
-            <Link
-              href="/contact"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            
-            <Link
-              href="/products"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Products
-            </Link>
-            <Link
-              href="/products/squadcart"
-              className="block text-gray-300 hover:text-white text-lg pl-4"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              SquadCart
-            </Link>
-            <Link
-              href="/products"
-              className="block text-gray-300 hover:text-white text-lg pl-4"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              CleverERP
-            </Link>
+              <div className="flex flex-col space-y-6">
+                {[
+                  { name: "Home", href: "/" },
+                  { name: "About", href: "/about" },
+                  { name: "Case Studies", href: "/case-studies" },
+                  { name: "Contact", href: "/contact" },
+                  { name: "Products", href: "/products" },
+                   { name: "SquadCart", href: "/products/squadcart", sub: true },
+                   { name: "CleverERP", href: "/products", sub: true },
+                  { name: "FAQ", href: "/faq" },
+                ].map((item, i) => (
+                  <motion.div
+                    key={item.name}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + i * 0.05 }}
+                  >
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block text-3xl font-bold tracking-tight hover:text-[#EFFC76] transition-colors ${
+                        item.sub ? "text-xl text-gray-400 pl-4 font-medium" : "text-white"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.div>
+                ))}
 
-            <Link
-              href="/faq"
-              className="block text-gray-300 hover:text-white text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              FAQ
-            </Link>
-            <div className="pt-4">
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                <SmoothButton className="w-full flex justify-center">
-                  Get In Touch
-                </SmoothButton>
-              </Link>
-            </div>
-          </div>
-        )}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="pt-8"
+                >
+                  <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="block">
+                    <button className="w-full bg-[#EFFC76] text-black font-bold text-lg py-4 rounded-full hover:bg-white transition-colors">
+                      Get In Touch
+                    </button>
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
