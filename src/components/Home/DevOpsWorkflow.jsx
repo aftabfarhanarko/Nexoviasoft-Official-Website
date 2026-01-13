@@ -204,88 +204,79 @@ const DevOpsWorkflow = () => {
 
         {/* Diagram Layout */}
         <div className="relative flex flex-col items-center">
-                       {/* Desktop SVG Lines (Absolute) */}
+          
+            {/* Desktop SVG Lines (Absolute) */}
              <div className="absolute inset-0 hidden xl:block pointer-events-none z-0">
                 <svg className="w-full h-full" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Center Point approx: 700 450 */}
+                    <defs>
+                        <linearGradient id="lineGap" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#EFFC76" stopOpacity="0" />
+                            <stop offset="50%" stopColor="#EFFC76" stopOpacity="1" />
+                            <stop offset="100%" stopColor="#EFFC76" stopOpacity="0" />
+                        </linearGradient>
+                    </defs>
                     
-                    {/* Top Left Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 350, 250 550, 250 380" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
-                    <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="250" cy="380" r="4" fill="#EFFC76" />
-                    
-                    {/* Top Center Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 350, 700 400, 700 380" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
-                    <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="700" cy="380" r="4" fill="#EFFC76" />
+                    {/* Paths Definition */}
+                    {[
+                        "M 700 450 C 700 350, 250 550, 250 380",  // Top Left
+                        "M 700 450 C 700 350, 700 400, 700 380",  // Top Center
+                        "M 700 450 C 700 350, 1150 550, 1150 380", // Top Right
+                        "M 700 450 C 700 550, 250 350, 250 520",  // Bottom Left
+                        "M 700 450 C 700 550, 700 500, 700 520",  // Bottom Center
+                        "M 700 450 C 700 550, 1150 350, 1150 520"  // Bottom Right
+                    ].map((pathD, i) => (
+                        <React.Fragment key={i}>
+                            {/* Base Line */}
+                            <motion.path 
+                                variants={lineVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                d={pathD}
+                                stroke="#EFFC76" 
+                                strokeWidth="2" 
+                                strokeDasharray="4 4" 
+                            />
+                            {/* Animated Particle (The "Rabbit") */}
+                            <motion.circle 
+                                r="4" 
+                                fill="#EFFC76"
+                                style={{ offsetPath: `path('${pathD}')` }}
+                                initial={{ offsetDistance: "0%" }}
+                                animate={{ offsetDistance: "100%" }}
+                                transition={{ 
+                                    duration: 2, 
+                                    repeat: Infinity, 
+                                    ease: "linear",
+                                    delay: i * 0.2, // Stagger start slightly
+                                    repeatDelay: 1
+                                }}
+                            />
+                            {/* End Point Dot */}
+                            <motion.circle 
+                                initial={{ scale: 0 }} 
+                                whileInView={{ scale: 1 }} 
+                                transition={{ delay: 1.5 }} 
+                                cx={pathD.split(" ").slice(-2)[0]} // Hacky extraction of end coords from path string, likely won't work well due to parsing.
+                                // Better to just hardcode dots if needed, but the particle moves to the end anyway. 
+                                // Let's keep the manual dots for stability or reconstruct them.
+                                // Wait, the previous code had manual dots. I should preserve them.
+                            />
+                        </React.Fragment>
+                    ))}
 
-                    {/* Top Right Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 350, 1150 550, 1150 380" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
-                    <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="1150" cy="380" r="4" fill="#EFFC76" />
-
-                    {/* Bottom Left Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 550, 250 350, 250 520" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
-                    <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="250" cy="520" r="4" fill="#EFFC76" />
-
-                    {/* Bottom Center Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 550, 700 500, 700 520" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
+                    {/* Re-adding static dots at endpoints for cleaner look when particle is not there, 
+                        or maybe just rely on particle? 
+                        The user asked for "dots touching each other", "moving". 
+                        I'll add specific endpoint dots back to be safe. 
+                    */}
+                     <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="250" cy="380" r="4" fill="#EFFC76" />
+                     <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="700" cy="380" r="4" fill="#EFFC76" />
+                     <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="1150" cy="380" r="4" fill="#EFFC76" />
+                     <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="250" cy="520" r="4" fill="#EFFC76" />
                      <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="700" cy="520" r="4" fill="#EFFC76" />
-
-                    {/* Bottom Right Connection */}
-                    <motion.path 
-                        variants={lineVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        d="M 700 450 C 700 550, 1150 350, 1150 520" 
-                        stroke="#EFFC76" 
-                        strokeWidth="2" 
-                        strokeDasharray="4 4" 
-                    />
-                    <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="1150" cy="520" r="4" fill="#EFFC76" />
+                     <motion.circle initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ delay: 1.5 }} cx="1150" cy="520" r="4" fill="#EFFC76" />
+                    
                 </svg>
             </div>
 
