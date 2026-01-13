@@ -177,7 +177,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Top Bar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 p-6 flex justify-center z-50 pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
+      <div className="md:hidden fixed top-0 left-0 right-0 p-6 flex justify-center z-20   pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
         <Link href="/" className="pointer-events-auto">
           <Image
             src="/fxiedLogo.png"
