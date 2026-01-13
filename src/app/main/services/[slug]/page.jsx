@@ -23,6 +23,7 @@ import UiUxDesignWorkflow from "@/components/Home/UiUxDesignWorkflow";
 import DigitalMarketingWorkflow from "@/components/Home/DigitalMarketingWorkflow";
 import GraphicDesignWorkflow from "@/components/Home/GraphicDesignWorkflow";
 import WordPressWorkflow from "@/components/Home/WordPressWorkflow";
+import CustomSoftwareWorkflow from "@/components/Home/CustomSoftwareWorkflow";
 
 const ServiceDetail = () => {
   const params = useParams();
@@ -169,6 +170,8 @@ const ServiceDetail = () => {
                 <GraphicDesignWorkflow />
              ) : slug === 'wordpress-development' ? (
                 <WordPressWorkflow />
+             ) : slug === 'custom-software-development' ? (
+                <CustomSoftwareWorkflow />
              ) : (
                 <DevOpsWorkflow />
              )}
