@@ -8,11 +8,11 @@ import {
   SiTailwindcss,
   SiDocker,
   SiGo,
-  SiAmazonaws,
   SiGit,
   SiTerraform,
   SiReact,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { Puzzle } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
 
@@ -25,7 +25,7 @@ const Integration = () => {
     { icon: SiTailwindcss, color: "bg-[#06B6D4]", iconColor: "text-white" }, // Tailwind
     { icon: SiDocker, color: "bg-[#2496ED]", iconColor: "text-white" }, // Docker
     { icon: SiGo, color: "bg-[#00ADD8]", iconColor: "text-white" }, // Golang
-    { icon: SiAmazonaws, color: "bg-[#232F3E]", iconColor: "text-[#FF9900]" }, // AWS
+    { icon: FaAws, color: "bg-[#232F3E]", iconColor: "text-[#FF9900]" }, // AWS
     {
       icon: SiGit,
       color: "bg-[#F05032]",
