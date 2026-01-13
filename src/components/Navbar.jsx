@@ -37,9 +37,9 @@ const Navbar = () => {
             <Image
               src="/fxiedLogo.png"
               alt="Squadlog Logo"
-              width={140}
-              height={48}
-              className="rounded-md object-contain h-10 md:h-14 w-auto" // Increased mobile to h-10, desktop to h-14
+              width={120}
+              height={40}
+              className="rounded-md object-contain h-8 md:h-10 w-auto"
             />
           </Link>
 
@@ -165,9 +165,9 @@ const Navbar = () => {
           <Image
             src="/fxiedLogo.png"
             alt="SquadLogo"
-            width={140}
-            height={48}
-            className="h-10 w-auto object-contain" // Increased to h-10
+            width={120}
+            height={40}
+            className="h-8 w-auto object-contain"
           />
         </Link>
       </div>
@@ -238,9 +238,9 @@ const Navbar = () => {
                 <Image
                   src="/fxiedLogo.png"
                   alt="Squadlogo"
-                  width={140}
-                  height={48}
-                  className="h-10 w-auto object-contain" // Increased to h-10
+                  width={100}
+                  height={32}
+                  className="h-8 w-auto object-contain"
                 />
               </Link>
               <button 
