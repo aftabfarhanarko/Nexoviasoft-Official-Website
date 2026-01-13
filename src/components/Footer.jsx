@@ -47,22 +47,22 @@ const Footer = () => {
   return (
     <footer ref={containerRef} className="relative bg-[#050505] pt-32 pb-12 overflow-hidden">
         
-      {/* 1. Deep Atmosphere (Premium Green) */}
+      {/* 1. Deep Atmosphere (Luminous Lime - #effc76) */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-         {/* Green Gradient Base */}
-         <div className="absolute inset-0 bg-gradient-to-b from-[#051105] via-[#0A1F0A] to-[#051105] z-0"/>
+         {/* Luminous Lime Gradient Base */}
+         <div className="absolute inset-0 bg-gradient-to-b from-[#0D1402] via-[#1A2604] to-[#0D1402] z-0"/>
          
-         {/* Subtle Grid Pattern - Lighter opacity for green background */}
-         <div className="absolute inset-0 bg-[linear-gradient(rgba(239,252,118,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(239,252,118,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] z-10" />
+         {/* Subtle Grid Pattern - Using #effc76 */}
+         <div className="absolute inset-0 bg-[linear-gradient(rgba(239,252,118,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(239,252,118,0.05)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)] z-10" />
 
          {/* Noise Texture for Grain */}
          <div className="absolute inset-0 opacity-[0.2] mix-blend-overlay z-20" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")' }}></div>
 
-         {/* Subtle Ambient Light - Stronger Green/Lime */}
+         {/* Subtle Ambient Light - Intense Lime #effc76 */}
          <motion.div 
-            animate={{ opacity: [0.3, 0.4, 0.3], scale: [1, 1.1, 1] }}
+            animate={{ opacity: [0.4, 0.5, 0.4], scale: [1, 1.1, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-b from-[#EFFC76]/15 to-transparent rounded-full blur-[120px] z-10" 
+            className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-b from-[#EFFC76]/20 to-transparent rounded-full blur-[120px] z-10" 
          />
       </div>
 
