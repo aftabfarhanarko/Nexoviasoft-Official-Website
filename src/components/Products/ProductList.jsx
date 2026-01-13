@@ -1,42 +1,58 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { 
+  Sparkles, 
+  ArrowRight, 
+  ShoppingCart, 
+  BarChart2, 
+  Layers,
+  Zap
+} from "lucide-react";
 import Link from "next/link";
+import SmoothButton from "@/Share/SmoothButton";
 
 const ProductList = () => {
   const products = [
     {
-      number: 1,
       title: "SquadCart",
       description: "A comprehensive e-commerce solution designed to streamline your online business operations with powerful analytics and seamless integrations.",
-      rayCount: 15,
+      icon: ShoppingCart,
+      color: "from-blue-500 to-cyan-400",
+      accent: "#06B6D4",
       link: "/products/squadcart",
+      features: ["Advanced Analytics", "Inventory Management", "Multi-channel Sales"]
     },
     {
-      number: 2,
       title: "CleverERP",
       description: "An all-in-one ERP platform to manage operations, finance, inventory, and workflows with clarity and control.",
-      rayCount: 18,
+      icon: Layers,
+      color: "from-purple-500 to-pink-500",
+      accent: "#E0234E",
       link: "/products",
+      features: ["Finance Automation", "Workflow Optimization", "Real-time Reporting"]
     },
   ];
 
   return (
     <section className="bg-transparent py-24 px-4 md:px-8 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+        {/* Background Gradients */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px]" />
+            <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
+        </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="mb-20">
+        <div className="mb-20 text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-6"
           >
-            <div className="w-5 h-5 flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-[#EFFC76] fill-[#EFFC76]" />
-            </div>
-            <span className="text-gray-300 text-sm font-medium">Explore Our Suite</span>
+            <Sparkles className="w-4 h-4 text-[#EFFC76]" />
+            <span className="text-gray-300 text-sm font-medium tracking-wide">Explore Our Suite</span>
           </motion.div>
 
           <motion.h2
@@ -44,9 +60,9 @@ const ProductList = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-medium text-white mb-6 tracking-tight"
+            className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight"
           >
-            Built for scale & performance
+            Built for <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Scale</span> & <span className="text-[#EFFC76]">Performance</span>
           </motion.h2>
 
           <motion.p
@@ -54,108 +70,71 @@ const ProductList = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-gray-400 text-lg max-w-2xl leading-relaxed"
+            className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed md:mx-0 mx-auto"
           >
             Discover our range of SaaS products designed to help your business grow and succeed in the digital age.
           </motion.p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
           {products.map((product, index) => (
-            <Link href={product.link} key={index} className="block">
+            <Link href={product.link} key={index} className="block group">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="relative group cursor-pointer"
+                transition={{ delay: index * 0.1 }}
+                className="relative h-full"
               >
-                {/* Rays Visual */}
-                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-64 h-32 pointer-events-none flex items-end justify-center">
-                  <Rays count={product.rayCount} />
-                </div>
+                  {/* Glass Card */}
+                  <div className="relative h-full bg-[#0A0A0A]/80 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 md:p-12 overflow-hidden transition-all duration-500 group-hover:border-[#EFFC76]/50 group-hover:shadow-[0_0_50px_-15px_rgba(239,252,118,0.2)]">
+                      
+                      {/* Hover Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                      
+                      {/* Icon */}
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${product.color} p-0.5 mb-8 shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                          <div className="w-full h-full bg-[#111] rounded-[14px] flex items-center justify-center">
+                              <product.icon className="w-8 h-8 text-white" />
+                          </div>
+                      </div>
 
-                {/* Card Container */}
-                <div className="relative z-10">
-                  {/* Yellow Header Pill */}
-                  <div className="bg-[#EFFC76] rounded-full p-2 pl-3 flex items-center gap-4 shadow-lg relative z-20 w-full transform transition-transform duration-300 group-hover:-translate-y-1">
-                    <div className="w-8 h-8 bg-[#111] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-inner flex-shrink-0">
-                      {product.number}
-                    </div>
-                    <span className="text-[#111] font-semibold text-lg tracking-tight">
-                      {product.title}
-                    </span>
-                    <div className="ml-auto mr-3">
-                        <ArrowRight size={16} className="text-[#111] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </div>
-                  </div>
+                      {/* Content */}
+                      <div className="relative z-10">
+                          <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-[#EFFC76] transition-colors duration-300">
+                              {product.title}
+                          </h3>
+                          <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                              {product.description}
+                          </p>
 
-                  {/* Dark Body */}
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-8 pt-12 -mt-6 relative z-10 h-full min-h-[180px] flex flex-col justify-center group-hover:border-[#EFFC76]/30 transition-colors duration-300">
-                    <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                      {product.description}
-                    </p>
+                          {/* Features List */}
+                          <div className="flex flex-wrap gap-3 mb-10">
+                              {product.features.map((feature, i) => (
+                                  <span key={i} className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs md:text-sm text-gray-300 flex items-center gap-1.5">
+                                      <Zap size={12} className="text-[#EFFC76]" />
+                                      {feature}
+                                  </span>
+                              ))}
+                          </div>
+
+                          {/* CTA */}
+                          <div className="flex items-center text-[#EFFC76] font-semibold tracking-wide group/btn">
+                              <span className="mr-2">Learn more</span>
+                              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-2" />
+                          </div>
+                      </div>
+                      
+                      {/* Decorative Shapes */}
+                      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-colors duration-500" />
                   </div>
-                </div>
               </motion.div>
             </Link>
           ))}
         </div>
       </div>
     </section>
-  );
-};
-
-// Custom Rays Component
-const Rays = ({ count }) => {
-  const rand01 = (seed) => {
-    let a = seed | 0;
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-
-  // Generate rays
-  const rays = Array.from({ length: count }).map((_, i) => {
-    // Calculate angle: distribute across -70 to 70 degrees
-    const angle = -70 + (140 / (count - 1 || 1)) * i;
-    // Randomize length slightly
-    const height = 60 + rand01(count * 100 + i) * 40;
-
-    return (
-      <motion.div
-        key={i}
-        initial={{ height: 0, opacity: 0 }}
-        whileInView={{ height: `${height}%`, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1,
-          delay: 0.5 + rand01(count * 200 + i) * 0.5,
-          type: "spring",
-        }}
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: "50%",
-          width: "2px",
-          height: `${height}%`,
-          background: "linear-gradient(to top, #EFFC76, transparent)",
-          transformOrigin: "bottom center",
-          transform: `translateX(-50%) rotate(${angle}deg)`,
-          opacity: 0.8,
-        }}
-      />
-    );
-  });
-
-  return (
-    <div className="w-full h-full relative overflow-visible">
-      {/* Center glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#EFFC76]/20 blur-2xl rounded-full" />
-      {rays}
-    </div>
   );
 };
 
