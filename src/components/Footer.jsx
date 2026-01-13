@@ -76,34 +76,37 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Column 1: Company (Span 2) */}
-          <div className="lg:col-span-2 space-y-6">
-            <h4 className="text-lg font-medium text-white">Company</h4>
-            <ul className="space-y-4">
-              {['About Us', 'Careers', 'Our Team', 'Blog', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm flex items-center gap-2 group">
-                    <span className="w-0 group-hover:w-2 h-px bg-[#EFFC76] transition-all duration-300"></span>
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Links Group: Company & Services (Span 4) */}
+          <div className="lg:col-span-4 grid grid-cols-2 gap-8">
+            {/* Company */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-medium text-white">Company</h4>
+              <ul className="space-y-4">
+                {['About Us', 'Careers', 'Our Team', 'Blog', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <Link href="#" className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm flex items-center gap-2 group">
+                      <span className="w-0 group-hover:w-2 h-px bg-[#EFFC76] transition-all duration-300"></span>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Links Column 2: Services (Span 2) */}
-          <div className="lg:col-span-2 space-y-6">
-            <h4 className="text-lg font-medium text-white">Services</h4>
-            <ul className="space-y-4">
-              {['Web Development', 'Mobile Apps', 'Cloud Solutions', 'UI/UX Design', 'Consulting'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm flex items-center gap-2 group">
-                     <span className="w-0 group-hover:w-2 h-px bg-[#EFFC76] transition-all duration-300"></span>
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Services */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-medium text-white">Services</h4>
+              <ul className="space-y-4">
+                {['Web Development', 'Mobile Apps', 'Cloud Solutions', 'UI/UX Design', 'Consulting'].map((item) => (
+                  <li key={item}>
+                    <Link href="#" className="text-gray-400 hover:text-[#EFFC76] transition-colors text-sm flex items-center gap-2 group">
+                      <span className="w-0 group-hover:w-2 h-px bg-[#EFFC76] transition-all duration-300"></span>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           
            {/* Links Column 3: Legal (Span 2) */}
