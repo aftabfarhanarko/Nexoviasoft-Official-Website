@@ -22,11 +22,11 @@ const ComparisonItem = ({
   return (
     <motion.div
       variants={variants}
-      className="flex items-center gap-4 group/item"
+      className="flex items-center gap-2.5 md:gap-4 group/item"
     >
-      <div className="md:block hidden">
+      <div className="">
         <div
-          className={`w-6 h-6  rounded-full flex items-center justify-center shrink-0 ${bg} transition-transform duration-300 group-hover/item:scale-110`}
+          className={` w-3 md:w-6 h-3 md:h-6  rounded-full flex items-center justify-center shrink-0 ${bg} transition-transform duration-300 group-hover/item:scale-110`}
         >
           <Icon
             className={`w-3.5 h-3.5 ${iconColor || color}`}
@@ -35,7 +35,7 @@ const ComparisonItem = ({
         </div>
       </div>
       <span
-        className={`font-medium text-md  md:text-lg tracking-tight ${
+        className={`font-medium text-sm  md:text-lg tracking-tight ${
           isPremium ? "text-white" : "text-gray-400"
         }`}
       >

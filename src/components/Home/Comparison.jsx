@@ -72,7 +72,7 @@ const Comparison = () => {
         {/* Comparison Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-12 relative">
           {/* The Rest */}
-          <div className="bg-[#111]  rounded-[22px] p-8 md:p-10 relative8overflow-hidden">
+          <div className="bg-[#111]  rounded-[22px] p-4 md:p-10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-red-500/5 to-transparent pointer-events-none opacity-50"></div>
 
             <motion.div
@@ -89,7 +89,7 @@ const Comparison = () => {
                   },
                 },
               }}
-              className="space-y-3 md:space-y-6 relative z-10 h-full flex flex-col justify-center"
+              className="space-y-5 md:space-y-6 relative z-10 h-full flex flex-col justify-center"
             >
               <ComparisonItem
                 icon={X}
@@ -153,7 +153,7 @@ const Comparison = () => {
                   },
                 },
               }}
-              className="relative z-10  space-y-3 md:space-y-6  p-8 md:p-10 h-full f8ex flex-col justify-center"
+              className="relative z-10  space-y-4 md:space-y-6  p-4 md:p-10 h-full f8ex flex-col justify-center"
             >
               <ComparisonItem
                 icon={Check}

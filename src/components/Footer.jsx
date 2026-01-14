@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -36,9 +37,11 @@ const FooterLink = ({ href, children }) => (
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const containerRef = useRef(null);
+  // const isInView = useInView(containerRef, { once: true, amount: 0.1 }); // Unused in this version
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end end"]
+    offset: ["start end", "end end"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [-50, 0]);
@@ -95,7 +98,6 @@ const Footer = () => {
                 </motion.div>
             </motion.div>
         </div>
-
 
         {/* 3. Floating Navigation (No Grid Lines) */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-16 md:gap-8 mb-24">
@@ -192,7 +194,6 @@ const Footer = () => {
                  </h1>
              </div>
         </div>
-
       </div>
     </footer>
   );

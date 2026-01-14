@@ -156,7 +156,7 @@ const Testimonial = () => {
             }}
           >
             {testimonials.map((item, index) => (
-              <SwiperSlide key={index} className="h-auto">
+              <SwiperSlide key={index} className="h-auto mb-8">
                 <TestimonialCard {...item} delay={0} />
               </SwiperSlide>
             ))}

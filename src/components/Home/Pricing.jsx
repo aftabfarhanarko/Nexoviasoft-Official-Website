@@ -147,7 +147,7 @@ const Pricing = () => {
           >
             {pricingPlans.map((plan, index) => (
               <SwiperSlide key={index} className="h-auto">
-                <div className="h-full px-1">
+                <div className="h-full px-1 mb-7">
                   <PricingCard {...plan} delay={0} />
                 </div>
               </SwiperSlide>

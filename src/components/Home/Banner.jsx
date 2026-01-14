@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
 import { useQuery } from "@/hooks/useApi";
+import Link from "next/link";
 const Banner = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,8 +26,10 @@ const Banner = () => {
 
   return (
     <div className="min-h-screen text-white  mt-2 md:-mt-8  overflow-hidden bg-transparent">
+     
+
       {/* Banner Component */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center pt-20">
+      <section className="relative md:mt-0 min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center flex-grow">
           {/* Badge */}

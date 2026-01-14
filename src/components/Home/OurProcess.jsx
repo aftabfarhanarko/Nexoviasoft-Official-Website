@@ -135,11 +135,13 @@ const OurProcess = () => {
               dynamicBullets: true,
             }}
             loop={true}
-            className="pb-12" // Add padding for pagination dots
+            className="pb-16" // Add padding for pagination dots
           >
             {processSteps.map((step, index) => (
-              <SwiperSlide key={index}>
-                <ProcessCard step={step} />
+              <SwiperSlide key={index} className="h-auto">
+                <div className="h-full mb-8">
+                  <ProcessCard step={step} />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

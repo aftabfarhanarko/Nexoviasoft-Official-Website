@@ -59,7 +59,7 @@ const Innovation = () => {
               dynamicBullets: true,
             }}
             loop={true}
-            className="pb-12"
+            className="pb-16"
             style={{
               "--swiper-pagination-color": "#EFFC76",
               "--swiper-pagination-bullet-inactive-color": "#666",
@@ -71,7 +71,7 @@ const Innovation = () => {
             {cards.map((card, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <div className="h-full px-1">
-                  <InnovationCard {...card} delay={0} />
+                  <InnovationCard {...card} delay={0} isMobile={true} />
                 </div>
               </SwiperSlide>
             ))}

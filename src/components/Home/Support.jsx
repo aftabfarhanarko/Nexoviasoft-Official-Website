@@ -27,7 +27,7 @@ const features = [
   {
     icon: Star,
     title: "Expert Guidance",
-    description: "Our team understands both design and tech.",
+    description: "Our team understands both design .",
   },
   {
     icon: Headset,
@@ -48,10 +48,8 @@ const Support = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#EFFC76]/20 mb-8"
           >
-             <UsersRound className="w-4 h-4 text-[#EFFC76]" />
-            <span className="text-gray-300 text-sm font-medium">
-             OurTeam
-            </span>
+            <UsersRound className="w-4 h-4 text-[#EFFC76]" />
+            <span className="text-gray-300 text-sm font-medium">OurTeam</span>
           </motion.div>
 
           <motion.h2
@@ -112,7 +110,7 @@ const Support = () => {
               pauseOnMouseEnter: true,
             }}
             loop={true}
-            className="pb-14 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
+            className="pb-16 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
             onClick={(swiper) => {
               swiper.autoplay.stop();
             }}
@@ -122,7 +120,9 @@ const Support = () => {
           >
             {features.map((feature, index) => (
               <SwiperSlide key={index} className="h-auto">
-                <FeatureCard {...feature} delay={0} />
+                <div className="h-full mb-9">
+                  <FeatureCard {...feature} delay={0} />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -155,7 +155,7 @@ const CardsDisplay = () => {
       z: 0,
       img: "1524504388940-b1c1722653e1", // Bag
       name: "Sarah Jenkins",
-      role: "Support Agent"
+      role: "Support Agent",
     },
     {
       // Card 2
@@ -166,7 +166,7 @@ const CardsDisplay = () => {
       z: 10,
       img: "1494976388531-d377034f0d38", // Car
       name: "David Kim",
-      role: "Tech Lead"
+      role: "Tech Lead",
     },
     {
       // Card 3
@@ -177,7 +177,7 @@ const CardsDisplay = () => {
       z: 20,
       img: "1546069901-ba9599a7e63c", // Food
       name: "Emily Chen",
-      role: "Product Manager"
+      role: "Product Manager",
     },
     {
       // Center
@@ -189,7 +189,7 @@ const CardsDisplay = () => {
       active: true,
       img: "1618005182384-a83a8bd57fbe", // Main
       name: "Alex Morgan",
-      role: "Senior Developer"
+      role: "Senior Developer",
     },
     {
       // Card 5
@@ -200,7 +200,7 @@ const CardsDisplay = () => {
       z: 20,
       img: "1515886657613-9f3515b0c78f", // Fashion
       name: "Jessica Wu",
-      role: "UI/UX Designer"
+      role: "UI/UX Designer",
     },
     {
       // Card 6
@@ -211,7 +211,7 @@ const CardsDisplay = () => {
       z: 10,
       img: "1534528741775-53994a69daeb", // Art/Abstract
       name: "Ryan Park",
-      role: "Frontend Engineer"
+      role: "Frontend Engineer",
     },
     {
       // Card 7 (Right Outer)
@@ -222,7 +222,7 @@ const CardsDisplay = () => {
       z: 0,
       img: "1542291026-7eec264c27ff", // Product
       name: "Lisa Thompson",
-      role: "QA Specialist"
+      role: "QA Specialist",
     },
   ];
 
@@ -233,7 +233,7 @@ const CardsDisplay = () => {
         initial={{ opacity: 0, scale: 0.5, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="absolute -top-12 left-[5%] md:left-[25%] z-40 bg-[#3B82F6] text-white px-5 py-2.5 rounded-2xl rounded-bl-none text-sm font-semibold shadow-xl shadow-blue-900/20"
+        className="absolute -top-23 md:top-0 left-[5%] md:left-[25%] z-40 bg-[#EFFC76] text-black px-5 py-2.5 rounded-2xl rounded-bl-none text-sm font-semibold shadow-xl shadow-blue-900/20"
       >
         Hey, it&apos;s me!
       </motion.div>
@@ -242,7 +242,7 @@ const CardsDisplay = () => {
         initial={{ opacity: 0, scale: 0.5, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="absolute -top-8 right-[5%] md:right-[25%] z-40 bg-[#8B5CF6] text-white px-5 py-2.5 rounded-2xl rounded-br-none text-sm font-semibold shadow-xl shadow-purple-900/20"
+        className="absolute -top-23 md:top-0 right-[5%] md:right-[25%] z-40 bg-[#EFFC76] text-black px-5 py-2.5 rounded-2xl rounded-br-none text-sm font-semibold shadow-xl shadow-purple-900/20"
       >
         Problem Solved
       </motion.div>
@@ -261,30 +261,45 @@ const CardsDisplay = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          className="w-full h-[80%] !overflow-visible"
+          className="w-full h-full !overflow-visible pb-12 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
         >
           {cards.map((card, index) => (
-            <SwiperSlide key={index} className="flex items-center justify-center transition-all duration-300">
-                {({ isActive }) => (
-                  <div 
-                    className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${isActive ? 'scale-110 z-20 ring-2 ring-[#EFFC76]/50' : 'scale-90 z-10 opacity-70 blur-[1px]'}`}
-                  >
-                    <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{
-                            backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
-                        }}
-                    />
-                    {/* Dark overlay for inactive slides */}
-                    <div className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
-                    
-                    {/* Glassy Name Overlay */}
-                    <div className="absolute bottom-3 left-3 right-3 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
-                        <span className="text-white text-xs font-semibold">{card.name}</span>
-                        <span className="text-white/60 text-[10px]">{card.role}</span>
-                    </div>
+            <SwiperSlide
+              key={index}
+              className="flex items-center justify-center transition-all duration-300"
+            >
+              {({ isActive }) => (
+                <div
+                  className={`relative w-44 h-64 mb-8 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
+                    isActive
+                      ? "scale-110 z-20 ring-2 ring-[#EFFC76]/50"
+                      : "scale-90 z-10 opacity-70 blur-[1px]"
+                  }`}
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
+                    }}
+                  />
+                  {/* Dark overlay for inactive slides */}
+                  <div
+                    className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
+                      isActive ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+
+                  {/* Glassy Name Overlay */}
+                  <div className="absolute bottom-3 left-3 right-3 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-2.5 flex flex-col items-center justify-center text-center">
+                    <span className="text-white text-xs font-semibold">
+                      {card.name}
+                    </span>
+                    <span className="text-white/60 text-[10px]">
+                      {card.role}
+                    </span>
                   </div>
-                )}
+                </div>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -293,54 +308,72 @@ const CardsDisplay = () => {
       {/* Desktop Fanned Stack */}
       <div className="hidden md:flex items-center justify-center w-full h-full">
         {cards.map((card, index) => {
-            const isActive = activeIndex === index;
-            return (
-                <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.5, y: 200, rotate: 0 }}
-                animate={{
-                    opacity: 1,
-                    scale: isActive ? 1.15 : card.scale,
-                    y: card.y,
-                    rotate: isActive ? 0 : card.rotate,
-                    x: card.x,
-                    zIndex: isActive ? 100 : card.z,
-                }}
-                viewport={{ once: true }}
-                transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 20,
-                    delay: 0, 
-                }}
-                onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(null)}
-                className={`absolute w-52 h-72 rounded-[24px] bg-neutral-800 shadow-2xl overflow-hidden group origin-bottom cursor-pointer`}
+          const isActive = activeIndex === index;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.5, y: 200, rotate: 0 }}
+              animate={{
+                opacity: 1,
+                scale: isActive ? 1.15 : card.scale,
+                y: card.y,
+                rotate: isActive ? 0 : card.rotate,
+                x: card.x,
+                zIndex: isActive ? 100 : card.z,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: 0,
+              }}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              className={`absolute w-52 h-72 rounded-[24px] bg-neutral-800 shadow-2xl overflow-hidden group origin-bottom cursor-pointer`}
+            >
+              {/* Card Border & Glow */}
+              <div className="absolute inset-0 rounded-[24px] border border-white/10 z-10" />
+
+              <div className={`w-full h-full bg-neutral-900 relative`}>
+                <div
+                  className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ${
+                    isActive ? "scale-110" : ""
+                  }`}
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
+                  }}
+                />
+                <div
+                  className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${
+                    isActive ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+
+                {card.active && (
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none transition-opacity duration-300 ${
+                      isActive ? "opacity-0" : "opacity-50"
+                    }`}
+                  />
+                )}
+
+                {/* Glassy Name Overlay - Visible on Hover/Active */}
+                <div
+                  className={`absolute bottom-4 left-4 right-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-3 flex flex-col text-center transition-all duration-300 ${
+                    isActive
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
                 >
-                {/* Card Border & Glow */}
-                <div className="absolute inset-0 rounded-[24px] border border-white/10 z-10" />
-
-                <div className={`w-full h-full bg-neutral-900 relative`}>
-                    <div
-                    className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ${isActive ? 'scale-110' : ''}`}
-                    style={{
-                        backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
-                    }}
-                    />
-                    <div className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
-                    
-                    {card.active && (
-                        <div className={`absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none transition-opacity duration-300 ${isActive ? 'opacity-0' : 'opacity-50'}`} />
-                    )}
-
-                    {/* Glassy Name Overlay - Visible on Hover/Active */}
-                    <div className={`absolute bottom-4 left-4 right-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-3 flex flex-col text-center transition-all duration-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                        <span className="text-white text-sm font-semibold">{card.name}</span>
-                        <span className="text-white/60 text-xs">{card.role}</span>
-                    </div>
+                  <span className="text-white text-sm font-semibold">
+                    {card.name}
+                  </span>
+                  <span className="text-white/60 text-xs">{card.role}</span>
                 </div>
-                </motion.div>
-            );
+              </div>
+            </motion.div>
+          );
         })}
       </div>
     </div>
