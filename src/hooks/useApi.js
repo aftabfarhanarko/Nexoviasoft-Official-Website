@@ -24,7 +24,7 @@ export const useQuery = (url, { skip = false, deps = [] } = {}) => {
   const [isLoading, setIsLoading] = useState(!skip);
   const [isError, setIsError] = useState(false);
   const [error, setError] = useState(null);
-j
+
   const fetchData = useCallback(async () => {
     if (skip) return;
 
