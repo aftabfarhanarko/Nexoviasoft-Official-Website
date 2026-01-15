@@ -87,7 +87,14 @@ const Pricing = () => {
   const cardsData = apiPlans.length ? apiPlans : fallbackPlans;
 
   return (
+<<<<<<< HEAD
     <section className="py-24 -mt-26 md:-mt-18 relative overflow-hidden">
+=======
+    <section id="pricing" className="py-24 -mt-26 md:-mt-18 relative overflow-hidden">
+      {/* Background Gradients - Removed for global theme */}
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#EFFC76]/10 blur-[100px] rounded-full pointer-events-none" /> */}
+
+>>>>>>> 597fa49 (set mobile images)
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="mb-16">
