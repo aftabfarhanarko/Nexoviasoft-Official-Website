@@ -35,7 +35,7 @@ const FullCardAdImages = () => {
 
   return (
     <div className="w-11/12 md:max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start my-16">
-      <div className="flex flex-col gap-6 lg:sticky lg:top-28">
+      <div className="flex flex-col gap-6 ">
         <NewButton>About Squadlog</NewButton>
         <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
           Built for real-world delivery teams
