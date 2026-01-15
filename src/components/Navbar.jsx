@@ -191,7 +191,7 @@ const Navbar = () => {
 
       {/* Mobile Bottom Dock */}
       <div className="md:hidden fixed  border  bottom-8 left-4 right-4 z-50">
-        <div className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#424426] rounded-2xl grid grid-cols-5 items-end px-2 py-3 shadow-2xl relative">
+        <div className="bg-[#0A0A0A]/90 backdrop-blur-xl border border-[#272725] rounded-2xl grid grid-cols-5 items-end px-2 py-3 shadow-2xl relative">
           <div className="flex justify-center w-full">
             <Link
               href="/"
