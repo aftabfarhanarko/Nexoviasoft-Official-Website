@@ -149,6 +149,7 @@ const CardsDisplay = () => {
   const team = Array.isArray(data?.data) ? data.data : [];
   console.log("This is Team Data", data);
 
+
   const layout = [
     {
       rotate: isMobile ? -15 : -25,
