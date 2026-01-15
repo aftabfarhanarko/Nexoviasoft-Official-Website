@@ -24,6 +24,7 @@ import {
 import { motion } from "framer-motion";
 import SmoothButton from "@/Share/SmoothButton";
 import { servicesData } from "@/constants/services";
+import { useQuery } from "@/hooks/useApi";
 
 const Service = () => {
   const bottomTags = [
@@ -36,6 +37,9 @@ const Service = () => {
     { name: "Database Design", icon: Database },
     { name: "Lead Generation", icon: Globe },
   ];
+
+  const { data, isLoading, isError } = useQuery(`/our-service`);
+  console.log("Services", data);
 
   return (
     <section className="bg-transparent py-20 px-4 md:px-8 relative overflow-hidden">
@@ -50,7 +54,7 @@ const Service = () => {
               transition={{ duration: 0.8 }}
             >
               <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
-             <Code size={15} className="text-black" />
+                <Code size={15} className="text-black" />
               </span>
               <span className="text-gray-300 text-sm font-medium">
                 Our Expertise

@@ -26,8 +26,6 @@ const Banner = () => {
 
   return (
     <div className="min-h-screen text-white  mt-2 md:-mt-8  overflow-hidden bg-transparent">
-     
-
       {/* Banner Component */}
       <section className="relative md:mt-0 min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Content */}

@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ["example.com"],
+    domains: ["example.com","i.ibb.co"],
     // domains: ["https://cdn.nextbyteitinstitute.com"],
   },
   async redirects() {

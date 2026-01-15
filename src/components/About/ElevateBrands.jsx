@@ -7,86 +7,106 @@ const ElevateBrands = () => {
   return (
     <div className="w-11/12 md:max-w-[1280px] mx-auto mt-10 py-20 relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-        
-        {/* Left Side - Content */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-8"
         >
-          {/* Badge */}
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit">
-            <div className="p-1 rounded-full bg-[#EFFC76] flex items-center justify-center">
-               <Gift size={14} className="text-black" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 w-fit">
+            <div className="p-1.5 rounded-full bg-[#EFFC76] flex items-center justify-center">
+              <Gift size={16} className="text-black" />
             </div>
-            <span className="text-gray-300 text-sm font-medium">About SquadLog</span>
+            <span className="text-gray-200 text-sm font-medium">
+              Why teams choose SquadLog
+            </span>
           </div>
-
-          {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight">
-            Elevate Your Business with <br />
-            <span className="text-gray-400">Proven Expertise!</span>
+            Elevate your brand with
+            <br />
+            <span className="text-gray-400">a product-ready workflow.</span>
           </h2>
-
-          {/* Feature 1 */}
-          <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-white">End-to-End Development</h3>
-            <p className="text-gray-400 leading-relaxed">
-              From initial concept to final deployment, we handle every aspect of your software lifecycle 
-              with precision, using cutting-edge technologies to deliver superior results.
-            </p>
-          </div>
-
-          {/* Feature 2 */}
-          <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-white">Strategic Digital Growth</h3>
-            <p className="text-gray-400 leading-relaxed">
-              We don't just build; we strategize. Our solutions are crafted to enhance your 
-              market presence, optimize operations, and drive measurable business growth.
-            </p>
-          </div>
-
-          {/* Bottom Action Area */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mt-4">
-            <button className="px-8 py-3 rounded-xl bg-[#EFFC76] hover:bg-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/25">
-              Book an Appointment
-            </button>
-            
-            <div className="flex flex-col gap-1">
-              <div className="flex gap-1 text-[#EFFC76]">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} size={18} fill="currentColor" className="text-[#EFFC76]" />
-                ))}
+          <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
+            SquadLog brings strategy, design, and engineering into one place so
+            every release feels on-brand, on-time, and confidently shipped to
+            your customers.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
+              <div className="mt-1 rounded-full bg-[#EFFC76]/20 text-[#EFFC76] w-7 h-7 flex items-center justify-center">
+                <Star size={16} />
               </div>
-              <span className="text-gray-400 text-sm">900+ People Rated</span>
+              <div>
+                <p className="text-sm text-gray-200 font-medium">
+                  Consistent launches
+                </p>
+                <p className="text-xs text-gray-400">
+                  Standard checklists and approvals keep every brand moment aligned.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
+              <div className="mt-1 rounded-full bg-[#EFFC76]/20 text-[#EFFC76] w-7 h-7 flex items-center justify-center">
+                <Star size={16} />
+              </div>
+              <div>
+                <p className="text-sm text-gray-200 font-medium">
+                  Clear client visibility
+                </p>
+                <p className="text-xs text-gray-400">
+                  Share a live SquadLog view instead of scattered chats and sheets.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
-
-        {/* Right Side - Image */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
         >
-          <div className="relative rounded-[1rem] overflow-hidden aspect-square lg:aspect-[3/3] group bg-white/5 p-2">
-            <img 
-              src="https://i.ibb.co.com/hRxNb4xf/image.png" 
-              alt="Team Working" 
-              className="w-full h-full rounded-[1rem] object-cover "
-            />
-            {/* Dark Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            
-            {/* Border Glow */}
-            <div className="absolute inset-0 border border-white/10 rounded-[2rem] pointer-events-none" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#EFFC76]/20 blur-3xl rounded-full pointer-events-none" />
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="rounded-3xl bg-black/40 border border-white/10 p-5 flex flex-col justify-between min-h-[160px]">
+              <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">
+                SquadLog Snapshot
+              </p>
+              <p className="text-2xl font-semibold text-white mb-2">
+                12 active launches
+              </p>
+              <p className="text-sm text-gray-400">
+                All tracked in one unified delivery board.
+              </p>
+            </div>
+            <div className="rounded-3xl bg-white/5 border border-white/10 p-5 flex flex-col justify-between min-h-[160px]">
+              <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">
+                Brand consistency
+              </p>
+              <p className="text-2xl font-semibold text-[#EFFC76] mb-2">
+                98% on-guideline
+              </p>
+              <p className="text-sm text-gray-400">
+                Templates keep every new page and release on-brand.
+              </p>
+            </div>
+            <div className="sm:col-span-2 rounded-3xl bg-gradient-to-r from-[#EFFC76]/20 to-transparent border border-[#EFFC76]/40 p-5 flex items-center justify-between gap-6">
+              <div>
+                <p className="text-xs text-gray-300 uppercase tracking-wide mb-1">
+                  Inside SquadLog
+                </p>
+                <p className="text-lg font-semibold text-white">
+                  One place to plan, approve, and ship your next launch.
+                </p>
+              </div>
+              <div className="hidden sm:flex items-center justify-center rounded-2xl bg-black/40 border border-white/10 px-4 py-3 text-sm text-[#EFFC76]">
+                SquadLog in action
+              </div>
+            </div>
           </div>
         </motion.div>
-
       </div>
     </div>
   );

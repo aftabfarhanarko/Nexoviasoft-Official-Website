@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Card from "@/components/About/Card";
 import NewButton from "@/Share/NewButton";
@@ -8,72 +9,59 @@ const FullCardAdImages = () => {
   const cards = [
     {
       icon: Bot,
-      badge: "Innovate",
-      title: "Future-Proof Solutions",
+      badge: "Workflow",
+      title: "Smart Project Co-pilot",
       description:
-        "Leveraging the latest in AI, Cloud, and Web technologies to build scalable solutions that keep you ahead of the curve. We turn complex challenges into elegant, efficient systems.",
-      tags: ["Innovation", "Scalability"],
+        "Let SquadLog watch your delivery pipeline, surface risks, and nudge owners before deadlines slip.",
+      tags: ["Delivery health", "Risk alerts"],
     },
     {
       icon: ShieldCheck,
-      badge: "Trust",
-      title: "Reliable & Secure Architecture",
+      badge: "Audit",
+      title: "Secure Activity Timeline",
       description:
-        "We prioritize security and reliability in every line of code. Our development practices ensure your digital assets are protected, compliant, and consistently performant.",
-      tags: ["Security", "Performance"],
+        "Every decision, change request, and deployment is captured in one clear, tamper-resistant history.",
+      tags: ["Audit trail", "Compliance"],
     },
     {
       icon: Scaling,
       badge: "Scale",
-      title: "Growth-Oriented Partnership",
+      title: "Repeatable Playbooks",
       description:
-        "From MVP to Enterprise, our solutions are designed to scale seamlessly with your business. We are your long-term technical partner committed to your sustained success.",
-      buttonText: "Book an Appointment",
+        "Turn your best project setups into templates so every new client starts fast and stays consistent.",
+      buttonText: "Explore the platform",
     },
   ];
 
   return (
-    <div className="w-11/12 md:max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-20 items-start relative my-10">
-      {/* Left Side - Sticky Image */}
-      <div className="relative fixed  md:top-32 bg-white/5 p-3 rounded-2xl border border-white/5 h-fit self-start">
-        <div className="relative rounded-2xl overflow-hidden aspect-[5/5] w-full">
-          <img
-            className="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
-            src="https://i.ibb.co.com/jPBNM5b4/image.png"
-            alt="About SquadLog"
-          />
-          {/* Overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+    <div className="w-11/12 md:max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start my-16">
+      <div className="flex flex-col gap-6 lg:sticky lg:top-28">
+        <NewButton>About Squadlog</NewButton>
+        <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
+          Built for real-world delivery teams
+        </h2>
+        <p className="text-gray-400 text-lg leading-relaxed">
+          SquadLog keeps projects, clients, and releases in one workflow so
+          nothing slips between tools, chats, or spreadsheets.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300">
+          <div className="rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
+            Track every milestone from brief to launch.
+          </div>
+          <div className="rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
+            Give clients a clear, always-current status view.
+          </div>
+          <div className="rounded-2xl bg-white/5 border border-white/10 px-4 py-3">
+            Standardize how you kick off and run projects.
+          </div>
         </div>
       </div>
-
-      {/* Right Side - Scrollable Cards */}
-      <div className="flex flex-col gap-8">
-        <div className="mb-4">
-          <NewButton>About Squadlog</NewButton>
-          <h2 className="text-4xl md:text-5xl font-medium text-white mt-6 leading-tight">
-            Empowering Business <br />
-            <span className="text-gray-400">Through Technology</span>
-          </h2>
-          <p className="text-gray-400 mt-6 text-lg leading-relaxed">
-            SquadLog is a premier digital transformation agency. We partner with visionaries,
-            enterprises, and startups to build robust web, mobile, and cloud solutions that drive real business value.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-6">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="relative md:sticky transition-all duration-500"
-              style={{ top: `calc(130px + ${index * 30}px)` }}
-            >
-              <div className=" bg-white/10 rounded-2xl p-1.5">
-                <Card {...card} />
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-6">
+        {cards.map((card, index) => (
+          <div key={index} className="bg-white/10 rounded-2xl p-1.5">
+            <Card {...card} />
+          </div>
+        ))}
       </div>
     </div>
   );
