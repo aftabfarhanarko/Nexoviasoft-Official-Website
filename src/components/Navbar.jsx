@@ -223,11 +223,7 @@ const Navbar = () => {
           {/* Floating Central Button */}
           <div className="relative -top-6 flex flex-col items-center justify-end w-full">
             <Link href="/contact">
-<<<<<<< HEAD
-              <div className="bg-white/20 backdrop-blur-lg p-3 rounded-xl  border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
-=======
               <div className="bg-white/10 backdrop-blur-lg p-3 rounded-xl border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
->>>>>>> 597fa49 (set mobile images)
                 <Image
                   src="/customIcon.png"
                   alt="Center Icon"

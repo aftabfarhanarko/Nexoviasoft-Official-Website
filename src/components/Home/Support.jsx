@@ -157,12 +157,9 @@ const CardsDisplay = () => {
       y: isMobile ? 25 : 35,
       scale: 0.85,
       z: 0,
-<<<<<<< HEAD
-=======
       img: "1524504388940-b1c1722653e1", // Bag
       name: "Sarah Jenkins",
       role: "Support Agent",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: isMobile ? -10 : -15,
@@ -170,12 +167,9 @@ const CardsDisplay = () => {
       y: isMobile ? 15 : 18,
       scale: 0.9,
       z: 10,
-<<<<<<< HEAD
-=======
       img: "1494976388531-d377034f0d38", // Car
       name: "David Kim",
       role: "Tech Lead",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: isMobile ? -5 : -7,
@@ -183,12 +177,9 @@ const CardsDisplay = () => {
       y: isMobile ? 5 : 5,
       scale: 0.95,
       z: 20,
-<<<<<<< HEAD
-=======
       img: "1546069901-ba9599a7e63c", // Food
       name: "Emily Chen",
       role: "Product Manager",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: 0,
@@ -197,12 +188,9 @@ const CardsDisplay = () => {
       scale: 1.05,
       z: 30,
       active: true,
-<<<<<<< HEAD
-=======
       img: "1618005182384-a83a8bd57fbe", // Main
       name: "Alex Morgan",
       role: "Senior Developer",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: isMobile ? 5 : 7,
@@ -210,12 +198,9 @@ const CardsDisplay = () => {
       y: isMobile ? 5 : 5,
       scale: 0.95,
       z: 20,
-<<<<<<< HEAD
-=======
       img: "1515886657613-9f3515b0c78f", // Fashion
       name: "Jessica Wu",
       role: "UI/UX Designer",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: isMobile ? 10 : 15,
@@ -223,12 +208,9 @@ const CardsDisplay = () => {
       y: isMobile ? 15 : 18,
       scale: 0.9,
       z: 10,
-<<<<<<< HEAD
-=======
       img: "1534528741775-53994a69daeb", // Art/Abstract
       name: "Ryan Park",
       role: "Frontend Engineer",
->>>>>>> 597fa49 (set mobile images)
     },
     {
       rotate: isMobile ? 15 : 25,
@@ -236,12 +218,9 @@ const CardsDisplay = () => {
       y: isMobile ? 25 : 35,
       scale: 0.85,
       z: 0,
-<<<<<<< HEAD
-=======
       img: "1542291026-7eec264c27ff", // Product
       name: "Lisa Thompson",
       role: "QA Specialist",
->>>>>>> 597fa49 (set mobile images)
     },
   ];
 
@@ -296,11 +275,7 @@ const CardsDisplay = () => {
             >
               {({ isActive }) => (
                 <div
-<<<<<<< HEAD
-                  className={`relative w-44 h-64 mb-8 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
-=======
                   className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
->>>>>>> 597fa49 (set mobile images)
                     isActive
                       ? "scale-110 z-20 ring-2 ring-[#EFFC76]/50"
                       : "scale-90 z-10 opacity-70 blur-[1px]"
@@ -309,13 +284,9 @@ const CardsDisplay = () => {
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-<<<<<<< HEAD
                       backgroundImage: card.image
                         ? `url('${card.image}')`
-                        : "none",
-=======
-                      backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
->>>>>>> 597fa49 (set mobile images)
+                        : `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
                     }}
                   />
                   {/* Dark overlay for inactive slides */}
@@ -331,11 +302,7 @@ const CardsDisplay = () => {
                       {card.name}
                     </span>
                     <span className="text-white/60 text-[10px]">
-<<<<<<< HEAD
-                      {card.designation}
-=======
-                      {card.role}
->>>>>>> 597fa49 (set mobile images)
+                      {card.designation || card.role}
                     </span>
                   </div>
                 </div>
@@ -408,13 +375,10 @@ const CardsDisplay = () => {
                   <span className="text-white text-sm font-semibold">
                     {card.name}
                   </span>
-<<<<<<< HEAD
                   <span className="text-white/60 text-xs">
                     {card.designation}
                   </span>
-=======
                   <span className="text-white/60 text-xs">{card.role}</span>
->>>>>>> 597fa49 (set mobile images)
                 </div>
               </div>
             </motion.div>
