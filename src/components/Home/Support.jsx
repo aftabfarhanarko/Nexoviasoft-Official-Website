@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useQuery } from "@/hooks/useApi";
 
 const features = [
   {
@@ -38,7 +39,7 @@ const features = [
 
 const Support = () => {
   return (
-    <section className=" py-24 px-4 relative overflow-hidden">
+    <section className="  py-24 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -84,14 +85,14 @@ const Support = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} delay={0.4 + index * 0.1} />
           ))}
         </div>
 
         {/* Mobile Slider */}
-        <div className="lg:hidden -mt-8 max-w-5xl mx-auto">
+        {/* <div className="lg:hidden -mt-8 max-w-5xl mx-auto">
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={24}
@@ -126,7 +127,7 @@ const Support = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -137,94 +138,119 @@ const CardsDisplay = () => {
 
   React.useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile(); // Check on mount
+    checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const [activeIndex, setActiveIndex] = React.useState(null);
 
-  // 7 Cards for a fuller fan effect
-  const cards = [
+  const { data } = useQuery("/our-team/public");
+  const team = Array.isArray(data?.data) ? data.data : [];
+  console.log("This is Team Data", data);
+
+
+  const layout = [
     {
-      // Card 1 (Left Outer)
       rotate: isMobile ? -15 : -25,
       x: isMobile ? -100 : -280,
       y: isMobile ? 25 : 35,
       scale: 0.85,
       z: 0,
+<<<<<<< HEAD
+=======
       img: "1524504388940-b1c1722653e1", // Bag
       name: "Sarah Jenkins",
       role: "Support Agent",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Card 2
       rotate: isMobile ? -10 : -15,
       x: isMobile ? -65 : -190,
       y: isMobile ? 15 : 18,
       scale: 0.9,
       z: 10,
+<<<<<<< HEAD
+=======
       img: "1494976388531-d377034f0d38", // Car
       name: "David Kim",
       role: "Tech Lead",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Card 3
       rotate: isMobile ? -5 : -7,
       x: isMobile ? -35 : -100,
       y: isMobile ? 5 : 5,
       scale: 0.95,
       z: 20,
+<<<<<<< HEAD
+=======
       img: "1546069901-ba9599a7e63c", // Food
       name: "Emily Chen",
       role: "Product Manager",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Center
       rotate: 0,
       x: 0,
       y: 0,
       scale: 1.05,
       z: 30,
       active: true,
+<<<<<<< HEAD
+=======
       img: "1618005182384-a83a8bd57fbe", // Main
       name: "Alex Morgan",
       role: "Senior Developer",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Card 5
       rotate: isMobile ? 5 : 7,
       x: isMobile ? 35 : 100,
       y: isMobile ? 5 : 5,
       scale: 0.95,
       z: 20,
+<<<<<<< HEAD
+=======
       img: "1515886657613-9f3515b0c78f", // Fashion
       name: "Jessica Wu",
       role: "UI/UX Designer",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Card 6
       rotate: isMobile ? 10 : 15,
       x: isMobile ? 65 : 190,
       y: isMobile ? 15 : 18,
       scale: 0.9,
       z: 10,
+<<<<<<< HEAD
+=======
       img: "1534528741775-53994a69daeb", // Art/Abstract
       name: "Ryan Park",
       role: "Frontend Engineer",
+>>>>>>> 597fa49 (set mobile images)
     },
     {
-      // Card 7 (Right Outer)
       rotate: isMobile ? 15 : 25,
       x: isMobile ? 100 : 280,
       y: isMobile ? 25 : 35,
       scale: 0.85,
       z: 0,
+<<<<<<< HEAD
+=======
       img: "1542291026-7eec264c27ff", // Product
       name: "Lisa Thompson",
       role: "QA Specialist",
+>>>>>>> 597fa49 (set mobile images)
     },
   ];
+
+  const cards = team.slice(0, layout.length).map((member, index) => ({
+    ...layout[index],
+    image: member.image,
+    name: member.name,
+    designation: member.designation,
+  }));
 
   return (
     <div className="relative w-full h-[350px] md:h-[450px] flex items-center justify-center translate-y-8">
@@ -270,7 +296,11 @@ const CardsDisplay = () => {
             >
               {({ isActive }) => (
                 <div
+<<<<<<< HEAD
                   className={`relative w-44 h-64 mb-8 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
+=======
+                  className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
+>>>>>>> 597fa49 (set mobile images)
                     isActive
                       ? "scale-110 z-20 ring-2 ring-[#EFFC76]/50"
                       : "scale-90 z-10 opacity-70 blur-[1px]"
@@ -279,7 +309,13 @@ const CardsDisplay = () => {
                   <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
+<<<<<<< HEAD
+                      backgroundImage: card.image
+                        ? `url('${card.image}')`
+                        : "none",
+=======
                       backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
+>>>>>>> 597fa49 (set mobile images)
                     }}
                   />
                   {/* Dark overlay for inactive slides */}
@@ -295,7 +331,11 @@ const CardsDisplay = () => {
                       {card.name}
                     </span>
                     <span className="text-white/60 text-[10px]">
+<<<<<<< HEAD
+                      {card.designation}
+=======
                       {card.role}
+>>>>>>> 597fa49 (set mobile images)
                     </span>
                   </div>
                 </div>
@@ -305,7 +345,6 @@ const CardsDisplay = () => {
         </Swiper>
       </div>
 
-      {/* Desktop Fanned Stack */}
       <div className="hidden md:flex items-center justify-center w-full h-full">
         {cards.map((card, index) => {
           const isActive = activeIndex === index;
@@ -369,7 +408,13 @@ const CardsDisplay = () => {
                   <span className="text-white text-sm font-semibold">
                     {card.name}
                   </span>
+<<<<<<< HEAD
+                  <span className="text-white/60 text-xs">
+                    {card.designation}
+                  </span>
+=======
                   <span className="text-white/60 text-xs">{card.role}</span>
+>>>>>>> 597fa49 (set mobile images)
                 </div>
               </div>
             </motion.div>

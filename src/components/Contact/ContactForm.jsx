@@ -3,8 +3,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
+import { useQuery } from "@/hooks/useApi";
 
 const ContactForm = () => {
+  const { data } = useQuery("/service-request");
+  console.log("Contactpage", data);
+
+  
   return (
     <div className="w-11/12 md:max-w-[1280px] mx-auto py-30">
       {/* Header Section */}

@@ -8,12 +8,11 @@ import Link from "next/link";
 import { useQuery } from "@/hooks/useApi";
 
 const PortfolioCard = () => {
-  const ref = useRef(null);
 
   // const projects = caseStudiesData;
 
   const { data, isLoading, isError } = useQuery("/case-studies");
-  console.log("case-studies", data?.data);
+  console.log("case-studies", data);
 
   return (
     <div

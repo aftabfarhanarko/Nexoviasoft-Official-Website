@@ -22,12 +22,10 @@ const Banner = () => {
 
   // Partner logos for marquee
   const { data, isLoading, isError } = useQuery("/hero-crasol");
-  console.log("Data", data);
+  console.log("Bannr", data);
 
   return (
     <div className="min-h-screen text-white  mt-2 md:-mt-8  overflow-hidden bg-transparent">
-     
-
       {/* Banner Component */}
       <section className="relative md:mt-0 min-h-screen flex flex-col items-center justify-center pt-20">
         {/* Content */}

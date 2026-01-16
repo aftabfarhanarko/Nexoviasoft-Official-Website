@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import TestimonialCard from "./TestimonialCard";
 import SmoothButton from "@/Share/SmoothButton";
+import { useQuery } from "@/hooks/useApi";
 
-const testimonials = [
+const fallbackTestimonials = [
   {
     name: "Michael Chen",
     role: "CTO",
@@ -61,6 +62,22 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  const { data } = useQuery("/customer-review");
+  const apiReviews = Array.isArray(data?.data)
+    ? data.data
+        .filter((item) => item.status === "approved")
+        .map((item) => ({
+          name: item.client?.name,
+          role: item.client?.designation,
+          company: item.caseStudy?.title,
+          image: item.client?.photo,
+          text: item.review_message,
+          rating: item.rating ?? 5,
+        }))
+    : [];
+
+  const testimonials = apiReviews.length ? apiReviews : fallbackTestimonials;
+
   return (
     <section className=" -mt-22 py-20 px-4 md:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
@@ -120,7 +137,6 @@ const Testimonial = () => {
           </motion.div>
         </div>
 
-        {/* Testimonials Grid for Desktop */}
         <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((item, index) => (
             <TestimonialCard key={index} {...item} delay={0.2 + index * 0.1} />

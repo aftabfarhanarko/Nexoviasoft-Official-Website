@@ -30,8 +30,8 @@ const TestPages = () => {
           <Innovation />
         </section>
 
-{/* grid-cols-1 lg:grid-cols-12 gap-6 */}
-        <section>  
+        {/* grid-cols-1 lg:grid-cols-12 gap-6 */}
+        <section>
           <PortfolioCard />
         </section>
         <section>
@@ -54,7 +54,6 @@ const TestPages = () => {
           <LaunchYourSite />
         </section>
 
-      
         <section>
           <DevOpsWorkflow />
         </section>
@@ -69,8 +68,6 @@ const TestPages = () => {
         <section>
           <Faq />
         </section>
-
-       
       </div>
     </div>
   );

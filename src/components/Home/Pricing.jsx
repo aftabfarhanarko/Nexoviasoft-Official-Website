@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import PricingCard from "./PricingCard";
 import { Rocket, Bell, Layout } from "lucide-react";
+import { useQuery } from "@/hooks/useApi";
 
 const pricingPlans = [
   {
@@ -66,11 +67,34 @@ const pricingPlans = [
 ];
 
 const Pricing = () => {
+  const { data, isLoading, isError } = useQuery("/price-package");
+  const apiPlans = data?.data ?? [];
+
+  const fallbackPlans = pricingPlans.map((plan, index) => ({
+    badge: plan.tag,
+    description: plan.description,
+    features: plan.features,
+    iconUrl: null,
+    id: index,
+    price: plan.price,
+    projectLimit: plan.stats?.projects,
+    revisionLimit: plan.stats?.revisions,
+    status: null,
+    title: plan.plan,
+    type: null,
+  }));
+
+  const cardsData = apiPlans.length ? apiPlans : fallbackPlans;
+
   return (
+<<<<<<< HEAD
     <section className="py-24 -mt-26 md:-mt-18 relative overflow-hidden">
+=======
+    <section id="pricing" className="py-24 -mt-26 md:-mt-18 relative overflow-hidden">
       {/* Background Gradients - Removed for global theme */}
       {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#EFFC76]/10 blur-[100px] rounded-full pointer-events-none" /> */}
 
+>>>>>>> 597fa49 (set mobile images)
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="mb-16">
@@ -113,10 +137,13 @@ const Pricing = () => {
           </motion.p>
         </div>
 
-        {/* Pricing Cards Grid (Desktop) */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} delay={0.3 + index * 0.1} />
+          {cardsData.map((items, index) => (
+            <PricingCard
+              key={items.id ?? index}
+              items={items}
+              delay={0.3 + index * 0.1}
+            />
           ))}
         </div>
 
@@ -145,10 +172,10 @@ const Pricing = () => {
               "--swiper-pagination-bullet-horizontal-gap": "6px",
             }}
           >
-            {pricingPlans.map((plan, index) => (
-              <SwiperSlide key={index} className="h-auto">
+            {cardsData.map((items, index) => (
+              <SwiperSlide key={items.id ?? index} className="h-auto">
                 <div className="h-full px-1 mb-7">
-                  <PricingCard {...plan} delay={0} />
+                  <PricingCard items={items} delay={0} />
                 </div>
               </SwiperSlide>
             ))}
