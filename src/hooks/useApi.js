@@ -90,9 +90,13 @@ export const useMutation = () => {
 
         if (!response.ok) {
           const errorData = await response.json().catch(() => ({}));
-          throw new Error(
+          const error = new Error(
             errorData.message || `HTTP error! status: ${response.status}`
           );
+          error.statusCode = response.status;
+          error.status = response.status;
+          error.data = errorData;
+          throw error;
         }
 
         const result = await response.json();

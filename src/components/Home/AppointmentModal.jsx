@@ -37,47 +37,51 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
       // Step 1: Check if client exists by email or create new client
       let clientId;
       
-      // First, try to find existing client by email
-      try {
-        const clientsResponse = await trigger("/our-client", {
-          method: "GET",
-        });
+      // Try to create new client first
+      const clientResponse = await trigger("/our-client", {
+        method: "POST",
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          companyName: formData.companyName,
+        },
+      });
 
-        if (!clientsResponse.error) {
-          const clientsData = clientsResponse.data;
-          const clients = clientsData?.data || clientsData || [];
-          
-          // Check if client with this email exists
-          const existingClient = clients.find(
-            (client) => client.email?.toLowerCase() === formData.email.toLowerCase()
-          );
+      // Check if email already exists (statusCode 409)
+      if (clientResponse.error && clientResponse.error.statusCode === 409) {
+        // Email already exists, find the existing client
+        try {
+          const clientsResponse = await trigger("/our-client", {
+            method: "GET",
+          });
 
-          if (existingClient) {
-            // Use existing client ID
-            clientId = existingClient.id;
+          if (!clientsResponse.error) {
+            const clientsData = clientsResponse.data;
+            const clients = clientsData?.data || clientsData || [];
+            
+            // Find client with this email
+            const existingClient = clients.find(
+              (client) => client.email?.toLowerCase() === formData.email.toLowerCase()
+            );
+
+            if (existingClient) {
+              // Use existing client ID
+              clientId = existingClient.id;
+            } else {
+              throw new Error("Client with this email not found");
+            }
+          } else {
+            throw new Error("Failed to fetch existing clients");
           }
+        } catch (error) {
+          throw new Error("Failed to find existing client: " + error.message);
         }
-      } catch (error) {
-        console.log("Error fetching clients:", error);
-        // Continue to create new client if fetch fails
-      }
-
-      // If client doesn't exist, create new one
-      if (!clientId) {
-        const clientResponse = await trigger("/our-client", {
-          method: "POST",
-          body: {
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            companyName: formData.companyName,
-          },
-        });
-
-        if (clientResponse.error) {
-          throw new Error(clientResponse.error.message || "Failed to create client");
-        }
-
+      } else if (clientResponse.error) {
+        // Other errors
+        throw new Error(clientResponse.error.message || "Failed to create client");
+      } else {
+        // Client created successfully
         clientId = clientResponse.data?.data?.id || clientResponse.data?.id;
         
         if (!clientId) {

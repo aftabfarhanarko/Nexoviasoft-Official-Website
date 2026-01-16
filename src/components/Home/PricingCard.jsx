@@ -113,3 +113,4 @@ const PricingCard = ({ items, delay = 0 }) => {
 };
 
 export default PricingCard;
+j
