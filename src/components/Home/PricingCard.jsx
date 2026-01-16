@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, Zap } from "lucide-react";
+import AppointmentModal from "./AppointmentModal";
 
 const PricingCard = ({ items, delay = 0 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const {
     badge,
     description,
@@ -13,6 +15,8 @@ const PricingCard = ({ items, delay = 0 }) => {
     projectLimit,
     revisionLimit,
     title,
+    id: pricePackageId,
+    type: serviceType,
   } = items;
 
   return (
@@ -92,10 +96,18 @@ const PricingCard = ({ items, delay = 0 }) => {
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="relative z-10 w-full py-3 md:py-4 rounded-xl font-medium text-sm md:text-base text-black bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] transition-all duration-300 shadow-lg shadow-[#EFFC76]/20"
+        onClick={() => setIsModalOpen(true)}
+        className="relative z-50 w-full py-3 md:py-4 rounded-xl font-medium text-sm md:text-base text-black bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] transition-all duration-300 shadow-lg shadow-[#EFFC76]/20"
       >
         Book an Appointment
       </motion.button>
+
+      <AppointmentModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        pricePackageId={pricePackageId}
+        serviceType={serviceType || "Web Development"}
+      />
     </motion.div>
   );
 };
