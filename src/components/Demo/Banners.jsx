@@ -1,18 +1,13 @@
 "use client";
 import React from "react";
-import {
-  CreditCard,
-  Activity,
-  BarChart2,
-  Hexagon,
-} from "lucide-react";
+import { CreditCard, Activity, BarChart2, Hexagon } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Banners = () => {
   return (
-    <section className="max-w-7xl mx-auto relative text-white pt-20 pb-32 overflow-hidden">
+    <section className="max-w-7xl  mx-auto relative text-white pt-10 md:pt-20 pb-32 overflow-hidden">
       {/* Floating Icons Background Elements - Positioned absolutely */}
-      <motion.div 
+      <motion.div
         animate={{ y: [-20, 20, -20] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         className="hidden lg:block absolute top-20 left-20"
@@ -21,10 +16,15 @@ const Banners = () => {
           <Activity className="w-12 h-12 text-[#EFFC76]" />
         </div>
       </motion.div>
-      
-      <motion.div 
+
+      <motion.div
         animate={{ y: [20, -20, 20] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1,
+        }}
         className="hidden lg:block absolute bottom-20 left-40"
       >
         <div className="bg-neutral-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-[0_0_30px_-10px_rgba(239,252,118,0.1)] transform rotate-3">
@@ -34,9 +34,14 @@ const Banners = () => {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         animate={{ y: [-15, 15, -15] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.5,
+        }}
         className="hidden lg:block absolute top-32 right-20"
       >
         <div className="bg-neutral-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-[0_0_30px_-10px_rgba(239,252,118,0.1)] transform rotate-6">
@@ -44,9 +49,14 @@ const Banners = () => {
         </div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         animate={{ y: [25, -25, 25] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 1.5,
+        }}
         className="hidden lg:block absolute bottom-32 right-40"
       >
         <div className="bg-neutral-900/50 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-[0_0_30px_-10px_rgba(239,252,118,0.1)] transform -rotate-3">
@@ -57,7 +67,7 @@ const Banners = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
           {/* Trusted Badge */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -74,7 +84,7 @@ const Banners = () => {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,7 +96,7 @@ const Banners = () => {
           </motion.h1>
 
           {/* Subheadline */}
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -98,7 +108,7 @@ const Banners = () => {
           </motion.p>
 
           {/* CTA Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
