@@ -25,7 +25,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
     }));
   };
   console.log(formData);
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
     try {
       // Step 1: Check if client exists by email or create new client
       let clientId;
-      
+
       // Try to create new client first
       const clientResponse = await trigger("/our-client", {
         method: "POST",
@@ -59,7 +59,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
           if (!clientsResponse.error) {
             const clientsData = clientsResponse.data;
             const clients = clientsData?.data || clientsData || [];
-            
+
             // Find client with this email
             const existingClient = clients.find(
               (client) => client.email?.toLowerCase() === formData.email.toLowerCase()
@@ -83,7 +83,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
       } else {
         // Client created successfully
         clientId = clientResponse.data?.data?.id || clientResponse.data?.id;
-        
+
         if (!clientId) {
           throw new Error("Client ID not received from API");
         }
@@ -147,7 +147,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
             className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl w-full max-w-2xl h-[90vh] overflow-y-auto">
+            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl w-full max-w-2xl h-[80vh] overflow-y-auto">
               {/* Close Button */}
               <button
                 onClick={onClose}
