@@ -1,7 +1,8 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import SmoothButton from "@/Share/SmoothButton";
+import AppointmentModal from "./AppointmentModal";
 
 const Packed = () => {
   const sectionRef = useRef(null);
@@ -9,6 +10,7 @@ const Packed = () => {
     target: sectionRef,
     offset: ["start end", "end start"],
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Smooth spring animation for text opacity only (no scaling)
   const textOpacity = useSpring(
@@ -55,7 +57,7 @@ const Packed = () => {
           </motion.div>
 
           <motion.div className="flex justify-center mb-80">
-            <SmoothButton>Book an Appointment</SmoothButton>
+            <SmoothButton onClick={() => setIsModalOpen(true)}>Book an Appointment</SmoothButton>
           </motion.div>
           <div className="">
             {/* Main Rotating Gallery Section - Fixed */}
@@ -163,12 +165,16 @@ const Packed = () => {
                     elevate your agency or case studies.
                   </p>
 
-                  <SmoothButton>Book an Appointment</SmoothButton>
+                  <SmoothButton onClick={() => setIsModalOpen(true)}>Book an Appointment</SmoothButton>
                 </motion.div>
               </div>
             </div>
           </div>
         </div>
+        <AppointmentModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
      
   );

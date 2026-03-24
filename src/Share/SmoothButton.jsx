@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function SmoothButton({ children, className = "" }) {
+export default function SmoothButton({ children, className = "", onClick }) {
   return (
     <div className={className}>
       <motion.button
+        onClick={onClick}
         className="px-6 py-2.5 bg-gradient-to-br from-[#d946ef] to-[#f97316] rounded-lg  text-white text-md shadow-2xl font-semibold"
         initial={{ scale: 1 }}
         whileHover={{

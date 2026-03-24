@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Rocket, Star } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
+import AppointmentModal from "./AppointmentModal";
 
 const LaunchYourSite = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative py-24 -mt-27 md:-mt-20 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -71,7 +73,7 @@ const LaunchYourSite = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center gap-8"
           >
-            <SmoothButton> Book an Appointment</SmoothButton>
+            <SmoothButton onClick={() => setIsModalOpen(true)}> Book an Appointment</SmoothButton>
 
             <div className="flex flex-col items-start">
               <div className="flex items-center gap-1 mb-1">
@@ -89,6 +91,7 @@ const LaunchYourSite = () => {
           </motion.div>
         </div>
       </div>
+      <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

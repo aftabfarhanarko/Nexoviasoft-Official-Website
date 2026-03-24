@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import AppointmentModal from "./AppointmentModal";
 
 const AboutNexoviaSoftCard = ({
   delay,
@@ -12,6 +13,8 @@ const AboutNexoviaSoftCard = ({
   imageUrl,
   isMobile = false,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   // Mobile version with image
   // Mobile version with image (Image top, Text split left & right)
   if (isMobile && imageUrl) {
@@ -88,9 +91,15 @@ const AboutNexoviaSoftCard = ({
         </p>
 
         {hasButton && (
-          <button className="bg-[#d946ef] hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] text-white px-4 py-2 rounded-full text-xs font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full">
-            Book an Appointment
-          </button>
+          <>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-[#d946ef] hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] text-white px-4 py-2 rounded-full text-xs font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full"
+            >
+              Book an Appointment
+            </button>
+            <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          </>
         )}
       </motion.div>
     );
@@ -137,9 +146,15 @@ const AboutNexoviaSoftCard = ({
           )}
 
           {hasButton && (
-            <button className="bg-[#d946ef] hover:bg-[#d946ef] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full sm:w-auto mt-4">
-              Book an Appointment
-            </button>
+            <>
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="bg-[#d946ef] hover:bg-[#d946ef] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full sm:w-auto mt-4"
+              >
+                Book an Appointment
+              </button>
+              <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            </>
           )}
         </div>
       </div>

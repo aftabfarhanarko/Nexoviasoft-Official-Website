@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ServiceCard from "./ServiceCard";
 import {
   Brain,
@@ -25,8 +25,10 @@ import { motion } from "framer-motion";
 import SmoothButton from "@/Share/SmoothButton";
 import { servicesData } from "@/constants/services";
 import { useQuery } from "@/hooks/useApi";
+import AppointmentModal from "./AppointmentModal";
 
 const Service = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const bottomTags = [
     { name: "Content Strategy", icon: PenTool },
     { name: "Cybersecurity", icon: Shield },
@@ -86,7 +88,7 @@ const Service = () => {
             enhance efficiency, and drive innovation.
           </motion.p>
 
-          <SmoothButton>Book an Appointment</SmoothButton>
+          <SmoothButton onClick={() => setIsModalOpen(true)}>Book an Appointment</SmoothButton>
         </div>
 
         {/* Services Grid */}
@@ -114,6 +116,7 @@ const Service = () => {
             </motion.div>
           ))}
         </div>
+        <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   );

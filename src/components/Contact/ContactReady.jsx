@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
+import AppointmentModal from "../home/AppointmentModal";
 
 const ContactReady = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="w-11/12 md:max-w-[880px] mx-auto py-20">
       <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#d946ef] via-[#f43f5e]/20 to-transparent border border-white/10 p-10 md:p-20 text-center">
@@ -52,11 +54,12 @@ const ContactReady = () => {
           </motion.p>
 
           {/* Button */}
-          <SmoothButton>Book an Appointment</SmoothButton>
+          <SmoothButton onClick={() => setIsModalOpen(true)}>Book an Appointment</SmoothButton>
         </div>
 
         {/* Background Grid Pattern (Optional subtle texture) */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 pointer-events-none" />
+        <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </div>
   );

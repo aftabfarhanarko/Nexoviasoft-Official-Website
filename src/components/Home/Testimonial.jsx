@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MessageSquare } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import TestimonialCard from "./TestimonialCard";
 import SmoothButton from "@/Share/SmoothButton";
 import { useQuery } from "@/hooks/useApi";
+import AppointmentModal from "./AppointmentModal";
 
 const fallbackTestimonials = [
   {
@@ -62,6 +63,7 @@ const fallbackTestimonials = [
 ];
 
 const Testimonial = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { data } = useQuery("/customer-review");
   const apiReviews = Array.isArray(data?.data)
     ? data.data
@@ -133,7 +135,7 @@ const Testimonial = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-8"
           >
-            <SmoothButton>Book An Appointment </SmoothButton>
+            <SmoothButton onClick={() => setIsModalOpen(true)}>Book An Appointment </SmoothButton>
           </motion.div>
         </div>
 
@@ -186,6 +188,10 @@ const Testimonial = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex justify-center gap-8 mt-20 opacity-30 grayscale"
         ></motion.div>
+        <AppointmentModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </section>
   );

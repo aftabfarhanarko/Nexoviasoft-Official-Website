@@ -1,9 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+import AppointmentModal from "../home/AppointmentModal";
 
 const PortfolioReady = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="w-11/12 md:max-w-[880px] mx-auto py-20">
       <div className="relative rounded-[2rem] overflow-hidden bg-gradient-to-b from-[#d946ef] via-[#f43f5e]/20 to-transparent border border-white/10 p-10 md:p-20 text-center">
@@ -56,6 +58,7 @@ const PortfolioReady = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
+            onClick={() => setIsModalOpen(true)}
             className="px-8 py-4 rounded-xl bg-[#d946ef] hover:bg-[#d946ef] text-white font-medium transition-all shadow-lg shadow-[#d946ef]/25 mt-4"
           >
             Book an Appointment
@@ -64,6 +67,7 @@ const PortfolioReady = () => {
 
         {/* Background Grid Pattern (Optional subtle texture) */}
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 pointer-events-none" />
+        <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </div>
   );

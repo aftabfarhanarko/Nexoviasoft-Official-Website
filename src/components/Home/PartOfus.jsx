@@ -1,10 +1,12 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Settings } from 'lucide-react';
 import Link from 'next/link';
+import AppointmentModal from './AppointmentModal';
 
 const PartOfUs = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <section className="relative w-full py-20 px-4 md:px-8 bg-transparent overflow-hidden flex items-center justify-center min-h-[600px]">
             <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
@@ -54,12 +56,13 @@ const PartOfUs = () => {
                     transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <Link href="/contact" className="inline-block px-8 py-4 rounded-lg bg-[#6C5CE7] hover:bg-[#5a4ad1] text-white font-medium text-lg transition-colors shadow-[0_0_20px_rgba(108,92,231,0.4)] hover:shadow-[0_0_30px_rgba(108,92,231,0.6)]">
+                    <button onClick={() => setIsModalOpen(true)} className="inline-block px-8 py-4 rounded-lg bg-[#6C5CE7] hover:bg-[#5a4ad1] text-white font-medium text-lg transition-colors shadow-[0_0_20px_rgba(108,92,231,0.4)] hover:shadow-[0_0_30px_rgba(108,92,231,0.6)]">
                         Book an Appointment
-                    </Link>
+                    </button>
                 </motion.div>
 
             </div>
+            <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </section>
     );
 };
