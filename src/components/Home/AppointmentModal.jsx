@@ -147,7 +147,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
             className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl w-full max-w-2xl h-[80vh] overflow-y-auto">
+            <div className="relative bg-[#0A0A0A] border border-white/10 rounded-2xl w-full max-w-2xl h-[65vh] lg:h-[80vh] overflow-y-auto">
               {/* Close Button */}
               <button
                 onClick={onClose}
