@@ -37,7 +37,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="min-h-screen text-white relative overflow-x-hidden selection:bg-[#EFFC76] selection:text-black">
+    <div className="min-h-screen text-white relative overflow-x-hidden selection:bg-[#d946ef] selection:text-white">
       {/* Background */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-30">
         <CosmicBackground />
@@ -49,7 +49,7 @@ const ServiceDetail = () => {
           href="/main/services"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 group"
         >
-          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#EFFC76]/50 group-hover:bg-[#EFFC76]/10 transition-all">
+          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#d946ef]/50 group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all">
             <ArrowLeft
               size={16}
               className="group-hover:-translate-x-0.5 transition-transform"
@@ -67,7 +67,7 @@ const ServiceDetail = () => {
             className="max-w-5xl"
           >
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-[#EFFC76]">
+              <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                 Service
               </span>
               <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300">
@@ -105,7 +105,7 @@ const ServiceDetail = () => {
                     className="mb-16"
                  >
                     <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                        <Zap className="text-[#EFFC76]" /> Key Features
+                        <Zap className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" /> Key Features
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {service.features && service.features.map((feature, i) => (
@@ -123,12 +123,12 @@ const ServiceDetail = () => {
                     viewport={{ once: true }}
                  >
                     <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                        <CheckCircle className="text-[#EFFC76]" /> Benefits
+                        <CheckCircle className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" /> Benefits
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {service.benefits && service.benefits.map((benefit, i) => (
                             <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#EFFC76]/20 flex items-center justify-center text-[#EFFC76]">
+                                <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                                     <Check size={12} strokeWidth={3} />
                                 </div>
                                 <span className="text-gray-300">{benefit}</span>
@@ -146,7 +146,7 @@ const ServiceDetail = () => {
                         Let's discuss how our {service.title} services can help you achieve your goals.
                     </p>
                     <Link href="/main/contact" className="block w-full">
-                        <div className="w-full py-4 rounded-xl bg-[#EFFC76] text-black font-bold text-center hover:scale-105 transition-transform">
+                        <div className="w-full py-4 rounded-xl bg-[#d946ef] text-white font-bold text-center hover:scale-105 transition-transform">
                             Book a Consultation
                         </div>
                     </Link>
@@ -183,7 +183,7 @@ const ServiceDetail = () => {
                 <span className="text-gray-500 uppercase tracking-wider text-sm">Next Service</span>
             </div>
             <Link href={`/main/services/${nextService.slug}`} className="group block">
-                <h2 className="text-4xl md:text-6xl font-bold group-hover:text-[#EFFC76] transition-colors mb-4">
+                <h2 className="text-4xl md:text-6xl font-bold group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors mb-4">
                     {nextService.title}
                 </h2>
                 <div className="flex items-center gap-4 text-gray-400 group-hover:translate-x-4 transition-transform">

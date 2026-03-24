@@ -12,7 +12,7 @@ const FullCardAdImages = () => {
       badge: "Workflow",
       title: "Smart Project Co-pilot",
       description:
-        "Let SquadLog watch your delivery pipeline, surface risks, and nudge owners before deadlines slip.",
+        "Let NexoviaSoft watch your delivery pipeline, surface risks, and nudge owners before deadlines slip.",
       tags: ["Delivery health", "Risk alerts"],
     },
     {
@@ -36,12 +36,12 @@ const FullCardAdImages = () => {
   return (
     <div className="w-11/12 md:max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start my-16">
       <div className="flex flex-col gap-6 ">
-        <NewButton>About Squadlog</NewButton>
+        <NewButton>About NexoviaSoft</NewButton>
         <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
           Built for real-world delivery teams
         </h2>
         <p className="text-gray-400 text-lg leading-relaxed">
-          SquadLog keeps projects, clients, and releases in one workflow so
+          NexoviaSoft keeps projects, clients, and releases in one workflow so
           nothing slips between tools, chats, or spreadsheets.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300">

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Layout } from "lucide-react";
-// import logo from '/squadlog-logo.png'
+// import logo from '/nexoviasoft-logo.png'
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
                 <Layout size={20} strokeWidth={3} />
               </div>
               <span className="text-2xl font-bold text-gray-900">
-                Squadlog{" "}
+                NexoviaSoft{" "}
               </span>
             </div>
             <p className="text-gray-500 text-lg mb-8 leading-relaxed">
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-900 font-medium">
-            All Rights Reserved © {new Date().getFullYear()} SquadLog
+            All Rights Reserved © {new Date().getFullYear()} NexoviaSoft
           </p>
         </div>
       </div>

@@ -52,11 +52,11 @@ const MockupTerminal = () => (
       <div className="w-2 h-2 rounded-full bg-green-500/50" />
     </div>
     <div className="flex gap-2">
-      <span className="text-[#EFFC76]">$</span> <span>terraform init</span>
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">$</span> <span>terraform init</span>
     </div>
     <div className="text-gray-500">Initializing the backend...</div>
     <div className="flex gap-2">
-      <span className="text-[#EFFC76]">$</span> <span>terraform apply</span>
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">$</span> <span>terraform apply</span>
     </div>
     <div className="text-green-400">Apply complete! Resources: 5 added.</div>
   </div>
@@ -65,20 +65,20 @@ const MockupTerminal = () => (
 const MockupPipeline = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-center space-y-3">
     <div className="flex items-center gap-2">
-      <div className="w-6 h-6 rounded-md bg-[#EFFC76]/20 flex items-center justify-center text-[#EFFC76]">
+      <div className="w-6 h-6 rounded-md bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
         <GitBranch size={12} />
       </div>
       <div className="h-1 flex-1 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full w-full bg-[#EFFC76] rounded-full" />
+        <div className="h-full w-full bg-[#d946ef] rounded-full" />
       </div>
       <div className="text-[10px] text-gray-400">Build</div>
     </div>
     <div className="flex items-center gap-2">
-      <div className="w-6 h-6 rounded-md bg-[#EFFC76]/20 flex items-center justify-center text-[#EFFC76]">
+      <div className="w-6 h-6 rounded-md bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
         <CheckCircle2 size={12} />
       </div>
       <div className="h-1 flex-1 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full w-3/4 bg-[#EFFC76] rounded-full" />
+        <div className="h-full w-3/4 bg-[#d946ef] rounded-full" />
       </div>
       <div className="text-[10px] text-gray-400">Test</div>
     </div>
@@ -87,7 +87,7 @@ const MockupPipeline = () => (
 
 const MockupMonitoring = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-end gap-1 relative">
-    <div className="absolute top-2 right-2 text-[10px] text-[#EFFC76] font-mono">
+    <div className="absolute top-2 right-2 text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] font-mono">
       99.9% UP
     </div>
     {[40, 65, 45, 80, 55, 90, 70, 85].map((h, i) => (
@@ -96,7 +96,7 @@ const MockupMonitoring = () => (
         initial={{ height: 0 }}
         whileInView={{ height: `${h}%` }}
         transition={{ duration: 1, delay: i * 0.1 }}
-        className="flex-1 bg-gradient-to-t from-[#EFFC76]/10 to-[#EFFC76] rounded-t-sm opacity-60"
+        className="flex-1 bg-gradient-to-t from-[#d946ef]/10 to-[#f97316] rounded-t-sm opacity-60"
       />
     ))}
   </div>
@@ -104,14 +104,14 @@ const MockupMonitoring = () => (
 
 const MockupSecurity = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center gap-3">
-    <div className="h-16 w-16 rounded-full border-4 border-[#EFFC76]/20 flex items-center justify-center relative">
-      <Lock size={20} className="text-[#EFFC76]" />
-      <div className="absolute inset-0 border-t-4 border-[#EFFC76] rounded-full animate-spin"></div>
+    <div className="h-16 w-16 rounded-full border-4 border-[#d946ef]/20 flex items-center justify-center relative">
+      <Lock size={20} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
+      <div className="absolute inset-0 border-t-4 border-[#d946ef] rounded-full animate-spin"></div>
     </div>
     <div className="space-y-1">
       <div className="h-2 w-20 bg-white/10 rounded-full"></div>
       <div className="h-2 w-16 bg-white/10 rounded-full"></div>
-      <div className="text-[10px] text-[#EFFC76] mt-1">Scanning...</div>
+      <div className="text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mt-1">Scanning...</div>
     </div>
   </div>
 );
@@ -125,7 +125,7 @@ const MockupDeployment = () => (
       </div>
       <span className="text-[10px] text-gray-500">v2.4.0</span>
     </div>
-    <div className="w-full bg-[#EFFC76] text-black text-[10px] font-bold py-1.5 rounded text-center cursor-pointer hover:bg-white transition-colors">
+    <div className="w-full bg-[#d946ef] text-white text-[10px] font-bold py-1.5 rounded text-center cursor-pointer hover:bg-white transition-colors">
       Deploy Now
     </div>
   </div>
@@ -142,7 +142,7 @@ const MockupDatabase = () => (
       <div className="text-[8px] text-gray-500">Replica</div>
     </div>
     <div className="col-span-2 h-1 bg-white/10 rounded-full overflow-hidden mt-1">
-      <div className="h-full w-full bg-[#EFFC76] animate-pulse"></div>
+      <div className="h-full w-full bg-[#d946ef] animate-pulse"></div>
     </div>
   </div>
 );
@@ -158,10 +158,10 @@ const FeatureCard = ({
 }) => (
   <motion.div
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
       <div>
@@ -189,9 +189,9 @@ const DevOpsWorkflow = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
           >
-            <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
             DevOps Workflow
           </motion.div>
           <motion.h2
@@ -200,7 +200,7 @@ const DevOpsWorkflow = () => {
             className="text-4xl md:text-6xl font-medium text-white tracking-tight"
           >
             Smarter Dev,{" "}
-            <span className="font-serif italic text-[#EFFC76]">
+            <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
               Supercharged By DevOps
             </span>
           </motion.h2>
@@ -227,9 +227,9 @@ const DevOpsWorkflow = () => {
             >
               <defs>
                 <linearGradient id="lineGap" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#EFFC76" stopOpacity="0" />
-                  <stop offset="50%" stopColor="#EFFC76" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#EFFC76" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#d946ef" stopOpacity="0" />
+                  <stop offset="50%" stopColor="#d946ef" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#d946ef" stopOpacity="0" />
                 </linearGradient>
               </defs>
 
@@ -250,14 +250,14 @@ const DevOpsWorkflow = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     d={pathD}
-                    stroke="#EFFC76"
+                    stroke="#d946ef"
                     strokeWidth="2"
                     strokeDasharray="4 4"
                   />
                   {/* Animated Particle (The "Rabbit") */}
                   <motion.circle
                     r="4"
-                    fill="#EFFC76"
+                    fill="#d946ef"
                     style={{ offsetPath: `path('${pathD}')` }}
                     initial={{ offsetDistance: "0%" }}
                     animate={{ offsetDistance: "100%" }}
@@ -294,7 +294,7 @@ const DevOpsWorkflow = () => {
                 cx="250"
                 cy="380"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
               <motion.circle
                 initial={{ scale: 0 }}
@@ -303,7 +303,7 @@ const DevOpsWorkflow = () => {
                 cx="700"
                 cy="380"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
               <motion.circle
                 initial={{ scale: 0 }}
@@ -312,7 +312,7 @@ const DevOpsWorkflow = () => {
                 cx="1150"
                 cy="380"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
               <motion.circle
                 initial={{ scale: 0 }}
@@ -321,7 +321,7 @@ const DevOpsWorkflow = () => {
                 cx="250"
                 cy="520"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
               <motion.circle
                 initial={{ scale: 0 }}
@@ -330,7 +330,7 @@ const DevOpsWorkflow = () => {
                 cx="700"
                 cy="520"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
               <motion.circle
                 initial={{ scale: 0 }}
@@ -339,7 +339,7 @@ const DevOpsWorkflow = () => {
                 cx="1150"
                 cy="520"
                 r="4"
-                fill="#EFFC76"
+                fill="#d946ef"
               />
             </svg>
           </div>
@@ -382,8 +382,8 @@ const DevOpsWorkflow = () => {
             <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
               {/* Central Pulsing Hub */}
               <div className="relative">
-                <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                   <Rocket size={40} className="fill-current" />
                 </div>
                 {/* Mobile decorative lines if needed, but keeping clean for now */}

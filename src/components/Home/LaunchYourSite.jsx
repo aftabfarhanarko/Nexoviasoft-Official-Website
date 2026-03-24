@@ -32,7 +32,7 @@ const LaunchYourSite = () => {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
           >
-            <div className="p-1 bg-[#EFFC76] rounded-full">
+            <div className="p-1 bg-[#d946ef] rounded-full">
               <Rocket className="w-3 h-3 text-black" />
             </div>
             <span className="text-sm font-medium text-gray-300">
@@ -47,7 +47,7 @@ const LaunchYourSite = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
           >
-            Launch Your Project with SquadLog <br />
+            Launch Your Project with NexoviaSoft <br />
             <span className="text-gray-500">
               Efficient, Scalable, and Premium.
             </span>
@@ -78,7 +78,7 @@ const LaunchYourSite = () => {
                 {[1, 2, 3, 4, 5].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-[#EFFC76] text-[#EFFC76]"
+                    className="w-5 h-5 fill-[#d946ef] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]"
                   />
                 ))}
               </div>

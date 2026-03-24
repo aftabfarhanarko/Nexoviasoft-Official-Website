@@ -19,42 +19,42 @@ const Beifect = () => {
       title: "Real-Time Tracking",
       description:
         "Monitor user activity instantly for smarter decision-making.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
     {
       icon: <Smartphone className="w-8 h-8" />, // Using Smartphone as a proxy for "All-in-One" or "Device"
       title: "All-in-One View",
       description:
         "Keep all your analytics in one place, without jumping between tools.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Actionable Insights",
       description:
         "Track the metrics that matter most for sustainable business growth.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Secure Data",
       description:
         "Keep your analytics safe with advanced security and strong encryption.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "Custom Reports",
       description:
         "Create tailored reports that fit your needs and highlight key insights.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
     {
       icon: <Layout className="w-8 h-8" />,
       title: "Simple to Use",
       description:
         "Navigate easily—no steep learning curve, start making better decisions quickly.",
-      color: "bg-[#EFFC76]/10 text-[#EFFC76]",
+      color: "bg-[#d946ef]/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]",
     },
   ];
 
@@ -69,7 +69,7 @@ const Beifect = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
               <MessageCircle size={15} className="text-black" />
             </span>
             <span className="text-gray-300 text-sm font-medium">
@@ -95,14 +95,14 @@ const Beifect = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="group relative p-8 rounded-3xl bg-neutral-900/50 border border-white/5 hover:border-[#EFFC76]/50 transition-all duration-300 hover:bg-neutral-900/80"
+              className="group relative p-8 rounded-3xl bg-neutral-900/50 border border-white/5 hover:border-[#d946ef]/50 transition-all duration-300 hover:bg-neutral-900/80"
             >
               {/* Hover Gradient Border Effect */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#EFFC76]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#d946ef]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col items-center text-center">
                 <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-[#EFFC76]/20 group-hover:scale-110 transition-transform duration-300 ${benefit.color}`}
+                  className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-[#d946ef]/20 group-hover:scale-110 transition-transform duration-300 ${benefit.color}`}
                 >
                   {benefit.icon}
                 </div>

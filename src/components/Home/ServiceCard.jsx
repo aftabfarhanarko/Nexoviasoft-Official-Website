@@ -13,17 +13,17 @@ const ServiceCard = ({ icon: Icon, title, slug, subtitle, description, image, de
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay }}
-                className="group relative flex flex-col justify-between h-full bg-white/5 border border-white/10 rounded-3xl p-6 overflow-hidden hover:border-[#EFFC76]/50 transition-all duration-300"
+                className="group relative flex flex-col justify-between h-full bg-white/5 border border-white/10 rounded-3xl p-6 overflow-hidden hover:border-[#d946ef]/50 transition-all duration-300"
             >
                 {/* Top Content */}
                 <div className="relative z-10">
                     <div className="flex justify-between items-start mb-4">
-                        <div className={`p-3 rounded-full ${title === 'AI-Powered Development' ? 'bg-[#EFFC76] text-black' :
-                            title === 'AI Chatbots' ? 'bg-[#EFFC76] text-black' :
-                                title === 'Predictive Analytics' ? 'bg-[#EFFC76] text-black' :
-                                    title === 'Computer Vision Solutions' ? 'bg-[#EFFC76] text-black' :
-                                        title === 'Speech Recognition' ? 'bg-[#EFFC76] text-black' :
-                                            'bg-[#EFFC76] text-black'
+                        <div className={`p-3 rounded-full ${title === 'AI-Powered Development' ? 'bg-[#d946ef] text-white' :
+                            title === 'AI Chatbots' ? 'bg-[#d946ef] text-white' :
+                                title === 'Predictive Analytics' ? 'bg-[#d946ef] text-white' :
+                                    title === 'Computer Vision Solutions' ? 'bg-[#d946ef] text-white' :
+                                        title === 'Speech Recognition' ? 'bg-[#d946ef] text-white' :
+                                            'bg-[#d946ef] text-white'
                             }`}>
                             {Icon && <Icon size={20} />}
                         </div>
@@ -52,9 +52,9 @@ const ServiceCard = ({ icon: Icon, title, slug, subtitle, description, image, de
                     ) : (
                         <div className="w-full h-full flex items-center justify-center bg-gray-800">
                             {/* Fallback pattern if no image */}
-                            <div className={`w-32 h-32 rounded-full blur-3xl opacity-30 ${title === 'AI-Powered Development' ? 'bg-[#EFFC76]' :
-                                title === 'AI Chatbots' ? 'bg-[#EFFC76]' :
-                                    'bg-[#EFFC76]'
+                            <div className={`w-32 h-32 rounded-full blur-3xl opacity-30 ${title === 'AI-Powered Development' ? 'bg-[#d946ef]' :
+                                title === 'AI Chatbots' ? 'bg-[#d946ef]' :
+                                    'bg-[#d946ef]'
                                 }`} />
                         </div>
                     )}
@@ -62,7 +62,7 @@ const ServiceCard = ({ icon: Icon, title, slug, subtitle, description, image, de
 
                 {/* Button Area */}
                 <div className="mt-6">
-                     <div className="w-full py-3 rounded-xl border border-white/20 hover:bg-white/10 hover:border-[#EFFC76]/50 transition-all flex items-center justify-center gap-2 text-md font-semibold text-gray-300 hover:text-white shadow-2xl">
+                     <div className="w-full py-3 rounded-xl border border-white/20 hover:bg-white/10 hover:border-[#d946ef]/50 transition-all flex items-center justify-center gap-2 text-md font-semibold text-gray-300 hover:text-white shadow-2xl">
                         Learn More <ArrowUpRight size={16} />
                     </div>
                 </div>

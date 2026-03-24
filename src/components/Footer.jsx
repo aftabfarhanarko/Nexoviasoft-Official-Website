@@ -24,7 +24,7 @@ const FooterLink = ({ href, children }) => (
       <span className="inline-block transition-transform duration-300 group-hover:-translate-y-full">
         {children}
       </span>
-      <span className="absolute top-0 left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0 text-[#EFFC76]">
+      <span className="absolute top-0 left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
         {children}
       </span>
     </span>
@@ -66,14 +66,14 @@ const Footer = () => {
               Have an idea?
             </h2>
             <div className="h-4 md:h-8" /> {/* Spacer */}
-            <h2 className="text-[12vw] md:text-[8vw] font-medium tracking-tight text-gray-500 leading-[0.9] group-hover:text-[#EFFC76] transition-colors duration-500">
+            <h2 className="text-[12vw] md:text-[8vw] font-medium tracking-tight text-gray-500 leading-[0.9] group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors duration-500">
               Let&apos;s build it.
             </h2>
             {/* Floating Magnetic Button */}
             <motion.div
               whileHover={{ scale: 1.1, rotate: -5 }}
               whileTap={{ scale: 0.9 }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-48 md:h-48 bg-[#EFFC76] rounded-full flex items-center justify-center mix-blend-difference opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-48 md:h-48 bg-[#d946ef] rounded-full flex items-center justify-center mix-blend-difference opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
             >
               <ArrowRight size={48} className="text-black" />
             </motion.div>
@@ -88,7 +88,7 @@ const Footer = () => {
               href="/"
               className="text-2xl font-bold text-white tracking-tight mb-6 inline-block"
             >
-              SquadLog.
+              NexoviaSoft.
             </Link>
             <p className="text-gray-500 leading-relaxed mb-8">
               Crafting digital experiences with precision and passion. Based
@@ -99,7 +99,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="text-gray-500 hover:text-[#EFFC76] transition-colors"
+                  className="text-gray-500 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors"
                 >
                   <Icon size={20} />
                 </a>
@@ -154,9 +154,9 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Email address"
-                  className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76] transition-colors rounded-none"
+                  className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef] transition-colors rounded-none"
                 />
-                <button className="absolute right-0 top-3 text-gray-500 group-focus-within:text-[#EFFC76] transition-colors">
+                <button className="absolute right-0 top-3 text-gray-500 group-focus-within:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors">
                   <ArrowUpRight size={20} />
                 </button>
               </div>
@@ -171,12 +171,12 @@ const Footer = () => {
               <MapPin size={14} /> New York, NY
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <Mail size={14} /> hello@squadlog.com
+              <Mail size={14} /> hello@nexoviasoft.com
             </div>
           </div>
 
           <div className="flex gap-6 text-sm text-gray-600">
-            <span>&copy; {currentYear} SquadLog</span>
+            <span>&copy; {currentYear} NexoviaSoft</span>
           </div>
 
           {/* Giant Faded Anchor Text behind everything */}

@@ -6,9 +6,9 @@ import {
   Zap,
   Settings,
 } from "lucide-react";
-import AboutSquadLogCard from "./AboutSquadLogCard";
+import AboutNexoviaSoftCard from "./AboutNexoviaSoftCard";
 
-const AboutSquadLog = () => {
+const AboutNexoviaSoft = () => {
   return (
     <section className=" -mt-25 md:-mt-15 py-24 px-4 relative overflow-hidden">
       {/* Desktop Version - No Changes */}
@@ -22,9 +22,9 @@ const AboutSquadLog = () => {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8"
             >
-              <Bot size={14} className="text-[#EFFC76]" />
+              <Bot size={14} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
               <span className="text-gray-300 text-xs font-medium uppercase tracking-wider">
-                About SquadLog
+                About NexoviaSoft
               </span>
             </motion.div>
 
@@ -41,21 +41,21 @@ const AboutSquadLog = () => {
             </motion.h2>
 
             <div className="space-y-6">
-              <AboutSquadLogCard
+              <AboutNexoviaSoftCard
                 delay={0.3}
                 icon={Bot}
                 title="Advanced AI, Streamlined Design"
-                description="SquadLog blends technical expertise with creative innovation. We build solutions that showcase sophistication and drive results."
+                description="NexoviaSoft blends technical expertise with creative innovation. We build solutions that showcase sophistication and drive results."
                 tags={["AI Design", "Tech Innovation"]}
               />
-              <AboutSquadLogCard
+              <AboutNexoviaSoftCard
                 delay={0.4}
                 icon={Settings}
                 title="Tailored Solutions & Smart Strategies"
                 description="We adapt our strategies to your unique vision. From custom development to brand identity, we fine-tune every detail."
                 tags={["Easy Customization", "Brand Identity"]}
               />
-              <AboutSquadLogCard
+              <AboutNexoviaSoftCard
                 delay={0.5}
                 icon={Zap}
                 title="Strategic Growth Partner"
@@ -94,9 +94,9 @@ const AboutSquadLog = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6"
           >
-            <Bot size={14} className="text-[#EFFC76]" />
+            <Bot size={14} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-gray-300 text-xs font-medium uppercase tracking-wider">
-              About SquadLog
+              About NexoviaSoft
             </span>
           </motion.div>
 
@@ -117,13 +117,13 @@ const AboutSquadLog = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mb-6 rounded-xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#EFFC76]/30 transition-colors duration-500"
+            className="mb-6 rounded-xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#d946ef]/30 transition-colors duration-500"
           >
             <div className="relative h-48 w-full overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent z-10" />
               <img
                 src="https://i.ibb.co.com/q38fff6X/image.png"
-                alt="About SquadLog"
+                alt="About NexoviaSoft"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
@@ -135,12 +135,12 @@ const AboutSquadLog = () => {
                     Advanced AI, Streamlined Design
                   </h3>
                   <p className="text-gray-400 text-[11px] leading-relaxed">
-                    SquadLog blends technical expertise with creative
+                    NexoviaSoft blends technical expertise with creative
                     innovation.
                   </p>
                 </div>
                 <div className="pt-1">
-                  <span className="px-2 py-1 rounded-md text-[10px] font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20">
+                  <span className="px-2 py-1 rounded-md text-[10px] font-medium bg-gradient-to-r from-[#d946ef] to-[#f97316] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] border border-[#d946ef]/20">
                     AI Design
                   </span>
                 </div>
@@ -159,7 +159,7 @@ const AboutSquadLog = () => {
                   </p>
                 </div>
                 <div className="pt-1">
-                  <span className="px-2 py-1 rounded-md text-[10px] font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20">
+                  <span className="px-2 py-1 rounded-md text-[10px] font-medium bg-gradient-to-r from-[#d946ef] to-[#f97316] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] border border-[#d946ef]/20">
                     Easy Customization
                   </span>
                 </div>
@@ -168,7 +168,7 @@ const AboutSquadLog = () => {
           </motion.div>
 
           {/* Full Width Card */}
-          <AboutSquadLogCard
+          <AboutNexoviaSoftCard
             delay={0.4}
             icon={Zap}
             title="Strategic Growth Partner"
@@ -181,4 +181,4 @@ const AboutSquadLog = () => {
     </section>
   );
 };
-export default AboutSquadLog;
+export default AboutNexoviaSoft;

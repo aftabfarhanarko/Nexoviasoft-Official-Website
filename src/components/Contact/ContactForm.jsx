@@ -143,7 +143,7 @@ const ContactForm = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
               <MessageCircle size={15} className="text-black" />
             </span>
             <span className="text-gray-300 text-sm font-medium">
@@ -175,7 +175,7 @@ const ContactForm = () => {
         <SmoothButton> Fill The Form Out!</SmoothButton>
 
         {/* Background glow for header */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#EFFC76]/20 blur-[100px] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[100px] pointer-events-none -z-10" />
       </div>
 
       {/* Form Section */}
@@ -187,11 +187,11 @@ const ContactForm = () => {
         className="relative"
       >
         {/* Glow effect behind form */}
-        <div className="absolute inset-0 bg-[#EFFC76]/10 blur-[60px] rounded-[2rem] transform scale-95 translate-y-4 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[60px] rounded-[2rem] transform scale-95 translate-y-4 pointer-events-none" />
 
         <div className="relative bg-[#0A0A0A] border border-white/10 rounded-[2rem] p-6 md:p-12 lg:p-16 overflow-hidden">
           {/* Subtle top gradient inside card */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-[#EFFC76]/10 blur-[80px] pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/4 bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[80px] pointer-events-none" />
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
             {/* First Name */}
@@ -206,7 +206,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Jane"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -222,7 +222,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Smith"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -238,7 +238,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="jane@framer.com"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -254,7 +254,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="+1 (555) 123-4567"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -270,7 +270,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="e.g., CEO, Manager, Developer"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -286,7 +286,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="Your Company Name"
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
               />
             </div>
 
@@ -301,7 +301,7 @@ const ContactForm = () => {
                   value={formData.country}
                   onChange={handleChange}
                   required
-                  className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all appearance-none cursor-pointer"
+                  className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all appearance-none cursor-pointer"
                 >
                   <option value="">Select your country...</option>
                   <option value="us">United States</option>
@@ -340,7 +340,7 @@ const ContactForm = () => {
                   value={formData.companyType}
                   onChange={handleChange}
                   required
-                  className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all appearance-none cursor-pointer"
+                  className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-gray-400 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all appearance-none cursor-pointer"
                 >
                   <option value="">Select category</option>
                   <option value="tech">Technology</option>
@@ -381,7 +381,7 @@ const ContactForm = () => {
                 rows="4"
                 placeholder="Type your message..."
                 required
-                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all resize-none"
+                className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all resize-none"
               ></textarea>
             </div>
 
@@ -407,7 +407,7 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#d946ef] to-[#f97316] hover:from-[#d946ef] hover:to-[#f97316] text-white font-medium transition-all shadow-lg shadow-[#d946ef]/20 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Submitting..." : "Submit Now"}
               </button>

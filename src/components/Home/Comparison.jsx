@@ -14,9 +14,9 @@ const Comparison = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#EFFC76]/30 bg-[#EFFC76]/10 mb-8"
+            className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#d946ef]/30 bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-8"
           >
-            <div className="w-5 h-5 rounded-full bg-[#EFFC76] flex items-center justify-center mr-2">
+            <div className="w-5 h-5 rounded-full bg-[#d946ef] flex items-center justify-center mr-2">
               <span className="flex items-center justify-center w-full h-full">
                 <svg
                   width="12"
@@ -46,7 +46,7 @@ const Comparison = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-6xl font-medium text-white mb-4 relative z-10 tracking-tight"
             >
-              SquadLog Advantage
+              NexoviaSoft Advantage
             </motion.h2>
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ const Comparison = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed"
           >
-            SquadLog is designed to set your business apart with premium
+            NexoviaSoft is designed to set your business apart with premium
             solutions that drive growth and engagement.
           </motion.p>
         </div>
@@ -113,7 +113,7 @@ const Comparison = () => {
                 icon={X}
                 color="text-red-500"
                 bg="bg-red-500/10"
-                text="Hidden Costs Squadlog"
+                text="Hidden Costs NexoviaSoft"
               />
               <ComparisonItem
                 icon={X}
@@ -124,7 +124,7 @@ const Comparison = () => {
             </motion.div>
           </div>
 
-          {/* SquadLog - Elevated Card */}
+          {/* NexoviaSoft - Elevated Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,11 +133,11 @@ const Comparison = () => {
             className="relative bg-[#0A0A0A] rounded-[22px]   overflow-hidden group"
           >
             {/* Glowing Border Effect */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#EFFC76]/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#EFFC76] to-transparent opacity-70"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#d946ef]/20 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#f43f5e] to-transparent opacity-70"></div>
 
             {/* Inner Gradient */}
-            <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-[#EFFC76]/5 to-transparent pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-[#d946ef]/5 to-transparent pointer-events-none"></div>
 
             <motion.div
               initial="hidden"
@@ -159,7 +159,7 @@ const Comparison = () => {
                 icon={Check}
                 color="text-white"
                 iconColor="text-black"
-                bg="bg-[#EFFC76]"
+                bg="bg-[#d946ef]"
                 text="AI-Driven Design"
                 isPremium
               />
@@ -167,7 +167,7 @@ const Comparison = () => {
                 icon={Check}
                 color="text-white"
                 iconColor="text-black"
-                bg="bg-[#EFFC76]"
+                bg="bg-[#d946ef]"
                 text="Premium, Minimal Aesthetic"
                 isPremium
               />
@@ -175,7 +175,7 @@ const Comparison = () => {
                 icon={Check}
                 color="text-white"
                 iconColor="text-black"
-                bg="bg-[#EFFC76]"
+                bg="bg-[#d946ef]"
                 text="Performance Optimized"
                 isPremium
               />
@@ -183,7 +183,7 @@ const Comparison = () => {
                 icon={Check}
                 color="text-white"
                 iconColor="text-black"
-                bg="bg-[#EFFC76]"
+                bg="bg-[#d946ef]"
                 text="Future-Proof Technology"
                 isPremium
               />
@@ -191,7 +191,7 @@ const Comparison = () => {
                 icon={Check}
                 color="text-white"
                 iconColor="text-black"
-                bg="bg-[#EFFC76]"
+                bg="bg-[#d946ef]"
                 text="Unmatched Flexibility"
                 isPremium
               />

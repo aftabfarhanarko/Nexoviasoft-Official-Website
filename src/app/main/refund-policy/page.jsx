@@ -5,7 +5,7 @@ const page = () => {
     <div className="min-h-screen bg-black overflow-x-hidden pb-30 pt-20">
       <section className="max-w-4xl mx-auto px-4 md:px-8 py-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm text-xs font-medium mb-8">
-          <span className="bg-[#EFFC76] text-black px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">
+          <span className="bg-[#d946ef] text-white px-2 py-0.5 rounded text-[10px] font-bold tracking-wider">
             READ
           </span>
           <span className="text-gray-300">Refund Policy</span>
@@ -36,7 +36,7 @@ const page = () => {
               How to Request a Refund
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Send an email to support@squadlog.com with your purchase
+              Send an email to support@nexoviasoft.com with your purchase
               information, reason for the request, and any supporting details.
               We’ll review and respond as soon as possible.
             </p>
@@ -57,7 +57,7 @@ const page = () => {
               Contact
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed">
-              For questions about this policy, contact support@squadlog.com.
+              For questions about this policy, contact support@nexoviasoft.com.
             </p>
           </div>
         </div>

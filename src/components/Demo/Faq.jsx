@@ -8,7 +8,7 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: "How does SquadLog track project progress?",
+      question: "How does NexoviaSoft track project progress?",
       answer:
         "We use industry-standard project management tools like Jira and Trello to track milestones, tasks, and progress. You'll have real-time access to see exactly where your project stands.",
     },
@@ -18,7 +18,7 @@ const Faq = () => {
         "Not at all. We handle all the technical heavy lifting. We communicate in plain English, ensuring you understand the solutions we're building for your business.",
     },
     {
-      question: "Can SquadLog integrate with tools we already use?",
+      question: "Can NexoviaSoft integrate with tools we already use?",
       answer:
         "Yes, we specialize in API integrations. We can connect your new custom software with existing tools like Salesforce, HubSpot, Slack, Stripe, and many others.",
     },
@@ -39,7 +39,7 @@ const Faq = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#EFFC76] text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-sm font-medium mb-6 backdrop-blur-sm">
             FAQ's
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -65,7 +65,7 @@ const Faq = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className={`border rounded-2xl transition-all duration-300 backdrop-blur-sm overflow-hidden ${
                 openIndex === index
-                  ? "bg-neutral-900/80 border-[#EFFC76]/50 shadow-[0_0_30px_-10px_rgba(239,252,118,0.15)]"
+                  ? "bg-neutral-900/80 border-[#d946ef]/50 shadow-[0_0_30px_-10px_rgba(217,70,239,0.15)]"
                   : "bg-neutral-900/30 border-white/5 hover:bg-neutral-900/50 hover:border-white/10"
               }`}
             >
@@ -86,7 +86,7 @@ const Faq = () => {
                   }`}
                 >
                   {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-[#EFFC76]" />
+                    <Minus className="w-5 h-5 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
                   ) : (
                     <Plus className="w-5 h-5 text-gray-500 group-hover:text-white" />
                   )}

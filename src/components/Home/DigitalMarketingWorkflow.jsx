@@ -49,7 +49,7 @@ const MockupSEO = () => (
             <div className="h-1 w-20 bg-gray-600 rounded-full"></div>
         </div>
         <div className="space-y-1 pl-1">
-             <div className="h-2 w-3/4 bg-[#EFFC76]/20 rounded mb-1"></div>
+             <div className="h-2 w-3/4 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded mb-1"></div>
              <div className="h-1 w-full bg-white/10 rounded"></div>
              <div className="h-1 w-5/6 bg-white/10 rounded"></div>
         </div>
@@ -67,7 +67,7 @@ const MockupSocial = () => (
         <div className="w-8 h-8 rounded bg-sky-500/20 flex items-center justify-center border border-white/5">
              <div className="w-3 h-3 rounded-full border-2 border-sky-400"></div>
         </div>
-         <div className="absolute -bottom-1 -right-1 bg-[#EFFC76] text-black text-[8px] px-1.5 py-0.5 rounded-tl font-bold uppercase"> Viral</div>
+         <div className="absolute -bottom-1 -right-1 bg-[#d946ef] text-white text-[8px] px-1.5 py-0.5 rounded-tl font-bold uppercase"> Viral</div>
     </div>
 );
 
@@ -75,13 +75,13 @@ const MockupContent = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col items-center justify-center gap-2">
         <div className="w-12 h-14 bg-white/5 border border-white/10 rounded flex flex-col p-1 gap-1 transform rotate-[-5deg]">
             <div className="w-full h-6 bg-white/5 rounded overflow-hidden relative">
-                <div className="absolute w-4 h-4 bg-[#EFFC76] rounded-full top-1 left-1 opacity-50"></div>
+                <div className="absolute w-4 h-4 bg-[#d946ef] rounded-full top-1 left-1 opacity-50"></div>
             </div>
             <div className="w-full h-1 bg-white/10 rounded"></div>
              <div className="w-2/3 h-1 bg-white/10 rounded"></div>
         </div>
         <div className="flex gap-1">
-             <div className="w-1 h-1 rounded-full bg-[#EFFC76]"></div>
+             <div className="w-1 h-1 rounded-full bg-[#d946ef]"></div>
              <div className="w-1 h-1 rounded-full bg-gray-600"></div>
              <div className="w-1 h-1 rounded-full bg-gray-600"></div>
         </div>
@@ -95,7 +95,7 @@ const MockupAds = () => (
                  <div className="h-1.5 w-1/2 bg-white/10 rounded"></div>
                  <div className="h-1.5 w-3/4 bg-white/10 rounded"></div>
              </div>
-             <div className="w-16 h-10 bg-[#EFFC76] rounded-md flex items-center justify-center shadow-lg transform scale-105">
+             <div className="w-16 h-10 bg-[#d946ef] rounded-md flex items-center justify-center shadow-lg transform scale-105">
                  <MousePointerClick size={16} className="text-black" />
                  <span className="text-[8px] text-black font-bold ml-1">CLICK</span>
              </div>
@@ -107,10 +107,10 @@ const MockupEmail = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center">
          <div className="relative w-12 h-8 bg-white/10 rounded border border-white/10 flex items-center justify-center group overflow-hidden">
              <Mail size={14} className="text-gray-300 relative z-10" />
-             <div className="absolute inset-0 bg-[#EFFC76] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+             <div className="absolute inset-0 bg-[#d946ef] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
          </div>
          <div className="ml-2 space-y-1">
-             <div className="h-1 w-10 bg-[#EFFC76] rounded-full"></div>
+             <div className="h-1 w-10 bg-[#d946ef] rounded-full"></div>
              <div className="h-1 w-6 bg-white/10 rounded-full"></div>
          </div>
     </div>
@@ -122,8 +122,8 @@ const MockupAnalytics = () => (
         <div className="w-2 bg-white/10 h-6 rounded-t-sm"></div>
         <div className="w-2 bg-white/10 h-5 rounded-t-sm"></div>
         <div className="w-2 bg-white/10 h-8 rounded-t-sm"></div>
-        <div className="w-2 bg-[#EFFC76] h-12 rounded-t-sm shadow-[0_0_8px_#EFFC76]"></div>
-        <div className="absolute top-2 right-2 text-[#EFFC76] text-[8px] font-mono">+125%</div>
+        <div className="w-2 bg-[#d946ef] h-12 rounded-t-sm shadow-[0_0_8px_#d946ef]"></div>
+        <div className="absolute top-2 right-2 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-[8px] font-mono">+125%</div>
     </div>
 )
 
@@ -132,10 +132,10 @@ const MockupAnalytics = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -166,9 +166,9 @@ const DigitalMarketingWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Marketing Strategy
             </motion.div>
             <motion.h2 
@@ -176,7 +176,7 @@ const DigitalMarketingWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Reach, Engage, <span className="font-serif italic text-[#EFFC76]">Convert</span>
+                Reach, Engage, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Convert</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ const DigitalMarketingWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -229,7 +229,7 @@ const DigitalMarketingWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-marketing)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -252,7 +252,7 @@ const DigitalMarketingWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -271,7 +271,7 @@ const DigitalMarketingWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -315,8 +315,8 @@ const DigitalMarketingWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Megaphone/Trends Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <TrendingUp size={40} className="fill-current" />
                         </div>
                     </div>

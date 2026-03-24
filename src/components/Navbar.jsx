@@ -29,16 +29,10 @@ const Navbar = () => {
 
   const products = [
     {
-      title: "SquadCart",
+      title: "NexoCart",
       description: "E-commerce platform with analytics and integrations.",
-      href: "/products/squadcart",
+      href: "/products/nexocart",
       badge: "Live",
-    },
-    {
-      title: "CleverERP",
-      description: "ERP to manage finance, inventory, and workflows.",
-      href: "/products",
-      badge: "New",
     },
   ];
 
@@ -48,14 +42,8 @@ const Navbar = () => {
       <nav className="hidden md:flex fixed top-6 left-0 right-0 z-50 justify-center px-4">
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-7xl shadow-2xl relative">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 pl-2">
-            <Image
-              src="/fxiedLogo.png"
-              alt="Squadlog Logo"
-              width={120}
-              height={40}
-              className="rounded-md object-contain h-8 md:h-10 w-auto"
-            />
+          <Link href="/" className="flex-shrink-0 pl-2 flex items-center h-8 md:h-10">
+            <span className="text-xl md:text-2xl font-bold text-white tracking-tight">NexoviaSoft</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -77,6 +65,12 @@ const Navbar = () => {
               className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
             >
               Case Studies
+            </Link>
+            <Link
+              href="/career"
+              className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              Career
             </Link>
             <Link
               href="/contact"
@@ -149,12 +143,12 @@ const Navbar = () => {
                                 </div>
                               </div>
                               <div className="flex flex-col items-end gap-3">
-                                <span className="text-[10px] font-semibold tracking-wider uppercase bg-[#EFFC76] text-black px-2 py-1 rounded-full">
+                                <span className="text-[10px] font-semibold tracking-wider uppercase bg-[#d946ef] text-white px-2 py-1 rounded-full">
                                   {item.badge}
                                 </span>
                                 <ArrowRight
                                   size={16}
-                                  className="text-[#EFFC76] opacity-0 group-hover:opacity-100 transition-opacity"
+                                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] opacity-0 group-hover:opacity-100 transition-opacity"
                                 />
                               </div>
                             </div>
@@ -177,14 +171,8 @@ const Navbar = () => {
       </nav>
       {/* Mobile Top Bar */}
       <div className="md:hidden absolute top-0 left-0 right-0 p-6 flex justify-center z-20 pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
-        <Link href="/" className="pointer-events-auto">
-          <Image
-            src="/fxiedLogo.png"
-            alt="SquadLogo"
-            width={120}
-            height={40}
-            className="h-15 w-auto "
-          />
+        <Link href="/" className="pointer-events-auto flex items-center h-15">
+          <span className="text-2xl font-bold text-white tracking-tight">NexoviaSoft</span>
         </Link>
       </div>
 
@@ -194,7 +182,7 @@ const Navbar = () => {
           <div className="flex justify-center w-full">
             <Link
               href="/"
-              className="text-gray-400 hover:text-[#EFFC76] transition-colors flex flex-col items-center gap-1 group"
+              className="text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group"
             >
               <Home
                 size={20}
@@ -208,7 +196,7 @@ const Navbar = () => {
           <div className="flex justify-center w-full">
             <Link
               href="/products"
-              className="text-gray-400 hover:text-[#EFFC76] transition-colors flex flex-col items-center gap-1 group"
+              className="text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group"
             >
               <Layers
                 size={20}
@@ -238,7 +226,7 @@ const Navbar = () => {
           <div className="flex justify-center w-full">
             <Link
               href="/services"
-              className="text-gray-400 hover:text-[#EFFC76] transition-colors flex flex-col items-center gap-1 group"
+              className="text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group"
             >
               <Zap
                 size={20}
@@ -252,8 +240,8 @@ const Navbar = () => {
           <div className="flex justify-center w-full">
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={`text-gray-400 hover:text-[#EFFC76] transition-colors flex flex-col items-center gap-1 group ${
-                isMenuOpen ? "text-[#EFFC76]" : ""
+              className={`text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group ${
+                isMenuOpen ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" : ""
               }`}
             >
               <Menu
@@ -280,14 +268,8 @@ const Navbar = () => {
           >
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between py-6">
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                <Image
-                  src="/fxiedLogo.png"
-                  alt="Squadlogo"
-                  width={100}
-                  height={32}
-                  className="h-12 w-auto -ml-5 object-contain"
-                />
+              <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center h-12">
+                <span className="text-2xl font-bold text-white tracking-tight">NexoviaSoft</span>
               </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -303,13 +285,13 @@ const Navbar = () => {
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
                 { name: "Case Studies", href: "/case-studies" },
+                { name: "Career", href: "/career" },
                 { name: "Contact", href: "/contact" },
                 {
                   name: "Products",
                   href: "#",
                   children: [
-                    { name: "SquadCart", href: "/products/squadcart" },
-                    { name: "CleverERP", href: "/products" },
+                    { name: "NexoCart", href: "/products/nexocart" },
                   ],
                 },
                 { name: "FAQ", href: "/faq" },
@@ -328,7 +310,7 @@ const Navbar = () => {
                           setMobileProductsOpen(!mobileProductsOpen)
                         }
                       >
-                        <span className="text-xl md:text-3xl font-medium text-white hover:text-[#EFFC76] tracking-tight">
+                        <span className="text-xl md:text-3xl font-medium text-white hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] tracking-tight">
                           {item.name}
                         </span>
                         <ChevronDown
@@ -352,7 +334,7 @@ const Navbar = () => {
                                 key={child.name}
                                 href={child.href}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-lg text-gray-500 font-medium hover:text-[#EFFC76] block"
+                                className="text-lg text-gray-500 font-medium hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] block"
                               >
                                 {child.name}
                               </Link>
@@ -365,7 +347,7 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block transition-all duration-300 text-xl md:text-3xl font-medium text-white hover:text-[#EFFC76] tracking-tight"
+                      className="block transition-all duration-300 text-xl md:text-3xl font-medium text-white hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] tracking-tight"
                     >
                       {item.name}
                     </Link>
@@ -384,7 +366,7 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="block"
                 >
-                  <button className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white px-6 py-2.5 rounded-full hover:bg-[#EFFC76] hover:text-black hover:border-[#EFFC76] transition-all group">
+                  <button className="inline-flex items-center gap-2 bg-transparent border border-white/20 text-white px-6 py-2.5 rounded-full hover:bg-[#d946ef] hover:text-white hover:border-[#d946ef] transition-all group">
                     <span className="font-semibold text-lg">
                       Free Consultation
                     </span>
@@ -410,7 +392,7 @@ const Navbar = () => {
                   <a
                     key={index}
                     href="#"
-                    className="text-gray-400 hover:text-[#EFFC76] transition-colors p-2 -ml-2"
+                    className="text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors p-2 -ml-2"
                   >
                     <Icon size={22} />
                   </a>

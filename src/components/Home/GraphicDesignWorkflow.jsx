@@ -49,7 +49,7 @@ const MockupLogo = () => (
                  <div key={i} className="border border-white/10"></div>
              ))}
         </div>
-        <div className="relative w-12 h-12 border-2 border-[#EFFC76] rounded-full flex items-center justify-center">
+        <div className="relative w-12 h-12 border-2 border-[#d946ef] rounded-full flex items-center justify-center">
              <div className="w-6 h-6 border-2 border-white rounded transform rotate-45"></div>
         </div>
     </div>
@@ -58,7 +58,7 @@ const MockupLogo = () => (
 const MockupBranding = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-center gap-2">
         <div className="flex gap-2">
-             <div className="w-8 h-8 rounded-full bg-[#EFFC76]"></div>
+             <div className="w-8 h-8 rounded-full bg-[#d946ef]"></div>
              <div className="w-8 h-8 rounded-full bg-black border border-white/10"></div>
              <div className="w-8 h-8 rounded-full bg-gray-600"></div>
         </div>
@@ -74,16 +74,16 @@ const MockupIllustration = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center relative">
          <svg width="60" height="40" viewBox="0 0 60 40" fill="none" stroke="currentColor" className="text-gray-400">
              <path d="M5 35 C 15 35, 15 5, 25 20 S 45 35, 55 5" strokeWidth="2" strokeLinecap="round" />
-             <circle cx="25" cy="20" r="2" className="text-[#EFFC76] fill-[#EFFC76]" />
-             <circle cx="40" cy="25" r="2" className="text-[#EFFC76] fill-[#EFFC76]" />
-             <line x1="25" y1="20" x2="40" y2="25" stroke="#EFFC76" strokeWidth="1" strokeDasharray="2 2" />
+             <circle cx="25" cy="20" r="2" className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] fill-[#d946ef]" />
+             <circle cx="40" cy="25" r="2" className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] fill-[#d946ef]" />
+             <line x1="25" y1="20" x2="40" y2="25" stroke="#d946ef" strokeWidth="1" strokeDasharray="2 2" />
          </svg>
     </div>
 )
 
 const MockupTypography = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center gap-1">
-        <span className="text-4xl font-serif text-[#EFFC76]">A</span>
+        <span className="text-4xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">A</span>
         <span className="text-4xl font-sans text-white font-bold">g</span>
         <div className="flex flex-col gap-1 ml-2">
             <div className="w-8 h-0.5 bg-gray-500"></div>
@@ -97,12 +97,12 @@ const MockupMarketing = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center relative">
          {/* Flyer */}
          <div className="w-12 h-16 bg-white/5 border border-white/10 rounded transform -rotate-6 z-10 flex flex-col p-1 gap-1">
-             <div className="w-full h-6 bg-[#EFFC76]/20 rounded"></div>
+             <div className="w-full h-6 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded"></div>
              <div className="w-full h-1 bg-white/10 rounded"></div>
              <div className="w-2/3 h-1 bg-white/10 rounded"></div>
          </div>
          {/* Business Card */}
-         <div className="absolute bottom-2 right-4 w-12 h-8 bg-[#EFFC76] rounded text-black flex items-center justify-center shadow-lg transform rotate-12 z-20">
+         <div className="absolute bottom-2 right-4 w-12 h-8 bg-[#d946ef] rounded text-white flex items-center justify-center shadow-lg transform rotate-12 z-20">
              <div className="w-2 h-2 rounded-full bg-black/20 mr-1"></div>
              <div className="w-6 h-1 bg-black/20 rounded"></div>
          </div>
@@ -113,10 +113,10 @@ const MockupPrint = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-center items-center gap-2 relative">
          <Printer size={16} className="text-gray-400 absolute top-2 right-2" />
          <div className="w-16 h-10 border border-white/10 bg-white/5 rounded relative overflow-hidden">
-             <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#EFFC76]"></div>
-             <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#EFFC76]"></div>
-             <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#EFFC76]"></div>
-             <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#EFFC76]"></div>
+             <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#d946ef]"></div>
+             <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#d946ef]"></div>
+             <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#d946ef]"></div>
+             <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#d946ef]"></div>
          </div>
          <div className="flex gap-1">
              <div className="w-3 h-3 rounded-full bg-cyan-400"></div>
@@ -132,10 +132,10 @@ const MockupPrint = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -166,9 +166,9 @@ const GraphicDesignWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Visual Identity
             </motion.div>
             <motion.h2 
@@ -176,7 +176,7 @@ const GraphicDesignWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Bold Concepts, <span className="font-serif italic text-[#EFFC76]">Timeless Design</span>
+                Bold Concepts, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Timeless Design</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -221,7 +221,7 @@ const GraphicDesignWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -229,7 +229,7 @@ const GraphicDesignWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-graphic)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -252,7 +252,7 @@ const GraphicDesignWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -271,7 +271,7 @@ const GraphicDesignWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -315,8 +315,8 @@ const GraphicDesignWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Palette Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <Palette size={40} className="fill-current" />
                         </div>
                     </div>

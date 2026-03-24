@@ -1,4 +1,4 @@
-import AboutSquadLog from "@/components/Home/AboutSquadLog";
+import AboutNexoviaSoft from "@/components/Home/AboutNexoviaSoft";
 import Banner from "@/components/Home/Banner";
 import Comparison from "@/components/Home/Comparison";
 import Faq from "@/components/Home/Faq";
@@ -21,7 +21,7 @@ const TestPages = () => {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CosmicBackground />
       </div>
-      <div className="relative z-10">
+      <div className="relative pt-20 z-10">
         <section>
           <Banner />
         </section>
@@ -38,7 +38,7 @@ const TestPages = () => {
           <Support />
         </section>
         <section>
-          <AboutSquadLog />
+          <AboutNexoviaSoft />
         </section>
         <section>
           <Integration />

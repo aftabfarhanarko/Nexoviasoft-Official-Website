@@ -48,7 +48,7 @@ const Packed = () => {
               className="text-3xl md:text-4xl lg:text-4xl max-w-6xl mx-auto font-light leading-tight"
               style={{ opacity: textOpacity }}
             >
-              Built on creativity, collaboration, and technical excellence, SquadLog is a
+              Built on creativity, collaboration, and technical excellence, NexoviaSoft is a
               dynamic team of industry experts committed to delivering
               exceptional digital solutions...
             </motion.h1>
@@ -102,7 +102,7 @@ const Packed = () => {
                         }}
                       >
                         <motion.div
-                          className="relative bg-black/10 p-1 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-[#EFFC76]/30"
+                          className="relative bg-black/10 p-1 w-24 md:w-28 lg:w-32 h-24 md:h-28 lg:h-32 rounded-3xl overflow-hidden shadow-2xl border border-[#d946ef]/30"
                           animate={{ rotate: -360 }} // counter rotate to keep upright
                           transition={{
                             duration: 60,
@@ -139,11 +139,11 @@ const Packed = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1.5 rounded-2xl">
+                      <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1.5 rounded-2xl">
                         2026
                       </span>
                       <span className="text-gray-200 text-sm font-medium">
-                        Next-Gen AI Squadlog
+                        Next-Gen AI NexoviaSoft
                       </span>
                     </motion.div>
                   </div>
@@ -158,7 +158,7 @@ const Packed = () => {
                   </motion.h1>
 
                   <p className="text-gray-300 text-base md:text-lg mb-10 leading-relaxed">
-                    SquadLog is packed with cutting-edge features designed to{" "}
+                    NexoviaSoft is packed with cutting-edge features designed to{" "}
                     <br className=" md:block hidden" />
                     elevate your agency or case studies.
                   </p>

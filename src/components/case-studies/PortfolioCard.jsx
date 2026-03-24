@@ -28,7 +28,7 @@ const PortfolioCard = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
               2025
             </span>
             <span className="text-gray-300 text-sm font-medium">
@@ -49,10 +49,10 @@ const PortfolioCard = () => {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                className=" lg:col-span-4 rounded-l-xl md:rounded-3xl p-5 md:p-8  border-white/10 relative group overflow-hidden hover:border-[#EFFC76]/50 transition-colors duration-500"
+                className=" lg:col-span-4 rounded-l-xl md:rounded-3xl p-5 md:p-8  border-white/10 relative group overflow-hidden hover:border-[#d946ef]/50 transition-colors duration-500"
               >
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-[#EFFC76]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#d946ef]/5 to-[#f97316]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="absolute inset-0 bg-black/40 backdrop-blur-sm -z-10" />
 
@@ -68,7 +68,7 @@ const PortfolioCard = () => {
                 <div className="space-y-2 md:block hidden  md:space-y-4 mb-6 md:mb-12">
                   {project.features?.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2 md:gap-3">
-                      <div className="bg-[#EFFC76] rounded-full md:block hidden p-[3px] md:p-1 shrink-0">
+                      <div className="bg-[#d946ef] rounded-full md:block hidden p-[3px] md:p-1 shrink-0">
                         <Check
                           className="text-black w-2.5 h-2.5 md:w-3 md:h-3"
                           strokeWidth={3}
@@ -108,7 +108,7 @@ const PortfolioCard = () => {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" text-[13px] z-20  md:text-md px-4 py-2 md:px-6 md:py-2.5 rounded-lg border border-white/20 hover:bg-white/10 hover:border-[#EFFC76]/50 transition-all flex items-center gap-2 text-sm md:text-md font-semibold text-gray-300 hover:text-white shadow-2xl"
+                      className=" text-[13px] z-20  md:text-md px-4 py-2 md:px-6 md:py-2.5 rounded-lg border border-white/20 hover:bg-white/10 hover:border-[#d946ef]/50 transition-all flex items-center gap-2 text-sm md:text-md font-semibold text-gray-300 hover:text-white shadow-2xl"
                     >
                       Live Version{" "}
                       <ExternalLink size={14} className="md:w-4 md:h-4" />

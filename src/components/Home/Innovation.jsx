@@ -13,7 +13,7 @@ const Innovation = () => {
     {
       title: "Custom Software Solutions",
       description:
-        "SquadLog builds robust, scalable applications tailored to your business needs.",
+        "NexoviaSoft builds robust, scalable applications tailored to your business needs.",
       type: "integrations",
       delay: 0,
     },
@@ -61,7 +61,7 @@ const Innovation = () => {
             loop={true}
             className="pb-16"
             style={{
-              "--swiper-pagination-color": "#EFFC76",
+              "--swiper-pagination-color": "#d946ef",
               "--swiper-pagination-bullet-inactive-color": "#666",
               "--swiper-pagination-bullet-inactive-opacity": "0.5",
               "--swiper-pagination-bullet-size": "10px",

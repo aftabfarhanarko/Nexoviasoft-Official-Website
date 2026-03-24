@@ -53,7 +53,7 @@ const Service = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+              <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
                 <Code size={15} className="text-black" />
               </span>
               <span className="text-gray-300 text-sm font-medium">
@@ -105,9 +105,9 @@ const Service = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 + index * 0.05 }}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#EFFC76]/50 hover:bg-white/10 transition-all cursor-default"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#d946ef]/50 hover:bg-white/10 transition-all cursor-default"
             >
-              <div className="p-1 rounded-full bg-[#EFFC76]/20 text-[#EFFC76]">
+              <div className="p-1 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                 <tag.icon size={14} />
               </div>
               <span className="text-gray-300 text-sm">{tag.name}</span>

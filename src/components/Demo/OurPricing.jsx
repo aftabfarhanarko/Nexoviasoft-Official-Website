@@ -53,7 +53,7 @@ const OurPricing = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#EFFC76] text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-sm font-medium mb-6 backdrop-blur-sm">
             Our Pricing
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -74,7 +74,7 @@ const OurPricing = () => {
                 onClick={() => setIsAnnual(false)}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   !isAnnual
-                    ? "bg-[#EFFC76] text-black shadow-md"
+                    ? "bg-[#d946ef] text-white shadow-md"
                     : "text-gray-400 hover:text-white"
                 }`}
               >
@@ -84,7 +84,7 @@ const OurPricing = () => {
                 onClick={() => setIsAnnual(true)}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                   isAnnual
-                    ? "bg-[#EFFC76] text-black shadow-md"
+                    ? "bg-[#d946ef] text-white shadow-md"
                     : "text-gray-400 hover:text-white"
                 }`}
               >
@@ -105,12 +105,12 @@ const OurPricing = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`relative bg-neutral-900/50 rounded-[2rem] p-8 backdrop-blur-sm ${
                 plan.isPopular
-                  ? "border-2 border-[#EFFC76] shadow-[0_0_50px_-12px_rgba(239,252,118,0.2)] scale-105 z-10"
-                  : "border border-white/5 hover:border-[#EFFC76]/50"
+                  ? "border-2 border-[#d946ef] shadow-[0_0_50px_-12px_rgba(217,70,239,0.2)] scale-105 z-10"
+                  : "border border-white/5 hover:border-[#d946ef]/50"
               } transition-all duration-300`}
             >
               {plan.isPopular && (
-                <div className="absolute -top-5 left-0 right-0 mx-auto w-fit bg-[#EFFC76] text-black px-6 py-1.5 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(239,252,118,0.3)]">
+                <div className="absolute -top-5 left-0 right-0 mx-auto w-fit bg-[#d946ef] text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(217,70,239,0.3)]">
                   Most Popular
                 </div>
               )}
@@ -143,7 +143,7 @@ const OurPricing = () => {
                       <div className="mt-1 min-w-[18px]">
                         <Check
                           size={18}
-                          className={plan.isPopular ? "text-[#EFFC76]" : "text-white"}
+                          className={plan.isPopular ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" : "text-white"}
                           strokeWidth={3}
                         />
                       </div>
@@ -156,7 +156,7 @@ const OurPricing = () => {
               <button
                 className={`w-full py-4 rounded-xl font-semibold transition-all shadow-lg ${
                   plan.isPopular
-                    ? "bg-[#EFFC76] text-black hover:bg-[#dce865] hover:shadow-[#EFFC76]/20"
+                    ? "bg-[#d946ef] text-white hover:bg-[#f97316] hover:shadow-[#d946ef]/20"
                     : "bg-white/10 text-white hover:bg-white/20 border border-white/5"
                 }`}
               >

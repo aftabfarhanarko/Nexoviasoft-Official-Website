@@ -25,7 +25,7 @@ const WhyAlytics = () => {
             <div className="container mx-auto px-4">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#EFFC76] text-sm font-medium mb-6 backdrop-blur-sm">
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-sm font-medium mb-6 backdrop-blur-sm">
                         Why Alytics
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -67,11 +67,11 @@ const WhyAlytics = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="relative bg-neutral-900/80 rounded-[2.5rem] p-8 md:p-12 border border-[#EFFC76]/50 shadow-[0_0_50px_-12px_rgba(239,252,118,0.2)] scale-105 md:-ml-8 z-10 backdrop-blur-xl"
+                            className="relative bg-neutral-900/80 rounded-[2.5rem] p-8 md:p-12 border border-[#d946ef]/50 shadow-[0_0_50px_-12px_rgba(217,70,239,0.2)] scale-105 md:-ml-8 z-10 backdrop-blur-xl"
                         >
-                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#EFFC76]/10 to-transparent pointer-events-none" />
+                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#d946ef]/10 to-transparent pointer-events-none" />
                             <div className="flex items-center gap-3 mb-8 relative z-10">
-                                <div className="bg-[#EFFC76] p-2 rounded-lg">
+                                <div className="bg-[#d946ef] p-2 rounded-lg">
                                     <Sparkles className="text-black w-6 h-6" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Alytics</h3>
@@ -80,7 +80,7 @@ const WhyAlytics = () => {
                             <div className="space-y-6 relative z-10">
                                 {alyticsFeatures.map((item, index) => (
                                     <div key={index} className="flex items-center gap-4 text-gray-300">
-                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#EFFC76] flex items-center justify-center">
+                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#d946ef] flex items-center justify-center">
                                             <Check size={14} className="text-black" strokeWidth={3} />
                                         </div>
                                         <span className="text-lg font-medium text-white">{item}</span>

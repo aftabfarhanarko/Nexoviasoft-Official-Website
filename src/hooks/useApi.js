@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 
-const BASE_URL = "https://squadlog-backend.up.railway.app";
-
+const BASE_URL = "https://nexoviasoft-api.vercel.app"
 const getFullUrl = (url) => {
   if (url.startsWith("/")) {
     return `${BASE_URL}${url}`;

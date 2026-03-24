@@ -14,32 +14,32 @@ const processSteps = [
     title: "Discover Insights",
     description:
       "We analyze your goals, challenges, and vision to craft a tailored digital .",
-    color: "bg-[#EFFC76]",
+    color: "bg-[#d946ef]",
   },
   {
     icon: <Settings className="w-8 h-8 text-black" />,
     title: "Develop Solutions",
     description:
       "Our experts design and build cutting-edge solutions that drive results.",
-    color: "bg-[#EFFC76]",
+    color: "bg-[#d946ef]",
   },
   {
     icon: <Layout className="w-8 h-8 text-black" />,
     title: "Deploy Success",
     description:
       "We implement, optimize, and scale your digital product for long-term impact.",
-    color: "bg-[#EFFC76]",
+    color: "bg-[#d946ef]",
   },
 ];
 
 const ProcessCard = ({ step }) => (
-  <div className="group relative p-8 rounded-3xl bg-neutral-900/50 border border-white/5 hover:border-[#EFFC76]/50 transition-all duration-300 hover:bg-neutral-900/80 h-full flex flex-col">
+  <div className="group relative p-8 rounded-3xl bg-neutral-900/50 border border-white/5 hover:border-[#d946ef]/50 transition-all duration-300 hover:bg-neutral-900/80 h-full flex flex-col">
     {/* Hover Gradient Border Effect */}
-    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#EFFC76]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#d946ef]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
     <div className="relative z-10 flex flex-col items-center text-center flex-grow">
       <div
-        className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-[#EFFC76]/20 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
+        className={`w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-[#d946ef]/20 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
       >
         {step.icon}
       </div>
@@ -66,9 +66,9 @@ const OurProcess = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#EFFC76]/20 backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-[#d946ef]/20 backdrop-blur-sm mb-6"
           >
-            <div className="p-1 bg-[#EFFC76] rounded-full">
+            <div className="p-1 bg-[#d946ef] rounded-full">
               <FileText className="w-3 h-3 text-black" />
             </div>
             <span className="text-sm font-medium text-gray-300">
@@ -156,7 +156,7 @@ const OurProcess = () => {
               transition: all 0.3s ease;
             }
             .swiper-pagination-bullet-active {
-              background: #EFFC76 !important;
+              background: #d946ef !important;
               width: 24px !important;
               border-radius: 5px !important;
             }

@@ -23,12 +23,12 @@ const InnovationCard = ({
   const Content = () => (
     <>
       {/* Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-[#EFFC76]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#d946ef]/5 to-[#f97316]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* Icon/Header Icon */}
       <div className="flex justify-center mb-6 relative z-10 shrink-0">
-        <div className="w-12 h-12 rounded-full bg-[#EFFC76]/20 flex items-center justify-center border border-[#EFFC76]/30">
-          <Zap className="w-6 h-6 text-[#EFFC76]" fill="currentColor" />
+        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center border border-[#d946ef]/30">
+          <Zap className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" fill="currentColor" />
         </div>
       </div>
 
@@ -58,7 +58,7 @@ const InnovationCard = ({
     return (
       <div className="flex flex-col h-full mb-8">
         <motion.div
-          className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#EFFC76]/50 transition-colors duration-500 flex flex-col"
+          className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#d946ef]/50 transition-colors duration-500 flex flex-col"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -73,7 +73,7 @@ const InnovationCard = ({
 
   return (
     <motion.div
-      className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#EFFC76]/50 transition-colors duration-500 h-[400px] flex flex-col"
+      className="relative p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#d946ef]/50 transition-colors duration-500 h-[400px] flex flex-col"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -89,10 +89,10 @@ const IntegrationsVisual = () => {
   // Mock icons for the integrations tree
   const icons = [
     { Icon: Apple, color: "text-white" },
-    { Icon: Trello, color: "text-[#EFFC76]" },
+    { Icon: Trello, color: "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" },
     { Icon: Ghost, color: "text-yellow-300" }, // Snapchat/Ghost proxy
-    { Icon: Slack, color: "text-[#EFFC76]" }, // Slack proxy (using Blackberry in design, switching to Slack/similar)
-    { Icon: Figma, color: "text-[#EFFC76]" },
+    { Icon: Slack, color: "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" }, // Slack proxy (using Blackberry in design, switching to Slack/similar)
+    { Icon: Figma, color: "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" },
     { Icon: Zap, color: "text-orange-400" }, // Nike proxy
   ];
 
@@ -151,7 +151,7 @@ const IntegrationsVisual = () => {
         />
       </svg>
       {/* Central Node */}
-      <div className="w-10 h-10 rounded-full bg-[#EFFC76] flex items-center justify-center shadow-[0_0_15px_rgba(239,252,118,0.5)] z-20 -mt-3">
+      <div className="w-10 h-10 rounded-full bg-[#d946ef] flex items-center justify-center shadow-[0_0_15px_rgba(217,70,239,0.5)] z-20 -mt-3">
         <div className="w-5 h-5 bg-white rounded-sm transform rotate-45" />{" "}
         {/* Stack icon proxy */}
       </div>
@@ -183,7 +183,7 @@ const AuthenticationVisual = () => {
 
       {/* Central Interactive Element */}
       <motion.div
-        className="relative z-10 w-16 h-16 rounded-full bg-gradient-to-b from-[#EFFC76] to-[#EFFC76] flex items-center justify-center shadow-2xl shadow-[#EFFC76]/20"
+        className="relative z-10 w-16 h-16 rounded-full bg-gradient-to-b from-[#d946ef] to-[#f97316] flex items-center justify-center shadow-2xl shadow-[#d946ef]/20"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
@@ -200,7 +200,7 @@ const SpeechVisual = () => {
     <div className="w-full h-full flex flex-col items-center justify-center">
       {/* Speech Bubble */}
       <motion.div
-        className="mb-4 bg-[#EFFC76] rounded-full px-4 py-1 text-xs font-semibold text-black shadow-lg"
+        className="mb-4 bg-[#d946ef] rounded-full px-4 py-1 text-xs font-semibold text-white shadow-lg"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
@@ -210,15 +210,15 @@ const SpeechVisual = () => {
 
       {/* Player UI */}
       <div className="w-[80%] h-12 bg-[#1A1A1A] rounded-full border border-white/10 flex items-center px-2 shadow-inner">
-        <div className="w-8 h-8 rounded-full bg-[#EFFC76]/20 flex items-center justify-center mr-2">
-          <Mic size={14} className="text-[#EFFC76]" />
+        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center mr-2">
+          <Mic size={14} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
         </div>
         {/* Waveform */}
         <div className="flex-1 flex items-center justify-center gap-[2px] h-full overflow-hidden opacity-50">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="w-[2px] bg-[#EFFC76] rounded-full"
+              className="w-[2px] bg-[#d946ef] rounded-full"
               animate={{ height: [8, 16, 8] }}
               transition={{
                 duration: 1,

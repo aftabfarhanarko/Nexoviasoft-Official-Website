@@ -10,8 +10,8 @@ const baiJamjuree = Bai_Jamjuree({
 });
 
 export const metadata = {
-  title: "Squadlog",
-  description: "squadlog",
+  title: "NexoviaSoft",
+  description: "nexoviasoft",
 };
 
 export default function RootLayout({ children }) {

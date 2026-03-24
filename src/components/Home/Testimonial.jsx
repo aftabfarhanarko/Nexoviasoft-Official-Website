@@ -16,7 +16,7 @@ const fallbackTestimonials = [
     role: "CTO",
     company: "FinTech Innovations",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
-    text: "SquadLog transformed our legacy infrastructure into a scalable cloud-native system. Their expertise in AWS and DevOps is unmatched.",
+    text: "NexoviaSoft transformed our legacy infrastructure into a scalable cloud-native system. Their expertise in AWS and DevOps is unmatched.",
     rating: 5,
   },
   {
@@ -32,7 +32,7 @@ const fallbackTestimonials = [
     role: "Product Manager",
     company: "HealthPlus App",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
-    text: "We needed a complex mobile app for patient monitoring. SquadLog delivered a secure, HIPAA-compliant app ahead of schedule.",
+    text: "We needed a complex mobile app for patient monitoring. NexoviaSoft delivered a secure, HIPAA-compliant app ahead of schedule.",
     rating: 5,
   },
   {
@@ -48,7 +48,7 @@ const fallbackTestimonials = [
     role: "CEO",
     company: "LogisticsPro",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=James",
-    text: "The custom ERP software SquadLog developed has streamlined our entire supply chain. Their understanding of business logic is impressive.",
+    text: "The custom ERP software NexoviaSoft developed has streamlined our entire supply chain. Their understanding of business logic is impressive.",
     rating: 5,
   },
   {
@@ -56,7 +56,7 @@ const fallbackTestimonials = [
     role: "Creative Director",
     company: "Artistry Studios",
     image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa",
-    text: "As a design agency, we have high standards. SquadLog's frontend development brought our designs to life with pixel-perfect precision.",
+    text: "As a design agency, we have high standards. NexoviaSoft's frontend development brought our designs to life with pixel-perfect precision.",
     rating: 5,
   },
 ];
@@ -87,9 +87,9 @@ const Testimonial = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#EFFC76]/30 bg-[#EFFC76]/10 mb-6"
+            className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#d946ef]/30 bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
           >
-            <div className="w-5 h-5 rounded-full bg-[#EFFC76] flex items-center justify-center mr-2">
+            <div className="w-5 h-5 rounded-full bg-[#d946ef] flex items-center justify-center mr-2">
               <MessageSquare
                 size={12}
                 className="text-black"
@@ -115,7 +115,7 @@ const Testimonial = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-3xl md:text-5xl font-medium text-gray-500 mb-6 tracking-tight"
           >
-            About SquadLog's Excellence
+            About NexoviaSoft's Excellence
           </motion.h3>
 
           <motion.p
@@ -163,7 +163,7 @@ const Testimonial = () => {
               pauseOnMouseEnter: true,
             }}
             loop={true}
-            className="pb-14 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
+            className="pb-14 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#d946ef] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
             onClick={(swiper) => {
               swiper.autoplay.stop();
             }}

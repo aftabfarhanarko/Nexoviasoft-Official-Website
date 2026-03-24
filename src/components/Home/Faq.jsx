@@ -5,7 +5,7 @@ import { Plus, X } from "lucide-react";
 
 const faqs = [
     {
-        question: "What core services does SquadLog provide?",
+        question: "What core services does NexoviaSoft provide?",
         answer:
             "We offer a comprehensive suite of digital services including Custom Web Development, Cloud Computing Solutions, Mobile App Development (iOS & Android), UI/UX Design, and Digital Marketing strategies.",
     },
@@ -55,7 +55,7 @@ const Faq = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFFC76] text-black text-sm font-medium mb-4 shadow-[#EFFC76]">
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-[#d946ef] text-white text-sm font-medium mb-4 shadow-[#d946ef]">
                                 FAQ
                             </span>
                             <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-4">
@@ -118,8 +118,8 @@ const Faq = () => {
             </div>
 
             {/* Background gradients for aesthetics */}
-            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
         </section>
     );
 };

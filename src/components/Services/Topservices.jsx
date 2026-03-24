@@ -26,8 +26,8 @@ const Topservices = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6"
           >
-            <div className="w-4 h-4 rounded-full border border-[#EFFC76] flex items-center justify-center">
-                <div className="w-2 h-2 bg-[#EFFC76] rounded-full" />
+            <div className="w-4 h-4 rounded-full border border-[#d946ef] flex items-center justify-center">
+                <div className="w-2 h-2 bg-[#d946ef] rounded-full" />
             </div>
             <span className="text-gray-300 text-sm font-medium">Our services</span>
           </motion.div>
@@ -49,7 +49,7 @@ const Topservices = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg max-w-2xl leading-relaxed"
           >
-            SquadLog is a premium digital agency delivering cutting-edge solutions for your business growth. We transform ideas into digital reality.
+            NexoviaSoft is a premium digital agency delivering cutting-edge solutions for your business growth. We transform ideas into digital reality.
           </motion.p>
         </div>
 
@@ -62,7 +62,7 @@ const Topservices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="md:row-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:border-[#EFFC76]/30 transition-all duration-300"
+            className="md:row-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 flex flex-col relative overflow-hidden group hover:border-[#d946ef]/30 transition-all duration-300"
           >
             <div className="mb-8 relative z-10">
               <h3 className="text-2xl font-medium text-white mb-4">Custom Development</h3>
@@ -78,7 +78,7 @@ const Topservices = () => {
               <div className="relative flex flex-col items-center">
                  {/* Center Node */}
                  <div className="w-16 h-16 bg-[#1A1A1A] rounded-2xl flex items-center justify-center border border-white/10 shadow-2xl mb-8 relative z-10">
-                    <Sparkles className="text-[#EFFC76] w-8 h-8" fill="currentColor" />
+                    <Sparkles className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] w-8 h-8" fill="currentColor" />
                  </div>
                  
                  {/* Connecting Lines */}
@@ -103,7 +103,7 @@ const Topservices = () => {
             </div>
             
             {/* Hover Glow */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#EFFC76]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#f97316]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           </motion.div>
 
           {/* Card 2: Cloud Solutions (Wide - Top Right) */}
@@ -112,7 +112,7 @@ const Topservices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="md:col-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#EFFC76]/30 transition-all duration-300"
+            className="md:col-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#d946ef]/30 transition-all duration-300"
           >
              <div className="flex flex-col md:flex-row justify-between relative z-10">
                 <div className="mb-8 md:mb-0">
@@ -130,31 +130,31 @@ const Topservices = () => {
                         {/* Gradient Area */}
                         <defs>
                             <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stopColor="#EFFC76" stopOpacity="0.2" />
-                                <stop offset="100%" stopColor="#EFFC76" stopOpacity="0" />
+                                <stop offset="0%" stopColor="#d946ef" stopOpacity="0.2" />
+                                <stop offset="100%" stopColor="#d946ef" stopOpacity="0" />
                             </linearGradient>
                         </defs>
                         
                         {/* Historical Data */}
                         <path d="M0 80 C 40 75, 60 55, 100 60 C 140 65, 160 35, 200 30" 
-                              fill="none" stroke="#EFFC76" strokeWidth="2" />
+                              fill="none" stroke="#d946ef" strokeWidth="2" />
                         
                         {/* Prediction Data (Dashed) */}
                         <path d="M200 30 C 230 25, 260 15, 300 10" 
-                              fill="none" stroke="#EFFC76" strokeWidth="2" strokeDasharray="4 4" />
+                              fill="none" stroke="#d946ef" strokeWidth="2" strokeDasharray="4 4" />
 
                         {/* Fill Area */}
                         <path d="M0 80 C 40 75, 60 55, 100 60 C 140 65, 160 35, 200 30 C 230 25, 260 15, 300 10 V 100 H 0 Z" 
                               fill="url(#chartGradient)" stroke="none" opacity="0.5" />
                         
                         {/* Points */}
-                        <circle cx="100" cy="60" r="4" fill="#111" stroke="#EFFC76" strokeWidth="2" />
-                        <circle cx="200" cy="30" r="4" fill="#EFFC76" stroke="#EFFC76" strokeWidth="2" />
-                        <circle cx="300" cy="10" r="4" fill="#111" stroke="#EFFC76" strokeWidth="2" />
+                        <circle cx="100" cy="60" r="4" fill="#111" stroke="#d946ef" strokeWidth="2" />
+                        <circle cx="200" cy="30" r="4" fill="#d946ef" stroke="#d946ef" strokeWidth="2" />
+                        <circle cx="300" cy="10" r="4" fill="#111" stroke="#d946ef" strokeWidth="2" />
                         
                         {/* Labels */}
-                        <text x="210" y="20" fill="white" fontSize="10" opacity="0.8">SquadLog</text>
-                        <circle cx="205" cy="17" r="2" fill="#EFFC76" />
+                        <text x="210" y="20" fill="white" fontSize="10" opacity="0.8">NexoviaSoft</text>
+                        <circle cx="205" cy="17" r="2" fill="#d946ef" />
                         <text x="210" y="35" fill="gray" fontSize="10">Competitors</text>
                         <circle cx="205" cy="32" r="2" fill="gray" />
                     </svg>
@@ -168,7 +168,7 @@ const Topservices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="bg-[#EFFC76] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
+            className="bg-[#d946ef] rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300"
           >
             <div className="relative z-10">
               <h3 className="text-2xl font-medium text-black mb-4">UI/UX Design</h3>
@@ -195,7 +195,7 @@ const Topservices = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="md:col-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#EFFC76]/30 transition-all duration-300"
+            className="md:col-span-2 bg-[#111] border border-white/10 rounded-3xl p-8 relative overflow-hidden group hover:border-[#d946ef]/30 transition-all duration-300"
           >
              <div className="flex flex-col md:flex-row gap-8 relative z-10 h-full">
                 <div className="flex-1">
@@ -214,7 +214,7 @@ const Topservices = () => {
                       <div className="absolute top-8 left-8 bg-[#1A1A1A] border border-white/10 px-3 py-1.5 rounded-lg text-gray-400 text-xs transform rotate-3 opacity-50">
                           Conversion Rate
                       </div>
-                       <div className="absolute top-12 left-20 bg-[#EFFC76]/10 border border-[#EFFC76]/20 px-3 py-1.5 rounded-lg text-[#EFFC76] text-xs transform -rotate-3">
+                       <div className="absolute top-12 left-20 bg-gradient-to-r from-[#d946ef] to-[#f97316] border border-[#d946ef]/20 px-3 py-1.5 rounded-lg text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-xs transform -rotate-3">
                           ROI +150%
                       </div>
                   </div>
@@ -225,7 +225,7 @@ const Topservices = () => {
                     <div className="w-full max-w-[280px] bg-[#1A1A1A] rounded-t-2xl rounded-bl-2xl border border-white/10 overflow-hidden shadow-2xl transform transition-transform duration-500 hover:rotate-y-12 hover:rotate-x-6 origin-bottom-right"
                          style={{ transformStyle: 'preserve-3d', transform: 'perspective(1000px) rotateY(-10deg) rotateX(5deg)' }}>
                         {/* Chat Header */}
-                        <div className="bg-[#EFFC76] p-3 flex justify-between items-center">
+                        <div className="bg-[#d946ef] p-3 flex justify-between items-center">
                             <div className="flex items-center gap-2">
                                 <Bot className="w-4 h-4 text-black" />
                                 <span className="text-black font-medium text-sm">Marketing Bot</span>
@@ -247,7 +247,7 @@ const Topservices = () => {
                             </div>
                             
                             <div className="flex gap-2 flex-row-reverse">
-                                 <div className="w-6 h-6 rounded-full bg-[#EFFC76] flex-shrink-0 flex items-center justify-center">
+                                 <div className="w-6 h-6 rounded-full bg-[#d946ef] flex-shrink-0 flex items-center justify-center">
                                     <User className="w-3 h-3 text-black" />
                                 </div>
                                 <div className="bg-white p-2 rounded-lg rounded-tr-none text-xs text-black">
@@ -264,9 +264,9 @@ const Topservices = () => {
                                 </div>
                             </div>
                             
-                            <div className="ml-8 bg-[#111] border border-white/10 rounded-lg p-2 flex items-center justify-between group cursor-pointer hover:border-[#EFFC76]/50">
-                                <span className="text-[#EFFC76] text-xs">Growth Plan</span>
-                                <TrendingUp className="w-3 h-3 text-[#EFFC76]" />
+                            <div className="ml-8 bg-[#111] border border-white/10 rounded-lg p-2 flex items-center justify-between group cursor-pointer hover:border-[#d946ef]/50">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-xs">Growth Plan</span>
+                                <TrendingUp className="w-3 h-3 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
                             </div>
                         </div>
                     </div>

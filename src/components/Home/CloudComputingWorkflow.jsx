@@ -51,9 +51,9 @@ const MockupMigration = () => (
             <Server size={12} className="text-gray-500" />
             <span className="text-[10px] text-gray-500">On-Prem</span>
         </div>
-        <ArrowUpRight size={12} className="text-[#EFFC76] animate-bounce" />
+        <ArrowUpRight size={12} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] animate-bounce" />
         <div className="flex items-center gap-1.5">
-            <Cloud size={12} className="text-[#EFFC76]" />
+            <Cloud size={12} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-[10px] text-white">Cloud</span>
         </div>
      </div>
@@ -62,7 +62,7 @@ const MockupMigration = () => (
            initial={{ width: 0 }}
            whileInView={{ width: "100%" }}
            transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
-           className="h-full bg-[#EFFC76]"
+           className="h-full bg-[#d946ef]"
         />
      </div>
      <div className="text-[8px] text-center text-gray-400">Transferring Data...</div>
@@ -71,14 +71,14 @@ const MockupMigration = () => (
 
 const MockupServerless = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center gap-2">
-     <div className="w-10 h-10 rounded-full border border-[#EFFC76]/30 flex items-center justify-center relative">
-        <Zap size={16} className="text-[#EFFC76]" />
-        <div className="absolute inset-0 border border-[#EFFC76] rounded-full animate-ping opacity-20"></div>
+     <div className="w-10 h-10 rounded-full border border-[#d946ef]/30 flex items-center justify-center relative">
+        <Zap size={16} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
+        <div className="absolute inset-0 border border-[#d946ef] rounded-full animate-ping opacity-20"></div>
      </div>
      <div className="space-y-1">
         <div className="h-1.5 w-16 bg-white/10 rounded-full"></div>
         <div className="h-1.5 w-10 bg-white/10 rounded-full"></div>
-        <div className="text-[9px] text-[#EFFC76]">Function Triggered</div>
+        <div className="text-[9px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Function Triggered</div>
      </div>
   </div>
 );
@@ -86,7 +86,7 @@ const MockupServerless = () => (
 const MockupSecurity = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-center gap-2">
      <div className="flex items-center gap-2">
-        <Lock size={12} className="text-[#EFFC76]" />
+        <Lock size={12} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
         <span className="text-[10px] text-white">IAM Policy</span>
      </div>
      <div className="bg-white/5 rounded p-1.5 font-mono text-[8px] text-gray-400">
@@ -103,12 +103,12 @@ const MockupScaling = () => (
         {/* Bars */}
         <div className="w-3 bg-white/10 h-6 rounded-t-sm"></div>
         <div className="w-3 bg-white/10 h-10 rounded-t-sm"></div>
-        <div className="w-3 bg-[#EFFC76]/50 h-14 rounded-t-sm animate-pulse"></div>
-        <div className="w-3 bg-[#EFFC76] h-20 rounded-t-sm"></div>
+        <div className="w-3 bg-gradient-to-r from-[#d946ef] to-[#f97316] h-14 rounded-t-sm animate-pulse"></div>
+        <div className="w-3 bg-[#d946ef] h-20 rounded-t-sm"></div>
         
         {/* Trend Line */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ overflow: 'visible' }}>
-             <path d="M 10 70 L 35 60 L 60 40 L 85 20" stroke="#EFFC76" strokeWidth="1" fill="none" />
+             <path d="M 10 70 L 35 60 L 60 40 L 85 20" stroke="#d946ef" strokeWidth="1" fill="none" />
         </svg>
     </div>
 )
@@ -118,7 +118,7 @@ const MockupProviders = () => (
         <div className="bg-white/5 rounded flex items-center justify-center text-[10px] text-gray-400">AWS</div>
         <div className="bg-white/5 rounded flex items-center justify-center text-[10px] text-gray-400">Azure</div>
         <div className="bg-white/5 rounded flex items-center justify-center text-[10px] text-gray-400">GCP</div>
-        <div className="bg-white/5 rounded border border-[#EFFC76]/30 flex items-center justify-center text-[10px] text-[#EFFC76]">Unified</div>
+        <div className="bg-white/5 rounded border border-[#d946ef]/30 flex items-center justify-center text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Unified</div>
     </div>
 )
 
@@ -143,10 +143,10 @@ const MockupCost = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -177,9 +177,9 @@ const CloudComputingWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Cloud Infrastructure
             </motion.div>
             <motion.h2 
@@ -187,7 +187,7 @@ const CloudComputingWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Scalable Power, <span className="font-serif italic text-[#EFFC76]">Limitless Potential</span>
+                Scalable Power, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Limitless Potential</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ const CloudComputingWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -240,7 +240,7 @@ const CloudComputingWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-cloud)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -263,7 +263,7 @@ const CloudComputingWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -282,7 +282,7 @@ const CloudComputingWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -326,8 +326,8 @@ const CloudComputingWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Cloud Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <Cloud size={40} className="fill-current" />
                         </div>
                     </div>

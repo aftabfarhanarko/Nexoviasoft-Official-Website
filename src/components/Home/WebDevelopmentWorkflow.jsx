@@ -49,7 +49,7 @@ const MockupWireframe = () => (
     <div className="flex gap-2 h-full">
         <div className="w-1/4 h-full bg-white/5 rounded"></div>
         <div className="w-3/4 h-full bg-white/5 rounded flex flex-col gap-1.5 p-1.5">
-             <div className="h-1.5 w-full bg-[#EFFC76]/20 rounded-full"></div>
+             <div className="h-1.5 w-full bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full"></div>
              <div className="h-1.5 w-2/3 bg-white/5 rounded-full"></div>
              <div className="h-1.5 w-1/2 bg-white/5 rounded-full"></div>
         </div>
@@ -59,8 +59,8 @@ const MockupWireframe = () => (
 
 const MockupDesign = () => (
   <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center relative overflow-hidden">
-     <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-transparent"></div>
-     <div className="w-10 h-10 rounded-lg bg-[#EFFC76] transform rotate-12 shadow-lg flex items-center justify-center">
+     <div className="absolute inset-0 bg-gradient-to-br from-[#d946ef]/5 to-transparent"></div>
+     <div className="w-10 h-10 rounded-lg bg-[#d946ef] transform rotate-12 shadow-lg flex items-center justify-center">
         <Brush size={18} className="text-black" />
      </div>
      <div className="w-10 h-10 rounded-lg border border-white/20 transform -rotate-6 absolute bg-black/50 backdrop-blur-sm -ml-6 -mt-4"></div>
@@ -69,7 +69,7 @@ const MockupDesign = () => (
 
 const MockupCode = () => (
   <div className="bg-black/40 rounded-lg p-3 font-mono text-[9px] text-gray-400 border border-white/5 space-y-1 h-24 overflow-hidden">
-     <div className="text-blue-400">export default <span className="text-yellow-400">function</span> <span className="text-[#EFFC76]">App</span>() {"{"}</div>
+     <div className="text-blue-400">export default <span className="text-yellow-400">function</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">App</span>() {"{"}</div>
      <div className="pl-2 text-purple-400">return (</div>
      <div className="pl-4 text-gray-300">{"<div className='hero'>"}</div>
      <div className="pl-6 text-white">{"<h1>Web Dev</h1>"}</div>
@@ -82,8 +82,8 @@ const MockupCode = () => (
 const MockupDatabase = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center gap-2">
         <div className="w-12 h-16 border border-white/10 rounded flex flex-col items-center justify-center gap-1 bg-white/5">
-            <Server size={14} className="text-[#EFFC76]" />
-            <div className="h-0.5 w-6 bg-[#EFFC76]/50 rounded-full animate-pulse"></div>
+            <Server size={14} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
+            <div className="h-0.5 w-6 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full animate-pulse"></div>
         </div>
         <div className="h-0.5 w-4 bg-white/10"></div>
         <div className="w-12 h-16 border border-white/10 rounded flex flex-col items-center justify-center gap-1 bg-white/5">
@@ -96,7 +96,7 @@ const MockupDatabase = () => (
 const MockupResponsive = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-end justify-center gap-2">
         <div className="w-6 h-12 border border-white/20 rounded bg-white/5"></div>
-        <div className="w-10 h-16 border border-white/20 rounded-md bg-white/5 border-[#EFFC76]/50 shadow-[0_0_10px_rgba(239,252,118,0.1)]"></div>
+        <div className="w-10 h-16 border border-white/20 rounded-md bg-white/5 border-[#d946ef]/50 shadow-[0_0_10px_rgba(217,70,239,0.1)]"></div>
         <div className="w-14 h-10 border border-white/20 rounded bg-white/5"></div>
     </div>
 )
@@ -104,7 +104,7 @@ const MockupResponsive = () => (
 const MockupLaunch = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col items-center justify-center">
         <div className="flex items-center gap-2 mb-2">
-            <CheckCircle2 size={16} className="text-[#EFFC76]" />
+            <CheckCircle2 size={16} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-xs text-white font-medium">All Systems Go</span>
         </div>
         <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
@@ -112,7 +112,7 @@ const MockupLaunch = () => (
                initial={{ width: 0 }}
                whileInView={{ width: "100%" }}
                transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
-               className="h-full bg-[#EFFC76]"
+               className="h-full bg-[#d946ef]"
             />
         </div>
         <div className="flex justify-between w-full mt-1 text-[8px] text-gray-500">
@@ -127,10 +127,10 @@ const MockupLaunch = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -161,9 +161,9 @@ const WebDevelopmentWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Web Development Process
             </motion.div>
             <motion.h2 
@@ -171,7 +171,7 @@ const WebDevelopmentWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Crafting Digital, <span className="font-serif italic text-[#EFFC76]">Built for Growth</span>
+                Crafting Digital, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Built for Growth</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -216,7 +216,7 @@ const WebDevelopmentWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -224,7 +224,7 @@ const WebDevelopmentWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-web)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -247,7 +247,7 @@ const WebDevelopmentWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -266,7 +266,7 @@ const WebDevelopmentWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -310,8 +310,8 @@ const WebDevelopmentWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Web Code Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <Globe size={40} className="fill-current" />
                         </div>
                     </div>

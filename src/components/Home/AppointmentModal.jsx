@@ -178,7 +178,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                       onChange={handleChange}
                       required
                       placeholder="John Doe"
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
                     />
                   </div>
 
@@ -194,7 +194,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                       onChange={handleChange}
                       required
                       placeholder="john@example.com"
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
                     />
                   </div>
 
@@ -210,7 +210,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                       onChange={handleChange}
                       required
                       placeholder="+1 234 567 8900"
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
                     />
                   </div>
 
@@ -226,7 +226,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                       onChange={handleChange}
                       required
                       placeholder="Company Inc."
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all"
+                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all"
                     />
                   </div>
 
@@ -241,7 +241,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                       onChange={handleChange}
                       rows="4"
                       placeholder="Tell us about your project requirements..."
-                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#EFFC76]/50 focus:ring-1 focus:ring-[#EFFC76]/50 transition-all resize-none"
+                      className="w-full bg-[#111] border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-[#d946ef]/50 focus:ring-1 focus:ring-[#d946ef]/50 transition-all resize-none"
                     />
                   </div>
 
@@ -271,7 +271,7 @@ const AppointmentModal = ({ isOpen, onClose, pricePackageId, serviceType = "Web 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex-1 py-3 rounded-xl font-medium text-sm md:text-base text-black bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] transition-all duration-300 shadow-lg shadow-[#EFFC76]/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 py-3 rounded-xl font-medium text-sm md:text-base text-white bg-gradient-to-r from-[#d946ef] to-[#f97316] hover:from-[#d946ef] hover:to-[#f97316] transition-all duration-300 shadow-lg shadow-[#d946ef]/20 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? "Submitting..." : "Book Appointment"}
                     </button>

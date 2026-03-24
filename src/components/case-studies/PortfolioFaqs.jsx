@@ -55,7 +55,7 @@ const PortfolioFaqs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 rounded-full bg-[#EFFC76] text-black text-sm font-medium mb-4 shadow-[0_0_15px_rgba(239,252,118,0.5)]">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-[#d946ef] text-white text-sm font-medium mb-4 shadow-[0_0_15px_rgba(217,70,239,0.5)]">
                 FAQ
               </span>
               <h2 className="text-4xl md:text-5xl font-medium leading-tight mb-4">
@@ -80,18 +80,18 @@ const PortfolioFaqs = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`bg-[#0A0A0A] rounded-2xl overflow-hidden border transition-colors ${
-                    activeIndex === index ? "border-[#EFFC76]/50" : "border-white/5 hover:border-[#EFFC76]/30"
+                    activeIndex === index ? "border-[#d946ef]/50" : "border-white/5 hover:border-[#d946ef]/30"
                   }`}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between p-6 text-left"
                   >
-                    <span className={`text-lg font-medium transition-colors ${activeIndex === index ? "text-[#EFFC76]" : "text-gray-200"}`}>
+                    <span className={`text-lg font-medium transition-colors ${activeIndex === index ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" : "text-gray-200"}`}>
                       {faq.question}
                     </span>
                     <span className={`shrink-0 ml-4 p-1 rounded-full transition-colors ${
-                      activeIndex === index ? "bg-[#EFFC76] text-black" : "bg-white/5 text-white/70"
+                      activeIndex === index ? "bg-[#d946ef] text-white" : "bg-white/5 text-white/70"
                     }`}>
                       {activeIndex === index ? (
                         <X className="w-5 h-5" />
@@ -122,8 +122,8 @@ const PortfolioFaqs = () => {
       </div>
 
       {/* Background gradients for aesthetics */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#EFFC76]/5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[100px] translate-x-1/3 translate-y-1/3 pointer-events-none" />
     </section>
   );
 };

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutSquadLogCard = ({
+const AboutNexoviaSoftCard = ({
   delay,
   icon: Icon,
   title,
@@ -21,7 +21,7 @@ const AboutSquadLogCard = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay }}
-        className="bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 hover:bg-zinc-900/60 overflow-hidden"
+        className="bg-zinc-900/40 border border-white/5 hover:border-[#d946ef]/30 transition-all duration-300 hover:bg-zinc-900/60 overflow-hidden"
       >
         {/* Image Section */}
         <div className="relative h-40 overflow-hidden">
@@ -51,7 +51,7 @@ const AboutSquadLogCard = ({
                 {tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20"
+                    className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-gradient-to-r from-[#d946ef] to-[#f97316] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] border border-[#d946ef]/20"
                   >
                     {tag}
                   </span>
@@ -72,10 +72,10 @@ const AboutSquadLogCard = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay }}
-        className="rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60 p-4"
+        className="rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#d946ef]/30 transition-all duration-300 group hover:bg-zinc-900/60 p-4"
       >
         <div className="flex items-start gap-3 mb-3">
-          <div className="p-2 rounded-lg bg-white/5 text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors shrink-0">
+          <div className="p-2 rounded-lg bg-white/5 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors shrink-0">
             <Icon size={18} />
           </div>
           <h3 className="text-white font-semibold text-base leading-tight">
@@ -88,7 +88,7 @@ const AboutSquadLogCard = ({
         </p>
 
         {hasButton && (
-          <button className="bg-[#EFFC76] hover:bg-[#EFFC76]/90 text-black px-4 py-2 rounded-full text-xs font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full">
+          <button className="bg-[#d946ef] hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] text-white px-4 py-2 rounded-full text-xs font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full">
             Book an Appointment
           </button>
         )}
@@ -103,10 +103,10 @@ const AboutSquadLogCard = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#EFFC76]/30 transition-all duration-300 group hover:bg-zinc-900/60"
+      className="p-6 rounded-2xl bg-zinc-900/40 border border-white/5 hover:border-[#d946ef]/30 transition-all duration-300 group hover:bg-zinc-900/60"
     >
       <div className="flex items-start gap-4">
-        <div className="p-2.5 rounded-lg bg-white/5 text-[#EFFC76] group-hover:text-[#EFFC76] group-hover:bg-[#EFFC76]/10 transition-colors">
+        <div className="p-2.5 rounded-lg bg-white/5 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors">
           <Icon size={20} />
         </div>
         <div>
@@ -128,7 +128,7 @@ const AboutSquadLogCard = ({
               {tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 rounded-full text-xs font-medium bg-[#EFFC76]/10 text-[#EFFC76] border border-[#EFFC76]/20"
+                  className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-[#d946ef] to-[#f97316] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] border border-[#d946ef]/20"
                 >
                   {tag}
                 </span>
@@ -137,7 +137,7 @@ const AboutSquadLogCard = ({
           )}
 
           {hasButton && (
-            <button className="bg-[#EFFC76] hover:bg-[#EFFC76] text-black px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#EFFC76]/20 w-full sm:w-auto mt-4">
+            <button className="bg-[#d946ef] hover:bg-[#d946ef] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all shadow-lg shadow-[#d946ef]/20 w-full sm:w-auto mt-4">
               Book an Appointment
             </button>
           )}
@@ -147,4 +147,4 @@ const AboutSquadLogCard = ({
   );
 };
 
-export default AboutSquadLogCard;
+export default AboutNexoviaSoftCard;

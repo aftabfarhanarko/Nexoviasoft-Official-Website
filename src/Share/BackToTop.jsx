@@ -23,10 +23,10 @@ const BackToTop = () => {
           exit={{ opacity: 0, y: 20, scale: 0.8 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-[9999] p-3 rounded-full border border-[#EFFC76]/30 bg-black/20 backdrop-blur-md hover:bg-[#EFFC76]/20 transition-all duration-300 group shadow-[0_0_15px_rgba(239,252,118,0.1)]"
+          className="fixed bottom-8 right-8 z-[9999] p-3 rounded-full border border-[#d946ef]/30 bg-black/20 backdrop-blur-md hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-300 group shadow-[0_0_15px_rgba(217,70,239,0.1)]"
           aria-label="Back to top"
         >
-          <ArrowUp className="w-6 h-6 text-[#EFFC76] group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
+          <ArrowUp className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
         </motion.button>
       )}
     </AnimatePresence>

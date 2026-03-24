@@ -47,9 +47,9 @@ const Support = () => {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#EFFC76]/20 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-[#d946ef]/20 mb-8"
           >
-            <UsersRound className="w-4 h-4 text-[#EFFC76]" />
+            <UsersRound className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-gray-300 text-sm font-medium">OurTeam</span>
           </motion.div>
 
@@ -72,11 +72,11 @@ const Support = () => {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-xl mx-auto mb-10 text-base"
           >
-            Partner with SquadLog for dedicated support that ensures your
+            Partner with NexoviaSoft for dedicated support that ensures your
             digital products evolve and scale seamlessly.
           </motion.p>
 
-          <SmoothButton>View About SquadLog </SmoothButton>
+          <SmoothButton>View About NexoviaSoft </SmoothButton>
         </div>
 
         {/* Central Visual - Moving Cards */}
@@ -111,7 +111,7 @@ const Support = () => {
               pauseOnMouseEnter: true,
             }}
             loop={true}
-            className="pb-16 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
+            className="pb-16 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#d946ef] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
             onClick={(swiper) => {
               swiper.autoplay.stop();
             }}
@@ -238,7 +238,7 @@ const CardsDisplay = () => {
         initial={{ opacity: 0, scale: 0.5, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="absolute -top-23 md:top-0 left-[5%] md:left-[25%] z-40 bg-[#EFFC76] text-black px-5 py-2.5 rounded-2xl rounded-bl-none text-sm font-semibold shadow-xl shadow-blue-900/20"
+        className="absolute -top-23 md:top-0 left-[5%] md:left-[25%] z-40 bg-[#d946ef] text-white px-5 py-2.5 rounded-2xl rounded-bl-none text-sm font-semibold shadow-xl shadow-blue-900/20"
       >
         Hey, it&apos;s me!
       </motion.div>
@@ -247,7 +247,7 @@ const CardsDisplay = () => {
         initial={{ opacity: 0, scale: 0.5, y: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1 }}
-        className="absolute -top-23 md:top-0 right-[5%] md:right-[25%] z-40 bg-[#EFFC76] text-black px-5 py-2.5 rounded-2xl rounded-br-none text-sm font-semibold shadow-xl shadow-purple-900/20"
+        className="absolute -top-23 md:top-0 right-[5%] md:right-[25%] z-40 bg-[#d946ef] text-white px-5 py-2.5 rounded-2xl rounded-br-none text-sm font-semibold shadow-xl shadow-purple-900/20"
       >
         Problem Solved
       </motion.div>
@@ -266,7 +266,7 @@ const CardsDisplay = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          className="w-full h-full !overflow-visible pb-12 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#EFFC76] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
+          className="w-full h-full !overflow-visible pb-12 [&_.swiper-pagination-bullet]:bg-gray-500 [&_.swiper-pagination-bullet-active]:bg-[#d946ef] [&_.swiper-pagination-bullet]:w-3 [&_.swiper-pagination-bullet]:h-3"
         >
           {cards.map((card, index) => (
             <SwiperSlide
@@ -277,7 +277,7 @@ const CardsDisplay = () => {
                 <div
                   className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
                     isActive
-                      ? "scale-110 z-20 ring-2 ring-[#EFFC76]/50"
+                      ? "scale-110 z-20 ring-2 ring-[#d946ef]/50"
                       : "scale-90 z-10 opacity-70 blur-[1px]"
                   }`}
                 >
@@ -395,10 +395,10 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay, duration: 0.5 }}
-    className="bg-neutral-900/50 border border-white/5 hover:border-[#EFFC76]/50 transition-all duration-300 hover:bg-neutral-900/80   rounded-2xl p-6   group"
+    className="bg-neutral-900/50 border border-white/5 hover:border-[#d946ef]/50 transition-all duration-300 hover:bg-neutral-900/80   rounded-2xl p-6   group"
   >
-    <div className="w-10 h-10 rounded-full  bg-[#EFFC76]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-      <Icon size={20} className="text-[#EFFC76]" />
+    <div className="w-10 h-10 rounded-full  bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <Icon size={20} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
     </div>
     <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
     <p className="text-gray-400 text-sm">{description}</p>

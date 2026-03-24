@@ -29,7 +29,7 @@ const CosmicBackground = () => {
 
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#050505] -z-10">
-      {/* Premium Modern Glow Effects - Enhanced with #effc76 */}
+      {/* Premium Modern Glow Effects - Enhanced with #d946ef */}
       <motion.div
         animate={{
           opacity: [0.4, 0.6, 0.4],
@@ -40,7 +40,7 @@ const CosmicBackground = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -top-[40%] left-1/2 -translate-x-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-b from-[#EFFC76]/25 via-[#EFFC76]/5 to-transparent blur-[140px] pointer-events-none"
+        className="absolute -top-[40%] left-1/2 -translate-x-1/2 w-[90%] aspect-square rounded-full bg-gradient-to-b from-[#d946ef]/25 via-[#f43f5e]/5 to-transparent blur-[140px] pointer-events-none"
       />
 
       {/* Secondary Ambient Glows - Stronger */}
@@ -55,8 +55,8 @@ const CosmicBackground = () => {
         }}
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[120%] pointer-events-none opacity-40"
       >
-        <div className="absolute top-[15%] left-[15%] w-[45%] h-[45%] bg-[#EFFC76]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[25%] right-[25%] w-[40%] h-[40%] bg-[#EFFC76]/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[15%] left-[15%] w-[45%] h-[45%] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[120px]" />
+        <div className="absolute bottom-[25%] right-[25%] w-[40%] h-[40%] bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-[100px]" />
       </motion.div>
 
       {/* Stars Background */}
@@ -85,8 +85,8 @@ const CosmicBackground = () => {
       </div>
 
       {/* Elegant Horizon Line */}
-      {/* <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[100%] max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-[#EFFC76]/30 to-transparent blur-[1px]" /> */}
-      {/* <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[70%] max-w-5xl h-[1px] bg-gradient-to-r from-transparent via-[#EFFC76]/80 to-transparent" /> */}
+      {/* <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[100%] max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-[#f43f5e]/30 to-transparent blur-[1px]" /> */}
+      {/* <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[70%] max-w-5xl h-[1px] bg-gradient-to-r from-transparent via-[#f43f5e]/80 to-transparent" /> */}
 
       {/* Bottom Fade for Smooth Transition */}
       <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />

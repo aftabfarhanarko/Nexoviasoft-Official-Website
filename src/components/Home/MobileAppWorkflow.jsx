@@ -48,7 +48,7 @@ const MockupPrototyping = () => (
      <div className="w-8 h-12 border border-dashed border-gray-500 rounded bg-white/5"></div>
      <div className="text-gray-600">→</div>
      <div className="w-8 h-12 border border-white/20 rounded bg-white/5 flex flex-col items-center justify-center gap-1">
-        <div className="w-4 h-4 rounded-full bg-[#EFFC76]/20"></div>
+        <div className="w-4 h-4 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316]"></div>
         <div className="w-5 h-1 bg-white/10 rounded"></div>
      </div>
   </div>
@@ -56,17 +56,17 @@ const MockupPrototyping = () => (
 
 const MockupUI = () => (
    <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#EFFC76]/5 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#d946ef]/5 to-transparent"></div>
         <div className="w-10 h-16 bg-[#0A0A0A] border border-white/10 rounded-xl relative shadow-xl transform rotate-[-5deg] overflow-hidden">
              {/* Screen Content */}
-             <div className="h-2 w-full bg-[#EFFC76]/20 mb-1"></div>
+             <div className="h-2 w-full bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-1"></div>
              <div className="grid grid-cols-2 gap-1 p-1">
                  <div className="h-6 bg-white/5 rounded"></div>
                  <div className="h-6 bg-white/5 rounded"></div>
                  <div className="h-6 bg-white/5 rounded"></div>
                  <div className="h-6 bg-white/5 rounded"></div>
              </div>
-             <div className="absolute bottom-1 bg-[#EFFC76] w-6 h-1 rounded-full left-1/2 -translate-x-1/2"></div>
+             <div className="absolute bottom-1 bg-[#d946ef] w-6 h-1 rounded-full left-1/2 -translate-x-1/2"></div>
         </div>
    </div>
 );
@@ -91,11 +91,11 @@ const MockupAPI = () => (
                initial={{ x: "-100%" }}
                whileInView={{ x: "100%" }}
                transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-               className="w-1/2 h-full bg-[#EFFC76]"
+               className="w-1/2 h-full bg-[#d946ef]"
             />
         </div>
         <div className="w-8 h-8 rounded bg-white/5 flex items-center justify-center border border-white/10">
-            <span className="text-[8px] font-mono text-[#EFFC76]">JSON</span>
+            <span className="text-[8px] font-mono text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">JSON</span>
         </div>
     </div>
 )
@@ -119,7 +119,7 @@ const MockupTesting = () => (
 
 const MockupStore = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col items-center justify-center gap-1">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#EFFC76] to-[#dce867] flex items-center justify-center shadow-lg">
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#d946ef] to-[#f97316] flex items-center justify-center shadow-lg">
              <div className="w-6 h-6 border-2 border-black rounded-lg"></div>
         </div>
         <div className="flex gap-1 mt-1">
@@ -134,10 +134,10 @@ const MockupStore = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -168,9 +168,9 @@ const MobileAppWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Mobile Development Cycle
             </motion.div>
             <motion.h2 
@@ -178,7 +178,7 @@ const MobileAppWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Start to Finish, <span className="font-serif italic text-[#EFFC76]">In Your Quality</span>
+                Start to Finish, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">In Your Quality</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -223,7 +223,7 @@ const MobileAppWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -231,7 +231,7 @@ const MobileAppWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-mobile)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -254,7 +254,7 @@ const MobileAppWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -273,7 +273,7 @@ const MobileAppWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -317,8 +317,8 @@ const MobileAppWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Mobile Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <Smartphone size={40} className="fill-current" />
                         </div>
                     </div>

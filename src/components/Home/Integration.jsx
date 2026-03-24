@@ -47,8 +47,8 @@ const Integration = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-center mb-6"
         >
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-[#EFFC76]/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
-            <Puzzle className="w-4 h-4 text-[#EFFC76]" />
+          <div className="inline-flex items-center gap-2 bg-white/5 border border-[#d946ef]/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
+            <Puzzle className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-sm font-medium text-gray-300">
               Integrations
             </span>
@@ -76,7 +76,7 @@ const Integration = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-gray-400 text-base md:text-lg mb-10 max-w-xl mx-auto"
         >
-          SquadLog leverages leading technologies and platforms, ensuring robust
+          NexoviaSoft leverages leading technologies and platforms, ensuring robust
           and scalable solutions.
         </motion.p>
 
@@ -88,7 +88,7 @@ const Integration = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mb-20"
         >
-          <SmoothButton> View About SquadLog </SmoothButton>
+          <SmoothButton> View About NexoviaSoft </SmoothButton>
         </motion.div>
 
         {/* Icons Row */}

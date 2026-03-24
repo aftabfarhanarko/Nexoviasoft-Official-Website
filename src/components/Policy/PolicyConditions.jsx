@@ -88,7 +88,7 @@ const PolicyConditions = () => {
       title: "6. Third-Party Links",
       content: (
         <p className="text-gray-400 text-sm leading-relaxed">
-          SquadLog may contain links to third-party websites or services. We are not responsible for the privacy practices or content of these external sites.
+          NexoviaSoft may contain links to third-party websites or services. We are not responsible for the privacy practices or content of these external sites.
         </p>
       ),
     },
@@ -96,7 +96,7 @@ const PolicyConditions = () => {
       title: "7. Children's Privacy",
       content: (
         <p className="text-gray-400 text-sm leading-relaxed">
-          SquadLog is not intended for use by individuals under the age of 13. We do not knowingly collect personal data neither from children. If we learn that we have collected data from a child without parental consent, we will take steps to delete that information.
+          NexoviaSoft is not intended for use by individuals under the age of 13. We do not knowingly collect personal data neither from children. If we learn that we have collected data from a child without parental consent, we will take steps to delete that information.
         </p>
       ),
     },
@@ -131,7 +131,7 @@ const PolicyConditions = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFFC76] text-black text-xs font-medium mb-12"
+          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d946ef] text-white text-xs font-medium mb-12"
         >
           <span className="bg-black text-white px-1.5 py-0.5 rounded text-[10px] uppercase tracking-wider">New</span>
           <span>Latest Policy</span>

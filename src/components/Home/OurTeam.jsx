@@ -45,7 +45,7 @@ const teamMembers = [
 
 const TeamCard = ({ member }) => {
   return (
-    <div className="group relative bg-[#0A0A0A] border border-white/5 rounded-3xl p-3 flex items-center gap-4 hover:border-[#EFFC76]/50 transition-colors duration-300 h-full">
+    <div className="group relative bg-[#0A0A0A] border border-white/5 rounded-3xl p-3 flex items-center gap-4 hover:border-[#d946ef]/50 transition-colors duration-300 h-full">
       {/* Image */}
       <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-gray-800 shrink-0">
         <div className="absolute inset-0 bg-gray-700 animate-pulse" />
@@ -62,14 +62,14 @@ const TeamCard = ({ member }) => {
 
       {/* Info */}
       <div className="flex-grow">
-        <h3 className="text-white font-medium text-lg leading-tight mb-1 group-hover:text-[#EFFC76] transition-colors">
+        <h3 className="text-white font-medium text-lg leading-tight mb-1 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors">
           {member.name}
         </h3>
         <p className="text-gray-400 text-sm">{member.role}</p>
       </div>
 
       {/* Button */}
-      <div className="rounded-xl bg-[#EFFC76] p-2.5 flex items-center justify-center shrink-0 group-hover:bg-[#EFFC76] transition-colors cursor-pointer">
+      <div className="rounded-xl bg-[#d946ef] p-2.5 flex items-center justify-center shrink-0 group-hover:bg-[#d946ef] transition-colors cursor-pointer">
         <Percent className="w-5 h-5 text-black" />
       </div>
     </div>
@@ -88,7 +88,7 @@ const OurTeam = () => {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8"
           >
-            <Search className="w-4 h-4 text-[#EFFC76]" />
+            <Search className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
             <span className="text-gray-300 text-sm">Our Team</span>
           </motion.div>
 
@@ -117,7 +117,7 @@ const OurTeam = () => {
           </motion.p>
 
           {/* Button */}
-          <SmoothButton> View About SquadLog</SmoothButton>
+          <SmoothButton> View About NexoviaSoft</SmoothButton>
         </div>
 
         {/* Desktop Team Grid */}
@@ -170,7 +170,7 @@ const OurTeam = () => {
               transition: all 0.3s ease;
             }
             .swiper-pagination-bullet-active {
-              background: #EFFC76 !important;
+              background: #d946ef !important;
               width: 24px !important;
               border-radius: 5px !important;
             }

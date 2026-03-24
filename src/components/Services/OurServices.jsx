@@ -37,7 +37,7 @@ const OurServices = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm mb-6"
           >
             <div className="w-5 h-5 flex items-center justify-center">
-               <Sparkles className="w-4 h-4 text-[#EFFC76] fill-[#EFFC76]" />
+               <Sparkles className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] fill-[#d946ef]" />
             </div>
             <span className="text-gray-300 text-sm font-medium">Our process</span>
           </motion.div>
@@ -82,7 +82,7 @@ const OurServices = () => {
               {/* Card Container */}
               <div className="relative z-10">
                 {/* Yellow Header Pill */}
-                <div className="bg-[#EFFC76] rounded-full p-2 pl-3 flex items-center gap-4 shadow-lg relative z-20 w-full transform transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="bg-[#d946ef] rounded-full p-2 pl-3 flex items-center gap-4 shadow-lg relative z-20 w-full transform transition-transform duration-300 group-hover:-translate-y-1">
                    <div className="w-8 h-8 bg-[#111] rounded-full flex items-center justify-center text-white font-bold text-sm shadow-inner flex-shrink-0">
                       {step.number}
                    </div>
@@ -92,7 +92,7 @@ const OurServices = () => {
                 </div>
 
                 {/* Dark Body */}
-                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 pt-12 -mt-6 relative z-10 h-full min-h-[180px] flex flex-col justify-center group-hover:border-[#EFFC76]/30 transition-colors duration-300">
+                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 pt-12 -mt-6 relative z-10 h-full min-h-[180px] flex flex-col justify-center group-hover:border-[#d946ef]/30 transition-colors duration-300">
                     <p className="text-gray-400 leading-relaxed text-sm md:text-base">
                         {step.description}
                     </p>
@@ -140,7 +140,7 @@ const Rays = ({ count }) => {
                     left: '50%',
                     width: '2px',
                     height: `${height}%`,
-                    background: 'linear-gradient(to top, #EFFC76, transparent)',
+                    background: 'linear-gradient(to top, #d946ef, transparent)',
                     transformOrigin: 'bottom center',
                     transform: `translateX(-50%) rotate(${angle}deg)`,
                     opacity: 0.8,
@@ -152,7 +152,7 @@ const Rays = ({ count }) => {
     return (
         <div className="w-full h-full relative overflow-visible">
             {/* Center glow */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-[#EFFC76]/20 blur-2xl rounded-full" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-2xl rounded-full" />
             {rays}
         </div>
     );

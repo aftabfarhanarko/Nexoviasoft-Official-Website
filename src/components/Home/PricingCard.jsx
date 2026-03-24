@@ -21,23 +21,23 @@ const PricingCard = ({ items, delay = 0 }) => {
 
   return (
     <motion.div
-      className="relative p-6 md:p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#EFFC76]/50 transition-colors duration-500 flex flex-col h-full"
+      className="relative p-6 md:p-8 rounded-3xl bg-[#0A0A0A] border border-white/10 overflow-hidden group hover:border-[#d946ef]/50 transition-colors duration-500 flex flex-col h-full"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#EFFC76]/5 to-[#EFFC76]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#d946ef]/5 to-[#f97316]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative z-10 flex justify-between items-start mb-6">
-        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#EFFC76]/20 flex items-center justify-center border border-[#EFFC76]/30">
+        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center border border-[#d946ef]/30">
           {iconUrl ? (
             <img
               src={iconUrl}
-              className="w-5 h-5 md:w-6 md:h-6 text-[#EFFC76]"
+              className="w-5 h-5 md:w-6 md:h-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]"
             />
           ) : (
-            <Zap className="w-5 h-5 md:w-6 md:h-6 text-[#EFFC76]" />
+            <Zap className="w-5 h-5 md:w-6 md:h-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
           )}
         </div>
         {badge && (
@@ -83,8 +83,8 @@ const PricingCard = ({ items, delay = 0 }) => {
         {Array.isArray(features) &&
           features.map((feature, index) => (
             <div key={index} className="flex items-center gap-2 md:gap-3">
-              <div className="flex-shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#EFFC76]/20 flex items-center justify-center">
-                <CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-[#EFFC76]" />
+              <div className="flex-shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center">
+                <CheckCircle2 className="w-3 h-3 md:w-3.5 md:h-3.5 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
               </div>
               <span className="text-gray-400 text-xs md:text-sm">
                 {feature}
@@ -97,7 +97,7 @@ const PricingCard = ({ items, delay = 0 }) => {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         onClick={() => setIsModalOpen(true)}
-        className="relative z-70 w-full py-3 md:py-4 rounded-xl font-medium text-sm md:text-base text-black bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] transition-all duration-300 shadow-lg shadow-[#EFFC76]/20"
+        className="relative z-70 w-full py-3 md:py-4 rounded-xl font-medium text-sm md:text-base text-white bg-gradient-to-r from-[#d946ef] to-[#f97316] hover:from-[#d946ef] hover:to-[#f97316] transition-all duration-300 shadow-lg shadow-[#d946ef]/20"
       >
         Book an Appointment
       </motion.button>

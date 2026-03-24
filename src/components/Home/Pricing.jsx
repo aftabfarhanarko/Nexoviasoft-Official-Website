@@ -89,7 +89,7 @@ const Pricing = () => {
   return (
     <section id="pricing" className="py-24 -mt-26 md:-mt-18 relative overflow-hidden">
       {/* Background Gradients - Removed for global theme */}
-      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#EFFC76]/10 blur-[100px] rounded-full pointer-events-none" /> */}
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[100px] rounded-full pointer-events-none" /> */}
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -101,8 +101,8 @@ const Pricing = () => {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 mb-6"
           >
-            <div className="h-px w-8 bg-[#EFFC76]" />
-            <span className="text-[#EFFC76] font-medium tracking-wide uppercase text-sm">
+            <div className="h-px w-8 bg-[#d946ef]" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] font-medium tracking-wide uppercase text-sm">
               Engagement Models
             </span>
           </motion.div>
@@ -161,7 +161,7 @@ const Pricing = () => {
             loop={true}
             className="pb-12"
             style={{
-              "--swiper-pagination-color": "#EFFC76",
+              "--swiper-pagination-color": "#d946ef",
               "--swiper-pagination-bullet-inactive-color": "#666",
               "--swiper-pagination-bullet-inactive-opacity": "0.5",
               "--swiper-pagination-bullet-size": "10px",

@@ -51,7 +51,7 @@ const MockupResearch = () => (
              <div className="w-2/3 h-1 bg-white/10 rounded"></div>
          </div>
      </div>
-     <Search size={18} className="text-[#EFFC76]" />
+     <Search size={18} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
   </div>
 );
 
@@ -70,8 +70,8 @@ const MockupWireframe = () => (
 const MockupPrototyping = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center gap-4 relative">
         <div className="w-10 h-14 border border-white/10 rounded bg-white/5 relative z-10"></div>
-        <div className="absolute w-8 h-0.5 bg-[#EFFC76]/50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="w-10 h-14 border border-[#EFFC76]/50 rounded bg-[#EFFC76]/10 relative z-10 shadow-[0_0_10px_rgba(239,252,118,0.2)]">
+        <div className="absolute w-8 h-0.5 bg-gradient-to-r from-[#d946ef] to-[#f97316] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="w-10 h-14 border border-[#d946ef]/50 rounded bg-gradient-to-r from-[#d946ef] to-[#f97316] relative z-10 shadow-[0_0_10px_rgba(217,70,239,0.2)]">
             <MousePointer2 size={12} className="absolute -bottom-2 -right-2 text-white fill-black" />
         </div>
     </div>
@@ -80,7 +80,7 @@ const MockupPrototyping = () => (
 const MockupVisual = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex items-center justify-center gap-2">
         <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500"></div>
-        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#EFFC76] to-green-400"></div>
+        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#d946ef] to-green-400"></div>
         <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-500 to-orange-400"></div>
     </div>
 )
@@ -88,7 +88,7 @@ const MockupVisual = () => (
 const MockupDesignSystem = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 grid grid-cols-2 gap-2">
         <div className="bg-white/5 rounded border border-white/10 flex items-center justify-center text-[8px] text-gray-400">Button</div>
-        <div className="bg-[#EFFC76] rounded border border-[#EFFC76] flex items-center justify-center text-[8px] text-black font-bold">Input</div>
+        <div className="bg-[#d946ef] rounded border border-[#d946ef] flex items-center justify-center text-[8px] text-white font-bold">Input</div>
         <div className="bg-white/5 rounded border border-white/10 flex items-center justify-center text-[8px] text-gray-400">Card</div>
         <div className="bg-white/5 rounded border border-white/10 flex items-center justify-center text-[8px] text-gray-400">Toggle</div>
     </div>
@@ -102,7 +102,7 @@ const MockupUserTesting = () => (
             <div className="w-8 h-8 rounded-full bg-white/10 border border-black flex items-center justify-center">😍</div>
         </div>
         <div className="w-20 h-1 bg-white/10 rounded-full mt-2 overflow-hidden">
-             <div className="w-3/4 h-full bg-[#EFFC76]"></div>
+             <div className="w-3/4 h-full bg-[#d946ef]"></div>
         </div>
     </div>
 )
@@ -112,10 +112,10 @@ const MockupUserTesting = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -146,9 +146,9 @@ const UiUxDesignWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Design Process
             </motion.div>
             <motion.h2 
@@ -156,7 +156,7 @@ const UiUxDesignWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Empathy Driven, <span className="font-serif italic text-[#EFFC76]">Pixel Perfect</span>
+                Empathy Driven, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Pixel Perfect</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -201,7 +201,7 @@ const UiUxDesignWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -209,7 +209,7 @@ const UiUxDesignWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-uiux)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -232,7 +232,7 @@ const UiUxDesignWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -251,7 +251,7 @@ const UiUxDesignWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -295,8 +295,8 @@ const UiUxDesignWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Pen Tool Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <PenTool size={40} className="fill-current" />
                         </div>
                     </div>

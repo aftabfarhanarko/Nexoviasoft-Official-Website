@@ -32,15 +32,15 @@ const Banner = () => {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center flex flex-col items-center justify-center flex-grow">
           {/* Badge */}
           <motion.div
-            className="inline-flex -mt-15 items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 px-1.5 py-1.5 pr-4 rounded-full mb-10"
+            className="inline-flex -mt-15 items-center space-x-2 bg-gradient-to-r from-[#d946ef]/10 to-[#f97316]/10 backdrop-blur-md border border-[#d946ef]/30 px-1.5 py-1.5 pr-4 rounded-full mb-10"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-gradient-to-r from-[#d946ef] to-[#f97316] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-[#d946ef]/20">
               Premium
             </span>
-            <span className="text-gray-300 text-sm font-medium">
+            <span className="text-gray-200 text-sm font-medium">
               Software Solutions
             </span>
           </motion.div>
@@ -55,7 +55,7 @@ const Banner = () => {
             <h1 className="text-5xl md:text-6xl lg:text-[5.5rem] font-medium leading-[1.1] tracking-tight text-white">
               Transforming Ideas
               <br />
-              <span className="text-white/90">Into Digital Reality.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Into Digital Reality.</span>
             </h1>
           </motion.div>
 
@@ -81,11 +81,11 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-gray-100 text-black rounded-full text-[14px] md:text-lg font-medium hover:bg-white transition-all duration-300 hover:scale-105 ">
+            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-gradient-to-r from-[#d946ef]/20 to-[#f97316]/20 text-white rounded-full text-[14px] border border-white/10 md:text-lg font-medium hover:from-[#d946ef]/40 hover:to-[#f97316]/40 transition-all duration-300 hover:scale-105 ">
               Connect With Us
             </button>
-            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-[#EFFC76] text-black rounded-full text-[14px] md:text-lg  font-medium border border-[#EFFC76] hover:bg-[#EFFC76]/90 transition-all duration-300 hover:scale-105 ">
-              What is SquadLog?
+            <button className=" px-3 md:px-8  py-2.5 md:py-3 bg-[#d946ef] text-white rounded-full text-[14px] md:text-lg  font-medium border border-[#d946ef] hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-300 hover:scale-105 ">
+              What is NexoviaSoft?
             </button>
           </motion.div>
 

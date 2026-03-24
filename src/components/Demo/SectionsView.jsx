@@ -47,7 +47,7 @@ const SectionsView = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
               <MessageCircle size={15} className="text-black" />
             </span>
             <span className="text-gray-300 text-sm font-medium">
@@ -72,13 +72,13 @@ const SectionsView = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="group relative p-[1px] rounded-[30px] bg-gradient-to-br from-white/10 via-[#EFFC76]/40 to-transparent overflow-hidden cursor-pointer"
+              className="group relative p-[1px] rounded-[30px] bg-gradient-to-br from-white/10 via-[#f43f5e]/40 to-transparent overflow-hidden cursor-pointer"
             >
-              <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(239,252,118,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(148,163,184,0.18),_transparent_55%)] opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700 pointer-events-none" />
+              <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(217,70,239,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(148,163,184,0.18),_transparent_55%)] opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700 pointer-events-none" />
 
               <div className="relative z-10 rounded-[28px] bg-gradient-to-b from-black/80 via-neutral-900/95 to-black/95 border border-white/10 shadow-[0_22px_60px_rgba(0,0,0,0.9)] group-hover:shadow-[0_30px_80px_rgba(0,0,0,1)] backdrop-blur-2xl transition-all duration-500">
                 {/* Image Container */}
-                <div className="relative mb-6 h-[260px] md:h-[320px] rounded-2xl overflow-hidden bg-neutral-900/80 ring-1 ring-white/10 group-hover:ring-[#EFFC76]/50 transition-all duration-500">
+                <div className="relative mb-6 h-[260px] md:h-[320px] rounded-2xl overflow-hidden bg-neutral-900/80 ring-1 ring-white/10 group-hover:ring-[#d946ef]/50 transition-all duration-500">
                   <Image
                     src={feature.image}
                     alt={feature.alt}
@@ -107,7 +107,7 @@ const SectionsView = () => {
                       App 0{index + 1}
                     </span>
                   </div> */}
-                  <h3 className="text-[22px] md:text-2xl font-semibold text-white mb-2 group-hover:text-[#EFFC76] tracking-tight">
+                  <h3 className="text-[22px] md:text-2xl font-semibold text-white mb-2 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] tracking-tight">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300/95 leading-relaxed text-[15px] md:text-base">
@@ -115,7 +115,7 @@ const SectionsView = () => {
                   </p>
                   {/* <div className="mt-4 flex items-center justify-between text-[11px] text-gray-400">
                     <span className="flex items-center gap-1.5">
-                      <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#EFFC76]" />
+                      <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#d946ef]" />
                       Ready for live applications
                     </span>
                     <span className="uppercase tracking-[0.18em] text-gray-500">
@@ -141,7 +141,7 @@ const SectionsView = () => {
             }}
             className="pb-16"
             style={{
-              "--swiper-pagination-color": "#EFFC76",
+              "--swiper-pagination-color": "#d946ef",
               "--swiper-pagination-bullet-inactive-color": "#4B5563",
               "--swiper-pagination-bullet-inactive-opacity": "0.5",
               "--swiper-pagination-bullet-size": "8px",
@@ -155,13 +155,13 @@ const SectionsView = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="group relative mb-7 p-[1px] rounded-[30px] bg-gradient-to-br from-white/10 via-[#EFFC76]/40 to-transparent overflow-hidden cursor-pointer"
+                  className="group relative mb-7 p-[1px] rounded-[30px] bg-gradient-to-br from-white/10 via-[#f43f5e]/40 to-transparent overflow-hidden cursor-pointer"
                 >
-                  <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(239,252,118,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(148,163,184,0.18),_transparent_55%)] opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700 pointer-events-none" />
+                  <div className="absolute -inset-10 bg-[radial-gradient(circle_at_top,_rgba(217,70,239,0.22),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(148,163,184,0.18),_transparent_55%)] opacity-0 group-hover:opacity-100 blur-3xl transition-opacity duration-700 pointer-events-none" />
 
                   <div className="relative z-10 rounded-[28px] bg-gradient-to-b from-black/80 via-neutral-900/95 to-black/95 border border-white/10 shadow-[0_22px_60px_rgba(0,0,0,0.9)] group-hover:shadow-[0_30px_80px_rgba(0,0,0,1)] backdrop-blur-2xl transition-all duration-500">
                     {/* Image Container */}
-                    <div className="relative mb-6 h-[260px] rounded-2xl overflow-hidden bg-neutral-900/80 ring-1 ring-white/10 group-hover:ring-[#EFFC76]/50 transition-all duration-500">
+                    <div className="relative mb-6 h-[260px] rounded-2xl overflow-hidden bg-neutral-900/80 ring-1 ring-white/10 group-hover:ring-[#d946ef]/50 transition-all duration-500">
                       <Image
                         src={feature.image}
                         alt={feature.alt}
@@ -190,7 +190,7 @@ const SectionsView = () => {
                           App 0{index + 1}
                         </span>
                       </div> */}
-                      <h3 className="text-[20px] font-semibold text-white mb-2 group-hover:text-[#EFFC76] tracking-tight">
+                      <h3 className="text-[20px] font-semibold text-white mb-2 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] tracking-tight">
                         {feature.title}
                       </h3>
                       <p className="text-gray-300/95 leading-relaxed text-[15px]">
@@ -198,7 +198,7 @@ const SectionsView = () => {
                       </p>
                       {/* <div className="mt-4 flex items-center justify-between text-[11px] text-gray-400">
                         <span className="flex items-center gap-1.5">
-                          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#EFFC76]" />
+                          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#d946ef]" />
                           Ready for live applications
                         </span>
                         <span className="uppercase tracking-[0.18em] text-gray-500">

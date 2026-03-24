@@ -22,11 +22,11 @@ const AboutPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-[#EFFC76] text-black text-xs font-bold px-3 py-1 rounded-full">
+            <span className="bg-[#d946ef] text-white text-xs font-bold px-3 py-1 rounded-full">
               2026
             </span>
             <span className="text-gray-300 text-sm font-medium">
-            About SquadLog
+            About NexoviaSoft
             </span>
           </div>
         </div>

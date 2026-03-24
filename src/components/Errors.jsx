@@ -7,7 +7,7 @@ const Errors = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#EFFC76]/10 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[120px] pointer-events-none rounded-full" />
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto -mt-20">
@@ -18,7 +18,7 @@ const Errors = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center gap-2 px-1.5 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit"
         >
-          <span className="bg-[#EFFC76] text-black text-[10px] font-bold px-2 py-0.5 rounded-full">
+          <span className="bg-[#d946ef] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
             OOPS
           </span>
           <span className="text-gray-300 text-sm font-medium pr-2">
@@ -55,7 +55,7 @@ const Errors = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Link href="/">
-            <button className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#EFFC76] to-[#EFFC76] hover:from-[#EFFC76] hover:to-[#EFFC76] text-black font-medium transition-all shadow-lg shadow-[#EFFC76]/25">
+            <button className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#d946ef] to-[#f97316] hover:from-[#d946ef] hover:to-[#f97316] text-white font-medium transition-all shadow-lg shadow-[#d946ef]/25">
               Back To Homepage
             </button>
           </Link>

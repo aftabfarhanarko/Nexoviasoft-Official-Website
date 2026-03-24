@@ -38,7 +38,7 @@ const features = [
     icon: Layout,
     title: "Single Workspace View",
     description:
-      "See product strategy, specs, and delivery status in one shared SquadLog workspace.",
+      "See product strategy, specs, and delivery status in one shared NexoviaSoft workspace.",
   },
 ];
 
@@ -46,7 +46,7 @@ const Video = () => {
   return (
     <div className="w-11/12 md:max-w-[1280px] -mt-20 mx-auto py-20">
       <div className="relative rounded-[2rem] overflow-hidden bg-white/5 border border-white/10 group">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-[#EFFC76]/20 blur-[120px] pointer-events-none opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[120px] pointer-events-none opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -57,14 +57,14 @@ const Video = () => {
         >
           <div className="space-y-6">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-black/40 border border-white/15 text-xs md:text-sm text-gray-300">
-              <span className="w-2 h-2 rounded-full bg-[#EFFC76] mr-2" />
-              How SquadLog works for your product
+              <span className="w-2 h-2 rounded-full bg-[#d946ef] mr-2" />
+              How NexoviaSoft works for your product
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
               Built for teams shipping real digital products.
             </h2>
             <p className="text-gray-300 text-base md:text-lg max-w-xl">
-              SquadLog connects strategy, design, and engineering into one flow,
+              NexoviaSoft connects strategy, design, and engineering into one flow,
               so every release feels predictable, transparent, and on time.
             </p>
           </div>
@@ -79,7 +79,7 @@ const Video = () => {
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="h-full rounded-2xl bg-black/40 border border-white/10 p-4 md:p-5 flex flex-col gap-3"
               >
-                <div className="w-9 h-9 rounded-xl bg-[#EFFC76]/15 flex items-center justify-center text-[#EFFC76]">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                   <item.icon size={18} />
                 </div>
                 <h3 className="text-white font-semibold text-base md:text-lg">
@@ -93,7 +93,7 @@ const Video = () => {
           </div>
         </motion.div>
 
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#EFFC76]/10 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#d946ef]/10 to-transparent pointer-events-none" />
       </div>
     </div>
   );

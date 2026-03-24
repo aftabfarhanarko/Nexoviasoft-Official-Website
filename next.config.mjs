@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ["example.com","i.ibb.co","squadlog-cdn.up.railway.app"],
+    domains: ["example.com","i.ibb.co","nexoviasoft-cdn.up.railway.app"],
     // domains: ["https://cdn.nextbyteitinstitute.com"],
   },
   async redirects() {
@@ -40,8 +40,8 @@ const nextConfig = {
       { source: "/policy", destination: "/privacy-policy", permanent: true },
       { source: "/privacy", destination: "/privacy-policy", permanent: true },
       {
-        source: "/squadcart",
-        destination: "/products/squadcart",
+        source: "/nexocart",
+        destination: "/products/nexocart",
         permanent: true,
       },
     ];
@@ -61,6 +61,8 @@ const nextConfig = {
       { source: "/privacy-policy", destination: "/main/privacy-policy" },
       { source: "/refund-policy", destination: "/main/refund-policy" },
       { source: "/faq", destination: "/main/faq" },
+      { source: "/career", destination: "/main/career" },
+      { source: "/career/:path*", destination: "/main/career/:path*" },
     ];
   },
   reactCompiler: false,

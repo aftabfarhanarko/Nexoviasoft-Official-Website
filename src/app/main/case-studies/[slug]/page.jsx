@@ -77,7 +77,7 @@ const CaseStudyDetail = () => {
     : [];
 
   return (
-    <div className="min-h-screen  text-white relative overflow-x-hidden selection:bg-[#EFFC76] selection:text-black">
+    <div className="min-h-screen  text-white relative overflow-x-hidden selection:bg-[#d946ef] selection:text-white">
       {/* Background */}
       <div className="fixed inset-0 z-0 pointer-events-none ">
         <CosmicBackground />
@@ -89,7 +89,7 @@ const CaseStudyDetail = () => {
           href="/main/case-studies"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 group"
         >
-          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#EFFC76]/50 group-hover:bg-[#EFFC76]/10 transition-all">
+          <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#d946ef]/50 group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all">
             <ArrowLeft
               size={16}
               className="group-hover:-translate-x-0.5 transition-transform"
@@ -108,19 +108,19 @@ const CaseStudyDetail = () => {
           >
             <div className="flex flex-wrap gap-3 mb-8">
               {project.badge && (
-                <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-[#EFFC76]">
+                <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                   Featured
                 </span>
               )}
               {project.industry && (
-                <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-[#EFFC76]">
+                <span className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                   {project.industry}
                 </span>
               )}
               {project.categories?.map((cat, i) => (
                 <span
                   key={cat.id || i}
-                  className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-[#EFFC76]"
+                  className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]"
                 >
                   {cat.name}
                 </span>
@@ -210,7 +210,7 @@ const CaseStudyDetail = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-[#EFFC76]/5 group"
+            className="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-[#d946ef]/5 group"
           >
             <Image
               src={images[activeImage]}
@@ -229,7 +229,7 @@ const CaseStudyDetail = () => {
                 onClick={() => setActiveImage(index)}
                 className={`relative w-24 h-16 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                   activeImage === index
-                    ? "border-[#EFFC76] scale-110 shadow-lg shadow-[#EFFC76]/20"
+                    ? "border-[#d946ef] scale-110 shadow-lg shadow-[#d946ef]/20"
                     : "border-transparent opacity-50 hover:opacity-100"
                 }`}
               >
@@ -251,13 +251,13 @@ const CaseStudyDetail = () => {
           <div className="lg:col-span-4">
             <div className="sticky top-32">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                <div className="w-8 h-1 bg-[#EFFC76] rounded-full" />
+                <div className="w-8 h-1 bg-[#d946ef] rounded-full" />
                 Key Features
               </h3>
               <ul className="space-y-4">
                 {project.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3 text-gray-300">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] mt-2.5 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] mt-2.5 shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -273,7 +273,7 @@ const CaseStudyDetail = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#EFFC76]/10 flex items-center justify-center mb-6 text-[#EFFC76]">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                 <Layers size={24} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -290,7 +290,7 @@ const CaseStudyDetail = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 rounded-2xl bg-[#EFFC76]/10 flex items-center justify-center mb-6 text-[#EFFC76]">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
                 <Cpu size={24} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -322,13 +322,13 @@ const CaseStudyDetail = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-[#EFFC76]/30 transition-colors group"
+                className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-[#d946ef]/30 transition-colors group"
               >
                 <Trophy
-                  className="text-[#EFFC76] mb-6 group-hover:scale-110 transition-transform"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6 group-hover:scale-110 transition-transform"
                   size={32}
                 />
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#EFFC76] transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors">
                   Result {index + 1}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">{result}</p>
@@ -346,14 +346,14 @@ const CaseStudyDetail = () => {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-[#EFFC76] text-sm font-medium tracking-wider uppercase mb-2 block">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-sm font-medium tracking-wider uppercase mb-2 block">
                     Next Case Study
                   </span>
                   <h2 className="text-2xl md:text-4xl font-bold group-hover:text-gray-300 transition-colors">
                     {nextProject.title}
                   </h2>
                 </div>
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#EFFC76] group-hover:border-[#EFFC76] group-hover:text-black transition-all">
+                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[#d946ef] group-hover:border-[#d946ef] group-hover:text-white transition-all">
                   <ArrowRight
                     size={22}
                     className="group-hover:-rotate-45 transition-transform duration-300"

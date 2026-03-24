@@ -27,7 +27,7 @@ const DemoNavbar = () => {
                 <path d="M11 5a1 1 0 0 1 2 0v5h5a1 1 0 1 1 0 2h-5v5a1 1 0 1 1-2 0v-5H6a1 1 0 1 1 0-2h5V5Z" />
               </svg>
             </div>
-            <span className="text-lg font-semibold text-black">Squadlog</span>
+            <span className="text-lg font-semibold text-black">NexoviaSoft</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-gray-700">

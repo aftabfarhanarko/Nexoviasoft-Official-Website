@@ -45,11 +45,11 @@ const lineVariants = {
 const MockupRequirements = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-center gap-2">
         <div className="flex gap-2 items-center">
-             <div className="w-4 h-4 rounded-full border border-[#EFFC76] flex items-center justify-center text-[10px] text-[#EFFC76]">✓</div>
+             <div className="w-4 h-4 rounded-full border border-[#d946ef] flex items-center justify-center text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">✓</div>
              <div className="h-2 w-32 bg-white/10 rounded"></div>
         </div>
         <div className="flex gap-2 items-center">
-             <div className="w-4 h-4 rounded-full border border-[#EFFC76] flex items-center justify-center text-[10px] text-[#EFFC76]">✓</div>
+             <div className="w-4 h-4 rounded-full border border-[#d946ef] flex items-center justify-center text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">✓</div>
              <div className="h-2 w-24 bg-white/10 rounded"></div>
         </div>
         <div className="flex gap-2 items-center">
@@ -69,16 +69,16 @@ const MockupArchitecture = () => (
                  <div className="w-6 h-6 rounded border border-white/20 bg-white/5"></div>
              </div>
          </div>
-         <div className="h-full w-0.5 bg-[#EFFC76]/20 mx-1"></div>
-         <div className="w-8 h-10 rounded border border-[#EFFC76]/50 bg-[#EFFC76]/10 flex items-center justify-center">
-             <Database size={14} className="text-[#EFFC76]" />
+         <div className="h-full w-0.5 bg-gradient-to-r from-[#d946ef] to-[#f97316] mx-1"></div>
+         <div className="w-8 h-10 rounded border border-[#d946ef]/50 bg-gradient-to-r from-[#d946ef] to-[#f97316] flex items-center justify-center">
+             <Database size={14} className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" />
          </div>
     </div>
 );
 
 const MockupDevelopment = () => (
     <div className="bg-black/40 rounded-lg p-3 border border-white/5 h-24 flex flex-col justify-between font-mono text-[8px] text-gray-400 p-2">
-         <div className="flex gap-1 text-[#EFFC76]">
+         <div className="flex gap-1 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">
              <span>function</span>
              <span className="text-white">init()</span>
              <span>{"{"}</span>
@@ -95,7 +95,7 @@ const MockupDevelopment = () => (
              <span>process(data);</span>
          </div>
          <div>{"}"}</div>
-         <div className="w-full h-1 bg-[#EFFC76] rounded mt-1 animate-pulse"></div>
+         <div className="w-full h-1 bg-[#d946ef] rounded mt-1 animate-pulse"></div>
     </div>
 )
 
@@ -108,7 +108,7 @@ const MockupIntegration = () => (
          <motion.div 
             animate={{ x: [-20, 20], opacity: [0, 1, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-2 h-2 rounded-full bg-[#EFFC76] absolute"
+            className="w-2 h-2 rounded-full bg-[#d946ef] absolute"
          />
          <div className="w-10 h-10 border border-white/10 bg-white/5 rounded flex items-center justify-center z-10 translate-x-14">
              <span className="text-[8px] font-bold">API</span>
@@ -124,7 +124,7 @@ const MockupQA = () => (
              <div className="w-full h-1.5 bg-green-500/50 rounded"></div>
              <div className="w-full h-1.5 bg-green-500/50 rounded"></div>
          </div>
-         <div className="text-[#EFFC76] text-xl">✔</div>
+         <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] text-xl">✔</div>
     </div>
 )
 
@@ -134,7 +134,7 @@ const MockupMaintenance = () => (
          <div className="flex flex-col gap-1">
              <div className="px-2 py-0.5 bg-green-900/30 border border-green-500/30 rounded text-[8px] text-green-400">v2.0.1 Stable</div>
              <div className="w-16 h-1 bg-white/10 rounded overflow-hidden">
-                 <div className="w-full h-full bg-[#EFFC76] animate-[shimmer_2s_infinite]"></div>
+                 <div className="w-full h-full bg-[#d946ef] animate-[shimmer_2s_infinite]"></div>
              </div>
          </div>
     </div>
@@ -145,10 +145,10 @@ const MockupMaintenance = () => (
 const FeatureCard = ({ title, subtitle, italicTitle, icon: Icon, children, className }) => (
   <motion.div 
     variants={cardVariants}
-    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#EFFC76]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
+    className={`bg-[#050505] border border-white/10 rounded-3xl p-6 md:p-8 relative hover:border-[#d946ef]/50 transition-colors duration-500 group overflow-hidden ${className} w-full`}
   >
     {/* Glow Effect */}
-    <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#EFFC76]/5 rounded-full blur-3xl group-hover:bg-[#EFFC76]/10 transition-all duration-500"></div>
+    <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-r from-[#d946ef] to-[#f97316] rounded-full blur-3xl group-hover:bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-all duration-500"></div>
 
     <div className="relative z-10 flex flex-col h-full justify-between">
         <div>
@@ -179,9 +179,9 @@ const CustomSoftwareWorkflow = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-[#EFFC76] mb-6"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-[#EFFC76] animate-pulse"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-[#d946ef] animate-pulse"></div>
                 Software Lifecycle
             </motion.div>
             <motion.h2 
@@ -189,7 +189,7 @@ const CustomSoftwareWorkflow = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="text-4xl md:text-6xl font-medium text-white tracking-tight"
             >
-                Tailored Logic, <span className="font-serif italic text-[#EFFC76]">Scalable Systems</span>
+                Tailored Logic, <span className="font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]">Scalable Systems</span>
             </motion.h2>
              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -234,7 +234,7 @@ const CustomSoftwareWorkflow = () => {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 d={pathD}
-                                stroke="#EFFC76" 
+                                stroke="#d946ef" 
                                 strokeWidth="1" 
                                 strokeOpacity="0.2" 
                             />
@@ -242,7 +242,7 @@ const CustomSoftwareWorkflow = () => {
                             {/* Animated Rabbit */}
                             <motion.circle 
                                 r="3" 
-                                fill="#EFFC76"
+                                fill="#d946ef"
                                 filter="url(#glow-rabbit-custom)"
                                 style={{ offsetPath: `path('${pathD}')` }}
                                 initial={{ offsetDistance: "0%", opacity: 0 }}
@@ -265,7 +265,7 @@ const CustomSoftwareWorkflow = () => {
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="2"
                                 fill="transparent"
-                                stroke="#EFFC76"
+                                stroke="#d946ef"
                                 strokeWidth="2"
                                 animate={{ r: [2, 12], opacity: [1, 0] }}
                                 transition={{
@@ -284,7 +284,7 @@ const CustomSoftwareWorkflow = () => {
                                 cx={pathD.split(" ").slice(-2)[0]}
                                 cy={pathD.split(" ").slice(-1)[0]}
                                 r="3" 
-                                fill="#EFFC76" 
+                                fill="#d946ef" 
                             />
                         </React.Fragment>
                     ))}
@@ -328,8 +328,8 @@ const CustomSoftwareWorkflow = () => {
                 <div className="hidden xl:flex items-center justify-center col-span-3 py-12 relative">
                      {/* Central Pulsing Hub - Monitor/Code Icon */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-[#EFFC76] rounded-full blur-2xl opacity-20 animate-pulse"></div>
-                        <div className="w-24 h-24 bg-gradient-to-b from-[#EFFC76] to-[#dce867] rounded-full flex items-center justify-center text-black shadow-[0_0_50px_rgba(239,252,118,0.3)] relative z-20">
+                        <div className="absolute inset-0 bg-[#d946ef] rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                        <div className="w-24 h-24 bg-gradient-to-b from-[#d946ef] to-[#f97316] rounded-full flex items-center justify-center text-white shadow-[0_0_50px_rgba(217,70,239,0.3)] relative z-20">
                             <Monitor size={40} className="fill-current" />
                         </div>
                     </div>

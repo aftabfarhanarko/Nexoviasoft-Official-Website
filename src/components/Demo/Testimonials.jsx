@@ -59,7 +59,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 max-w-7xl mx-auto overflow-hidden">
       <div className="px-4 sm:px-6 lg:px-8 mb-16 text-center">
-        <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[#EFFC76] font-medium text-sm mb-6 shadow-sm backdrop-blur-sm">
+        <div className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] font-medium text-sm mb-6 shadow-sm backdrop-blur-sm">
           Testimonials
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
@@ -78,9 +78,9 @@ const Testimonials = () => {
             <motion.div
               key={index}
               whileHover={{ y: -5 }}
-              className="w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 p-8 rounded-3xl border border-white/5 hover:border-[#EFFC76]/50 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(239,252,118,0.1)] transition-all whitespace-normal backdrop-blur-sm group"
+              className="w-[350px] md:w-[400px] flex-shrink-0 bg-neutral-900/50 p-8 rounded-3xl border border-white/5 hover:border-[#d946ef]/50 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(217,70,239,0.1)] transition-all whitespace-normal backdrop-blur-sm group"
             >
-              <Quote className="w-8 h-8 text-[#EFFC76] mb-6 fill-current opacity-80" />
+              <Quote className="w-8 h-8 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mb-6 fill-current opacity-80" />
               <p className="text-gray-400 text-lg leading-relaxed mb-8 h-40 overflow-hidden">
                 {item.quote}
               </p>
@@ -95,8 +95,8 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white group-hover:text-[#EFFC76] transition-colors">{item.name}</h4>
-                  <div className="flex gap-1 text-[#EFFC76] mt-1">
+                  <h4 className="font-bold text-white group-hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors">{item.name}</h4>
+                  <div className="flex gap-1 text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] mt-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} size={14} fill="currentColor" />
                     ))}
