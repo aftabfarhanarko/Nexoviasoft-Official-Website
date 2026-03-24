@@ -21,7 +21,7 @@ const TestPages = () => {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <CosmicBackground />
       </div>
-      <div className="relative pt-20 z-10">
+      <div className="relative lg:pt-20 pt-0 z-10">
         <section>
           <Banner />
         </section>
