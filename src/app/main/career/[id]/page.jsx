@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import CosmicBackground from "@/components/Home/CosmicBackground";
 import { useQuery, useMutation } from "@/hooks/useApi";
-import { Loader2, CheckCircle, ArrowLeft, MapPin, Briefcase, Clock, Users } from "lucide-react";
+import { Loader2, CheckCircle, ArrowLeft, MapPin, Briefcase, Clock, Users, UploadCloud, FileText, X } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
@@ -20,6 +20,8 @@ const JobApplyPage = () => {
     phone: "",
     experience: "",
     skills: "",
+    cvData: null,
+    cvFilename: "",
   });
 
   const [applyMutation, { isLoading, isError, error }] = useMutation();
@@ -51,6 +53,30 @@ const JobApplyPage = () => {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        alert("File size must be less than 5MB");
+        return;
+      }
+      
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData((prev) => ({
+          ...prev,
+          cvData: reader.result,
+          cvFilename: file.name,
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeFile = () => {
+    setFormData((prev) => ({ ...prev, cvData: null, cvFilename: "" }));
   };
 
   return (
@@ -201,10 +227,43 @@ const JobApplyPage = () => {
                         required
                         value={formData.skills}
                         onChange={handleChange}
-                        rows={4}
+                        rows={3}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#d946ef] transition-colors resize-none"
                         placeholder="React, Next.js, Tailwind CSS"
                       />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label className="text-sm font-medium text-gray-300">Upload CV / Resume (PDF, DOCX)</label>
+                      
+                      {!formData.cvFilename ? (
+                        <div className="relative border-2 border-dashed border-white/20 rounded-xl p-6 hover:border-[#d946ef]/50 transition-colors bg-white/5 text-center group cursor-pointer">
+                          <input
+                            type="file"
+                            accept=".pdf,.doc,.docx"
+                            required
+                            onChange={handleFileChange}
+                            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                          />
+                          <UploadCloud size={30} className="mx-auto text-gray-400 group-hover:text-[#d946ef] transition-colors mb-2" />
+                          <p className="text-sm text-gray-300 font-medium">Click to upload or drag and drop</p>
+                          <p className="text-xs text-gray-500 mt-1">PDF or Word files (Max. 5MB)</p>
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-between bg-[#d946ef]/10 border border-[#d946ef]/30 rounded-xl p-4">
+                          <div className="flex items-center space-x-3 overflow-hidden">
+                            <FileText size={24} className="text-[#d946ef] flex-shrink-0" />
+                            <span className="text-sm text-white font-medium truncate">{formData.cvFilename}</span>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={removeFile}
+                            className="text-gray-400 hover:text-red-400 transition-colors p-1"
+                          >
+                            <X size={18} />
+                          </button>
+                        </div>
+                      )}
                     </div>
 
                     {isError && (
