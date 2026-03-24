@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ["example.com","i.ibb.co","nexoviasoft-cdn.up.railway.app"],
-    // domains: ["https://cdn.nextbyteitinstitute.com"],
+    domains: ["example.com", "i.ibb.co", "nexoviasoft-cdn.up.railway.app"],
+    ///hhhhh
   },
   async redirects() {
     return [
@@ -26,6 +26,7 @@ const nextConfig = {
         destination: "/privacy-policy",
         permanent: true,
       },
+
 
       {
         source: "/pages/terms",

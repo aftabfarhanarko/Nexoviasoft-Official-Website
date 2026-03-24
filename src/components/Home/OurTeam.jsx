@@ -10,6 +10,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+
+
 const teamMembers = [
   {
     name: "Alexander West",
@@ -77,6 +79,7 @@ const TeamCard = ({ member }) => {
 };
 
 const OurTeam = () => {
+
   return (
     <section className="py-24 -mt-30 md:-mt-22 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -159,7 +162,7 @@ const OurTeam = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          
+
           {/* Custom Styles for Swiper Pagination */}
           <style jsx global>{`
             .swiper-pagination-bullet {

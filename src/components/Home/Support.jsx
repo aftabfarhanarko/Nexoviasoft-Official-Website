@@ -159,7 +159,7 @@ const CardsDisplay = () => {
       z: 0,
       img: "1524504388940-b1c1722653e1", // Bag
       name: "Sarah Jenkins",
-      role: "Support Agent",
+
     },
     {
       rotate: isMobile ? -10 : -15,
@@ -169,7 +169,7 @@ const CardsDisplay = () => {
       z: 10,
       img: "1494976388531-d377034f0d38", // Car
       name: "David Kim",
-      role: "Tech Lead",
+
     },
     {
       rotate: isMobile ? -5 : -7,
@@ -275,11 +275,10 @@ const CardsDisplay = () => {
             >
               {({ isActive }) => (
                 <div
-                  className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${
-                    isActive
+                  className={`relative w-44 h-64 rounded-[20px] bg-neutral-800 shadow-2xl overflow-hidden border border-white/10 transition-all duration-300 ${isActive
                       ? "scale-110 z-20 ring-2 ring-[#d946ef]/50"
                       : "scale-90 z-10 opacity-70 blur-[1px]"
-                  }`}
+                    }`}
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -291,9 +290,8 @@ const CardsDisplay = () => {
                   />
                   {/* Dark overlay for inactive slides */}
                   <div
-                    className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
-                      isActive ? "opacity-0" : "opacity-100"
-                    }`}
+                    className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
+                      }`}
                   />
 
                   {/* Glassy Name Overlay */}
@@ -343,34 +341,32 @@ const CardsDisplay = () => {
 
               <div className={`w-full h-full bg-neutral-900 relative`}>
                 <div
-                  className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ${
-                    isActive ? "scale-110" : ""
-                  }`}
+                  className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ${isActive ? "scale-110" : ""
+                    }`}
                   style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
+                    backgroundImage: card.image
+                      ? `url('${card.image}')`
+                      : `url('https://images.unsplash.com/photo-${card.img}?auto=format&fit=crop&w=600&q=80')`,
                   }}
                 />
                 <div
-                  className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${
-                    isActive ? "opacity-0" : "opacity-100"
-                  }`}
+                  className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"
+                    }`}
                 />
 
                 {card.active && (
                   <div
-                    className={`absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none transition-opacity duration-300 ${
-                      isActive ? "opacity-0" : "opacity-50"
-                    }`}
+                    className={`absolute inset-0 bg-gradient-to-t from-black/0 via-white/5 to-white/10 opacity-50 pointer-events-none transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-50"
+                      }`}
                   />
                 )}
 
                 {/* Glassy Name Overlay - Visible on Hover/Active */}
                 <div
-                  className={`absolute bottom-4 left-4 right-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-3 flex flex-col text-center transition-all duration-300 ${
-                    isActive
+                  className={`absolute bottom-4 left-4 right-4 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-3 flex flex-col text-center transition-all duration-300 ${isActive
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4"
-                  }`}
+                    }`}
                 >
                   <span className="text-white text-sm font-semibold">
                     {card.name}
