@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import AppointmentModal from "@/components/home/AppointmentModal";
+import AppointmentModal from "@/components/Home/AppointmentModal";
 
 const PortfolioReady = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

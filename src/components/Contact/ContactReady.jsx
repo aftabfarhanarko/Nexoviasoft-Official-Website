@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import SmoothButton from "@/Share/SmoothButton";
-import AppointmentModal from "@/components/home/AppointmentModal";
+import AppointmentModal from "@/components/Home/AppointmentModal";
 
 const ContactReady = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
