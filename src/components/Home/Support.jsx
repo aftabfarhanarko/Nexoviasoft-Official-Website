@@ -222,6 +222,8 @@ const CardsDisplay = () => {
       name: "Lisa Thompson",
 
     },
+
+    
   ];
 
   const cards = team.slice(0, layout.length).map((member, index) => ({
