@@ -173,7 +173,7 @@ const Navbar = () => {
       {/* Mobile Top Bar */}
       <div className="md:hidden absolute top-0 left-0 right-0 p-6 flex justify-center z-20 pointer-events-none bg-gradient-to-b from-black/80 to-transparent">
         <Link href="/" className="pointer-events-auto flex items-center h-15">
-          <Image src={logo2} alt="Logo" width={150} height={150} />
+          <Image src={logo} alt="Logo" width={150} height={150} />
         </Link>
       </div>
 
