@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Twitter,
   Instagram,
@@ -14,6 +15,8 @@ import {
   Mail,
 } from "lucide-react";
 import { useQuery } from "@/hooks/useApi";
+import logo from '../icon/logo.png'
+import { FaFacebook } from "react-icons/fa6";
 
 const FooterLink = ({ href, children }) => (
   <Link
@@ -88,22 +91,15 @@ const Footer = () => {
               href="/"
               className="text-2xl font-bold text-white tracking-tight mb-6 inline-block"
             >
-              NexoviaSoft.
+              <Image src={logo} alt="Logo" width={150} height={150} />
             </Link>
             <p className="text-gray-500 leading-relaxed mb-8">
               Crafting digital experiences with precision and passion. Based
               remotely, working globally.
             </p>
             <div className="flex gap-4">
-              {[Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="text-gray-500 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors"
-                >
-                  <Icon size={20} />
-                </a>
-              ))}
+              <Link target="_blank" href="https://www.facebook.com/nexoviasoftbd"><FaFacebook size={20} className="text-gray-500 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors" /></Link>
+
             </div>
           </div>
 
@@ -171,7 +167,7 @@ const Footer = () => {
               <MapPin size={14} /> New York, NY
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <Mail size={14} /> hello@nexoviasoft.com
+              <Mail size={14} /> nexoviasoft@gmail.com.com
             </div>
           </div>
 

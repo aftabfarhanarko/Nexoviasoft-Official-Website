@@ -21,6 +21,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import logo from '../icon/logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +44,7 @@ const Navbar = () => {
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl px-4 py-2 md:px-6 md:py-3 flex items-center justify-between w-full max-w-7xl shadow-2xl relative">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 pl-2 flex items-center h-8 md:h-10">
-            <span className="text-xl md:text-2xl font-bold text-white tracking-tight">NexoviaSoft</span>
+            <Image src={logo} alt="Logo" width={150} height={150} />
           </Link>
 
           {/* Desktop Menu */}
@@ -98,9 +99,8 @@ const Navbar = () => {
                 Products
                 <ChevronDown
                   size={14}
-                  className={`transition-transform duration-200 ${
-                    isProductsOpen ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""
+                    }`}
                 />
               </Link>
 
@@ -213,7 +213,7 @@ const Navbar = () => {
             <Link href="/contact">
               <div className="bg-white/10 backdrop-blur-lg p-3 rounded-xl border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] transform transition-transform hover:scale-110 flex items-center justify-center">
                 <Image
-                  src="/customIcon.png"
+                  src={logo}
                   alt="Center Icon"
                   width={28}
                   height={28}
@@ -240,9 +240,8 @@ const Navbar = () => {
           <div className="flex justify-center w-full">
             <button
               onClick={() => setIsMenuOpen(true)}
-              className={`text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group ${
-                isMenuOpen ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" : ""
-              }`}
+              className={`text-gray-400 hover:text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316] transition-colors flex flex-col items-center gap-1 group ${isMenuOpen ? "text-transparent bg-clip-text bg-gradient-to-r from-[#d946ef] to-[#f97316]" : ""
+                }`}
             >
               <Menu
                 size={20}
@@ -269,7 +268,7 @@ const Navbar = () => {
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between py-6">
               <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center h-12">
-                <span className="text-2xl font-bold text-white tracking-tight">NexoviaSoft</span>
+                <Image src={logo} alt="Logo" width={150} height={150} />
               </Link>
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -314,9 +313,8 @@ const Navbar = () => {
                           {item.name}
                         </span>
                         <ChevronDown
-                          className={`text-white transition-transform duration-300 ${
-                            mobileProductsOpen ? "rotate-180" : ""
-                          }`}
+                          className={`text-white transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""
+                            }`}
                           size={24}
                         />
                       </div>
