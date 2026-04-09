@@ -9,7 +9,14 @@ const nextConfig = {
   /* config options here */
   images: {
     domains: ["example.com", "i.ibb.co", "nexoviasoft-cdn.up.railway.app"],
-    ///hhhhh
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+  },
+  reactStrictMode: true,
+  swcMinify: true,
+  reactCompiler: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-icons', 'framer-motion', 'swiper'],
   },
   async redirects() {
     return [
@@ -66,7 +73,6 @@ const nextConfig = {
       { source: "/career/:path*", destination: "/main/career/:path*" },
     ];
   },
-  reactCompiler: false,
 };
 // hhhhh
 export default nextConfig;

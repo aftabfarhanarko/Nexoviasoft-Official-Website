@@ -1,28 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import TextColorLetters from "@/Share/TextColorLetters";
 import Image from "next/image";
 import { useQuery } from "@/hooks/useApi";
-import Link from "next/link";
 const Banner = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   // Partner logos for marquee
   const { data, isLoading, isError } = useQuery("/hero-crasol");
-  console.log("Bannr", data);
 
   return (
     <div className="min-h-screen text-white  mt-2 md:-mt-8  overflow-hidden bg-transparent">
@@ -113,7 +96,7 @@ const Banner = () => {
                 data?.data?.map((item, index) => (
                   <div
                     key={item.id || index}
-                    className="relative w-32 h-12 grayscale opacity-70 hover:opacity-100 transition-opacity"
+                    className="relative w-40 h-40 grayscale opacity-70 hover:opacity-100 transition-opacity"
                   >
                     <Image
                       src={item.logoUrl}
