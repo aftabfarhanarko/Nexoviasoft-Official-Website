@@ -98,7 +98,7 @@ const Banner = () => {
 
           {/* Partner Logos — auto-sliding marquee */}
           <motion.div
-            className="w-full max-w-4xl overflow-hidden relative py-16 md:py-24"
+            className="w-full max-w-4xl overflow-hidden my-6 relative py-6 md:py-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
