@@ -11,7 +11,7 @@ const BecomePart = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-gradient-to-r from-[#d946ef] to-[#f97316] blur-[100px] pointer-events-none" />
 
         <div className="relative z-10 flex flex-col items-center gap-8 max-w-4xl mx-auto">
-          {/* Badge */}
+          {/* Badge  oijwfi9oj weui9jhtgui9e*/ }
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
